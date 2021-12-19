@@ -1,0 +1,20 @@
+* xref:intro.adoc[1. Intro]
+* xref:boring.adoc[2. The Boring Stuff]
+** xref:boring.adoc#disclaimers[2.1 Disclaimers]
+** xref:boring.adoc#conventions[2.2 Conventions]
+** xref:boring.adoc#doc[2.3 Documentation]
+** xref:boring.adoc#ref[2.4 Disclaimers]
+** xref:boring.adoc#thanks[2.5 Thanks]
+
+* xref:managed.openshift.adoc[Managed OpenShift]
+** xref:deploy.managed.openshift.adoc[Deploy Managed OpenShift]
+** xref:authentication.adoc[Configure Authentication]
+* xref:rhods.adoc[RHODS]
+** xref:install.rhods.adoc[Install RHODS]
+** xref:authorization.adoc[Configure Authorization]
+** xref:login.adoc[Log Into RHODS]
+
+
+// * xref:02-deploy.adoc[2. Deploy Service]
+// ** xref:02-deploy.adoc#package[Build Service]
+// ** xref:02-deploy.adoc#deploy[Deploy Dervice]

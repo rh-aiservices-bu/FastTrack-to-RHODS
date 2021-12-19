@@ -1,0 +1,20 @@
+= Introduction
+include::_attributes.adoc[]
+
+[#is]
+== What this is
+
+* A quick way of getting RHODS configured
+* An opinionated set of instructions for those who do not want to RTFM
+*
+
+[#isnot]
+== What this is NOT
+
+* A replacement for the entire and complete documentation
+* A way to build production-grade environments
+* A guarantee of success
+
+== Next
+
+You don't **have** to skip the xref:boring.adoc[boring stuff], but it's ok if you do.

@@ -1,0 +1,7 @@
+name: fasttrack-to-rhods
+title: FastTrack to RHODS
+version: main
+nav:
+  - modules/ROOT/nav.adoc
+
+start_page: ROOT:index.adoc

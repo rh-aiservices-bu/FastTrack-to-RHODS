@@ -1,0 +1,10 @@
+= FastTrack to RHODS
+:page-layout: home
+:!sectids:
+
+[.text-center.strong]
+== Let's start
+
+
+
+Jump to the xref:intro.adoc[Introduction]
