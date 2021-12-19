@@ -1,1 +1,2 @@
-Check the build courseware https://redhat-scholars.github.io/build-course[documentation]  on how folder structure, how to use macros and other gotchas
+
+<https://erwangranger.github.io/Fastrack-to-RHODS/template-tutorial/index.html>
