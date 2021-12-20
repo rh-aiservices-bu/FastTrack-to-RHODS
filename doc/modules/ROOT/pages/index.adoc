@@ -3,8 +3,21 @@
 :!sectids:
 
 [.text-center.strong]
-== Let's start
+== Overview
+
+[.lines_space]
+[.console-output]
+[source,text]
+ ┌─────────────────────────────────────────┐           ┌─────────────────────────────────────────┐
+ │                                         │           │                                         │
+ │        Get Managed OpenShift            │           │         Get RHODS                       │
+ │                                         │           │                                         │
+ │ ┌───────────┐       ┌─────────────────┐ │           │ ┌───────────┐       ┌───────────────┐   │
+ │ │  Create   │ ────► │ Configure       │ │  ───────► │ │  Install  │ ────► │Configure      │   │
+ │ │  Cluster  │       │ Authentication  │ │           │ │  RHODS    │       │Authorization  │   │
+ │ └───────────┘       └─────────────────┘ │           │ │  Add-On   │       └───────────────┘   │
+ │                                         │           │ └───────────┘                           │
+ └─────────────────────────────────────────┘           │                                         │
+                                                       └─────────────────────────────────────────┘
 
 
-
-Jump to the xref:intro.adoc[Introduction]

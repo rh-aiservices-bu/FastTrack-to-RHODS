@@ -1,0 +1,12 @@
+= Configure OpenShift Authentication
+
+[#htpasswd]
+== Configure HTPasswd as and auth provider
+
+[#github]
+== Configure GitHub as an authentication provider
+
+=== Create a github org
+
+=== configure org as auth provider
+

@@ -1,0 +1,51 @@
+= Getting a Managed OpenShift Cluster
+include::_attributes.adoc[]
+
+
+[#existingclusters]
+== If you already have a Managed OpenShift Cluster
+
+* check which version.. has to be more than....
+* if it's ROSA, make sure it's not ROSA with STS
+* ensure you have Auth configured..
+* if so, skip to ....
+
+[#Choosing ROSA vs OSD]
+== Choosing ROSA or OSD
+
+.Comparison of ROSA and OSD
+[options="header,footer"]
+|=======================
+|ROSA |OSD |
+|https://cloud.redhat.com/products/amazon-openshift[Red Hat OpenShift Service on AWS (ROSA)] |https://cloud.redhat.com/products/dedicated/[OpenShift Dedicated] |
+|=======================
+
+== Console.redhat.com account
+
+
+
+// [cols="1,1"]
+// |===
+// |Cell in column 1, row 1
+// |Cell in column 2, row 1
+
+// |Cell in column 1, row 2
+// |Cell in column 2, row 2
+
+// |Cell in column 1, row 3
+// |Cell in column 2, row 3
+// |===
+
+// [tabs]
+// ====
+// ROSA::
+// +
+// --
+// Red Hat OpenShift Service on AWS (ROSA)
+// --
+// OSD::
+// +
+// --
+// OpenShift Dedicated
+// --
+// ====

@@ -1,0 +1,9 @@
+= Validation
+
+[#login]
+== 5.1 Log in to RHODS
+
+[#getstarted]
+== 5.2 Get started with RHODS
+
+

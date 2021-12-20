@@ -6,12 +6,20 @@ The page you skip, until you need it.
 [#disclaimers]
 == 2.1 Disclaimers
 
+=== General Disclaimers
+
 * The information provided here is for general informational purposes only.
 * It is provided in good faith, and is as accurate as I can make it.
 * There is however no warranty of any kind, expressed or implied, regarding the accuracy, adequacy, validity, reliability, or completeness of this content.
 * Views expressed here are my own and do not reflect those of my employer.
 * Disclaimers are never read by anyone, but if you did, thanks for that!
 * Should you find inaccuracies in this content, please open an Issue in the github project in order to bring it to my attention.
+
+=== Freshness
+
+It is possible that this document falls behind as things evolve.
+If unsure, check the history of the page in the github project to see when it was last updated.
+If you feel like something should be brought up to speed, please open an Issue against the project.
 
 [#conventions]
 == 2.2 Conventions
@@ -46,6 +54,8 @@ echo "this is fun"
 
 [#ref]
 == 2.4 References
+
+ROSAworkshop.io
 
 [#thanks]
 == 2.5 Thanks

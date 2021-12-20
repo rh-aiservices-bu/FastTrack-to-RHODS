@@ -5,8 +5,8 @@ include::_attributes.adoc[]
 == What this is
 
 * A quick way of getting RHODS configured
-* An opinionated set of instructions for those who do not want to RTFM
-*
+* An opinionated set of steps for those who do not want to RTFM
+* A copy of various instructions that can be found in various other xref:02-boring.adoc#ref[sources].
 
 [#isnot]
 == What this is NOT
@@ -17,4 +17,4 @@ include::_attributes.adoc[]
 
 == Next
 
-You don't **have** to skip the xref:boring.adoc[boring stuff], but it's ok if you do.
+You don't **have** to skip the xref:02-boring.adoc[boring stuff], but it's ok if you do.
