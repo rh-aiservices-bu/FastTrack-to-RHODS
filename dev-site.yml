@@ -3,7 +3,7 @@ runtime:
 
 site:
   title: FastTrack to RHODS
-  url: http://localhost:3000/fasttrack-to-rhods/index.html
+  url: http://localhost:3000/
   start_page: fasttrack-to-rhods::index.adoc
 
 content:
@@ -32,4 +32,5 @@ ui:
       contents: "static_files: [ .nojekyll ]"
 
 output:
+  clean: true
   dir: ./gh-pages

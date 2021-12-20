@@ -3,13 +3,14 @@ runtime:
 
 site:
   title: FastTrack to RHODS
-  url: https://erwangranger.github.io/Fastrack-to-RHODS/
-  start_page: fasttrack-to-rhods::index.adoc
+  url: https://erwangranger.github.io/Fastrack-to-RHODS
+  start_page: index.adoc
+  # start_page: fasttrack-to-rhods::index.adoc
 
 content:
   sources:
     - url: ./
-      start_path: doc
+      start_path: ./doc
 
 asciidoc:
   attributes:
