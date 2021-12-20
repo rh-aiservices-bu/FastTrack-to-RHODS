@@ -9,7 +9,8 @@ site:
 
 content:
   sources:
-    - url: .
+    - url: ./
+      branches: main
       start_path: doc
 
 asciidoc:
