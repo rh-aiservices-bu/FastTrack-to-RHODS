@@ -1,2 +1,2 @@
 
-<https://erwangranger.github.io/Fastrack-to-RHODS/template-tutorial/index.html>
+<https://erwangranger.github.io/Fastrack-to-RHODS/>
