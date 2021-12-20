@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>FastTrack to RHODS :: FastTrack to RHODS</title>
-    <link rel="canonical" href="https://erwangranger.github.io/Fastrack-to-RHODS/fasttrack-to-rhods/main/index.html">
-    <link rel="next" href="01-intro.html">
+    <title>The Boring Stuff :: FastTrack to RHODS</title>
+    <link rel="canonical" href="https://erwangranger.github.io/Fastrack-to-RHODS/fasttrack-to-rhods/main/02-boring.html">
+    <link rel="prev" href="01-intro.html">
+    <link rel="next" href="03-create.openshift.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -53,24 +54,24 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="01-intro.html">1. Intro</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="02-boring.html">2. The Boring Stuff</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="02-boring.html#disclaimers">2.1 Disclaimers</a>
+    <a class="nav-link" href="#disclaimers">2.1 Disclaimers</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="02-boring.html#conventions">2.2 Conventions</a>
+    <a class="nav-link" href="#conventions">2.2 Conventions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="02-boring.html#doc">2.3 Documentation</a>
+    <a class="nav-link" href="#doc">2.3 Documentation</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="02-boring.html#ref">2.4 Disclaimers</a>
+    <a class="nav-link" href="#ref">2.4 Disclaimers</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="02-boring.html#thanks">2.5 Thanks</a>
+    <a class="nav-link" href="#thanks">2.5 Thanks</a>
   </li>
 </ul>
   </li>
@@ -133,39 +134,126 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="index.html" class="home-link is-current"></a>
+  <a href="index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">FastTrack to RHODS</a></li>
+    <li><a href="02-boring.html">2. The Boring Stuff</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/erwangranger/Fastrack-to-RHODS/edit/main/doc/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/erwangranger/Fastrack-to-RHODS/edit/main/doc/modules/ROOT/pages/02-boring.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">FastTrack to RHODS</h1>
-<div class="sect1 text-center strong">
-<h2>Overview</h2>
+<h1 class="page">The Boring Stuff</h1>
+<div id="preamble">
 <div class="sectionbody">
+<div class="paragraph">
+<p>The page you skip, until you need it.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="disclaimers"><a class="anchor" href="#disclaimers"></a>2.1 Disclaimers</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_general_disclaimers"><a class="anchor" href="#_general_disclaimers"></a>General Disclaimers</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The information provided here is for general informational purposes only.</p>
+</li>
+<li>
+<p>It is provided in good faith, and is as accurate as I can make it.</p>
+</li>
+<li>
+<p>There is however no warranty of any kind, expressed or implied, regarding the accuracy, adequacy, validity, reliability, or completeness of this content.</p>
+</li>
+<li>
+<p>Views expressed here are my own and do not reflect those of my employer.</p>
+</li>
+<li>
+<p>Disclaimers are never read by anyone, but if you did, thanks for that!</p>
+</li>
+<li>
+<p>Should you find inaccuracies in this content, please open an Issue in the github project in order to bring it to my attention.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_freshness"><a class="anchor" href="#_freshness"></a>Freshness</h3>
+<div class="paragraph">
+<p>It is possible that this document falls behind as things evolve.
+If unsure, check the history of the page in the github project to see when it was last updated.
+If you feel like something should be brought up to speed, please open an Issue against the project.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="conventions"><a class="anchor" href="#conventions"></a>2.2 Conventions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Content that can be copied:</p>
+</div>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">echo "this is fun"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Expected output:</p>
+</div>
 <div class="listingblock lines_space console-output">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text"> ┌─────────────────────────────────────────┐           ┌─────────────────────────────────────────┐
- │                                         │           │                                         │
- │        Get Managed OpenShift            │           │         Get RHODS                       │
- │                                         │           │                                         │
- │ ┌───────────┐       ┌─────────────────┐ │           │ ┌───────────┐       ┌───────────────┐   │
- │ │  Create   │ ────► │ Configure       │ │  ───────► │ │  Install  │ ────► │Configure      │   │
- │ │  Cluster  │       │ Authentication  │ │           │ │  RHODS    │       │Authorization  │   │
- │ └───────────┘       └─────────────────┘ │           │ │  Add-On   │       └───────────────┘   │
- │                                         │           │ └───────────┘                           │
- └─────────────────────────────────────────┘           │                                         │
-                                                       └─────────────────────────────────────────┘</code></pre>
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">echo "this is fun"</code></pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="doc"><a class="anchor" href="#doc"></a>2.3 Documentation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_openshift"><a class="anchor" href="#_openshift"></a>OpenShift</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_osd"><a class="anchor" href="#_osd"></a>OSD</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_rosa"><a class="anchor" href="#_rosa"></a>ROSA</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_rhods"><a class="anchor" href="#_rhods"></a>RHODS</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_kubernetes"><a class="anchor" href="#_kubernetes"></a>Kubernetes</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ref"><a class="anchor" href="#ref"></a>2.4 References</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ROSAworkshop.io</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="thanks"><a class="anchor" href="#thanks"></a>2.5 Thanks</h2>
+<div class="sectionbody">
+
 </div>
 </div>
 <nav class="pagination">
-  <span class="next"><a href="01-intro.html">1. Intro</a></span>
+  <span class="prev"><a href="01-intro.html">1. Intro</a></span>
+  <span class="next"><a href="03-create.openshift.html">3. Getting a Managed OpenShift Cluster</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">

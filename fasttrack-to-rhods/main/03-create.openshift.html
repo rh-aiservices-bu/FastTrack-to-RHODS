@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>FastTrack to RHODS :: FastTrack to RHODS</title>
-    <link rel="canonical" href="https://erwangranger.github.io/Fastrack-to-RHODS/fasttrack-to-rhods/main/index.html">
-    <link rel="next" href="01-intro.html">
+    <title>Getting a Managed OpenShift Cluster :: FastTrack to RHODS</title>
+    <link rel="canonical" href="https://erwangranger.github.io/Fastrack-to-RHODS/fasttrack-to-rhods/main/03-create.openshift.html">
+    <link rel="prev" href="02-boring.html">
+    <link rel="next" href="03-create.osd.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -74,7 +75,7 @@
   </li>
 </ul>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="03-create.openshift.html">3. Getting a Managed OpenShift Cluster</a>
 <ul class="nav-list">
@@ -133,39 +134,75 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="index.html" class="home-link is-current"></a>
+  <a href="index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">FastTrack to RHODS</a></li>
+    <li><a href="03-create.openshift.html">3. Getting a Managed OpenShift Cluster</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/erwangranger/Fastrack-to-RHODS/edit/main/doc/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/erwangranger/Fastrack-to-RHODS/edit/main/doc/modules/ROOT/pages/03-create.openshift.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">FastTrack to RHODS</h1>
-<div class="sect1 text-center strong">
-<h2>Overview</h2>
+<h1 class="page">Getting a Managed OpenShift Cluster</h1>
+<div class="sect1">
+<h2 id="existingclusters"><a class="anchor" href="#existingclusters"></a>If you already have a Managed OpenShift Cluster</h2>
 <div class="sectionbody">
-<div class="listingblock lines_space console-output">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text"> ┌─────────────────────────────────────────┐           ┌─────────────────────────────────────────┐
- │                                         │           │                                         │
- │        Get Managed OpenShift            │           │         Get RHODS                       │
- │                                         │           │                                         │
- │ ┌───────────┐       ┌─────────────────┐ │           │ ┌───────────┐       ┌───────────────┐   │
- │ │  Create   │ ────► │ Configure       │ │  ───────► │ │  Install  │ ────► │Configure      │   │
- │ │  Cluster  │       │ Authentication  │ │           │ │  RHODS    │       │Authorization  │   │
- │ └───────────┘       └─────────────────┘ │           │ │  Add-On   │       └───────────────┘   │
- │                                         │           │ └───────────┘                           │
- └─────────────────────────────────────────┘           │                                         │
-                                                       └─────────────────────────────────────────┘</code></pre>
+<div class="ulist">
+<ul>
+<li>
+<p>check which version.. has to be more than&#8230;&#8203;.</p>
+</li>
+<li>
+<p>if it&#8217;s ROSA, make sure it&#8217;s not ROSA with STS</p>
+</li>
+<li>
+<p>ensure you have Auth configured..</p>
+</li>
+<li>
+<p>if so, skip to &#8230;&#8203;.</p>
+</li>
+</ul>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_choosing_rosa_or_osd"><a class="anchor" href="#_choosing_rosa_or_osd"></a>Choosing ROSA or OSD</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Comparison of ROSA and OSD</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ROSA</th>
+<th class="tableblock halign-left valign-top">OSD</th>
+<th class="tableblock halign-left valign-top"></th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://cloud.redhat.com/products/amazon-openshift">Red Hat OpenShift Service on AWS (ROSA)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://cloud.redhat.com/products/dedicated/">OpenShift Dedicated</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_console_redhat_com_account"><a class="anchor" href="#_console_redhat_com_account"></a>Console.redhat.com account</h2>
+<div class="sectionbody">
+
 </div>
 </div>
 <nav class="pagination">
-  <span class="next"><a href="01-intro.html">1. Intro</a></span>
+  <span class="prev"><a href="02-boring.html">2. The Boring Stuff</a></span>
+  <span class="next"><a href="03-create.osd.html">3.1-A Creating an OSD Cluster</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
