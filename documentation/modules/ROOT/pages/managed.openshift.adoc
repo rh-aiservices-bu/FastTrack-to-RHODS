@@ -1,0 +1,9 @@
+= Managed OpenShift
+
+.Optional Title
+[NOTE]
+===============================
+*NOTE* Block
+
+Use: multi-paragraph notes.
+===============================
