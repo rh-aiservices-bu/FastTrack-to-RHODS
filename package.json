@@ -1,11 +1,11 @@
 {
-  "name": "rhs-openshift-admins-devops",
-  "description": "OpenShift Admins Devops Course Documentation Site",
-  "homepage": "https://redhat-scholars.github.io/openshift-admins-devops",
+  "name": "fasttrack-to-rhods",
+  "description": "FastTrack to RHODS",
+  "homepage": "https://erwangranger.github.io/Fastrack-to-RHODS/",
   "author": {
-    "email": "kamesh.sampath@hotmail.com",
-    "name": "Kamesh Sampath",
-    "url": "https://twitter.com/@kamesh_sampath"
+    "email": "egranger@redhat.com",
+    "name": "Erwan Granger",
+    "url": "https://github.com/erwangranger/"
   },
   "dependencies": {
     "@antora/cli": "^2.3.1",
