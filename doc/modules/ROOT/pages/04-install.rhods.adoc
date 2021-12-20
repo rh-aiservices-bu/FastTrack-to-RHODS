@@ -3,3 +3,11 @@
 == Minimum Requirements and Machine Pools
 
 == Install
+
+== Final state
+
+* This is what the result should look like:
++
+image:installed.rhods.addon.png[installed,300,300,align=left]
++
+* And now you should be done
