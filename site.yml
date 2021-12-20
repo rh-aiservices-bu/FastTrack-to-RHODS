@@ -3,9 +3,9 @@ runtime:
 
 site:
   title: FastTrack to RHODS
-  url: https://erwangranger.github.io/Fastrack-to-RHODS
-  start_page: index.adoc
-  # start_page: fasttrack-to-rhods::index.adoc
+  url: https://erwangranger.github.io/fasttrack-to-rhods
+  start_page: fasttrack-to-rhods::index.adoc
+
 
 content:
   sources:
