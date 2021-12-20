@@ -9,8 +9,8 @@ site:
 
 content:
   sources:
-    - url: ./
-      start_path: ./doc
+    - url: .
+      start_path: doc
 
 asciidoc:
   attributes:
