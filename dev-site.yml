@@ -3,24 +3,33 @@ runtime:
 
 site:
   title: FastTrack to RHODS
-  url: http://localhost:3000/rhs-build-course/index.html
+  url: http://localhost:3000/fasttrack-to-rhods/index.html
   start_page: fasttrack-to-rhods::index.adoc
 
 content:
   sources:
     - url: .
       branches: HEAD
-      start_path: documentation
+      start_path: doc
+
 asciidoc:
   attributes:
     # title: FastTrack to RHODS
+    release-version: main
+    page-pagination: true
   extensions:
-    - ./lib/remote-include-processor.js
     - ./lib/tab-block.js
+    - ./lib/remote-include-processor.js
+
 ui:
   bundle:
     url: https://github.com/redhat-developer-demos/rhd-tutorial-ui/releases/download/v0.1.9/ui-bundle.zip
     snapshot: true
-  supplemental_files: ./supplemental-ui
+  supplemental_files:
+    - path: ./supplemental-ui
+    - path: .nojekyll
+    - path: ui.yml
+      contents: "static_files: [ .nojekyll ]"
+
 output:
   dir: ./gh-pages
