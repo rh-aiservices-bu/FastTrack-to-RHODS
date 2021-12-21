@@ -1,4 +1,4 @@
-
+/* Screenshots look better with a border and a shadow */
 .bordershadow {
     border: solid 1px black;
     /* display: inline; */
@@ -8,7 +8,10 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
+/* allow for wider screens */
+.doc {
+    max-width: none;
+}
 
 /* .image {
     border: solid;
