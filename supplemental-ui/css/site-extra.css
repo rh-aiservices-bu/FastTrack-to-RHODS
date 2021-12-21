@@ -1,0 +1,27 @@
+/* .image {
+    border: solid;
+} */
+
+
+
+.imageblock {
+    /* border: solid; */
+    display: block;
+    /* float:left; */
+    text-align: left;
+    margin-left: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* .doc .image>img, .doc .imageblock img {
+    height: auto;
+    max-width: 100%;
+} */
+
+
+
+
+/*
+.doc {
+    max-width: none;
+} */

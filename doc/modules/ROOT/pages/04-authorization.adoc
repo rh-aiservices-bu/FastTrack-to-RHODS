@@ -1,26 +1,54 @@
 = Configure the default RHODS Authorization
 
+== Rationale
+
+Currently, the way that RHODS Authorization defaults are configured, anyone who tries to log in will not be recognized as a RHODS user.
+
+Instead, they will be met with `403: forbidden` error when they try to launch a notebook.
+
+Although this is link:https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html-single/getting_started_with_red_hat_openshift_data_science/index#i_see_a_emphasis_role_strong_403_forbidden_emphasis_error_when_i_log_in_to_jupyterhub[documented], I belive it's a better experience to reconfigure the authentication is way that:
+
+* any OpenShift User automatically is recognized as a RHODS user
+* any OpenShift Cluster-Admin is recognized as a RHODS admin
+
+**Warning: the method described here is currently not documented**
+
+If you prefer to follow the official method, please refer to the link:https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html/managing_users_and_user_resources/adding-users-for-openshift-data-science_useradd[documentation on how to add users].
+
 // include::partial$login.to.openshift.console.adoc[]
 include::partial$login.to.openshift.console.adoc[]
 
-== Warning
-
-**Warning: the following method is currently not documented**
-
-If you want the documented method, please refer to the link:https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html/managing_users_and_user_resources/adding-users-for-openshift-data-science_useradd[documentation].
-
-
 == Edit Configmap
 
-* locate the configmap called "rhods-groups-config" in the namespace called "redhat-ods-applications"
-
+* Locate the configmap `rhods-groups-config` in the `redhat-ods-applications` namespace
++
+image::rhods.configmap.png[configmap]
++
 * Edit the YAML of the configmap
-* ensure that opendatahub.io/modified: is set to 'true'
-* ensure that admin_groups is set to cluster-admins
-* ensure that allowed_groups is set to   'system:authenticated'
-(with the single quotes)
-* this means that any authenticated OpenShift User is then also a RHODS user and any cluster-admin is also a RHODS admin
++
+image::edit.configmap.png[configmap edit]
++
+* Modify the content so that:
+** `opendatahub.io/modified:` is set to `true`
+** `admin_groups:` is set to `cluster-admins``
+** `allowed_groups:` is set to `'system:authenticated'`
+* The result should look like:
++
+image::updated.configmap.png[configmap edited]
++
+* Click save
+
+**Note:** These changes will not take effect until you restart all the JupyterHub pods. This is convered in the next section.
 
 == Do a rollout of the JupyterHub Pods
 
-* start rollover
+* Locate the `jupyterhub` deploymentconfig in the `redhat-ods-applications` namespace
++
+image::start.rollout.png[rollout]
++
+* Wait until all 3 `jupyterhub` pods have restarted, and one is **Ready 2/2**:
++
+image::pods.ready.png[ready]
+* At this point, the changes in Authorization should be fully active.
+* The next section will validate that we can successfully use RHODS, by launching a notebook.
+

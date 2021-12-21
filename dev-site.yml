@@ -25,11 +25,18 @@ ui:
   bundle:
     url: https://github.com/redhat-developer-demos/rhd-tutorial-ui/releases/download/v0.1.9/ui-bundle.zip
     snapshot: true
-  supplemental_files:
-    - path: ./supplemental-ui
-    - path: .nojekyll
-    - path: ui.yml
-      contents: "static_files: [ .nojekyll ]"
+  supplemental_files: ./supplemental-ui
+  ## none of the syntaxes below worked
+    # - path: .nojekyll
+    # - path: ui.yml
+    #   contents: "static_files: [ .nojekyll ]"
+
+  # supplemental_files:
+  #   - dir: ./supplemental-ui
+  #   # - path: ui.yml
+    #   contents: "static_files: [ .nojekyll ]"
+    # - path: .nojekyll
+    # - dir: ./supplemental-ui
 
 output:
   clean: true
