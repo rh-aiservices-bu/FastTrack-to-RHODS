@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Configure Authorization :: FastTrack to RHODS</title>
+    <title>Configure the default RHODS Authorization :: FastTrack to RHODS</title>
     <link rel="canonical" href="https://erwangranger.github.io/Fastrack-to-RHODS/fasttrack-to-rhods/main/04-authorization.html">
     <link rel="prev" href="04-install.rhods.html">
     <link rel="next" href="05-validation.html">
@@ -146,8 +146,73 @@
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Configure Authorization</h1>
-
+<h1 class="page">Configure the default RHODS Authorization</h1>
+<div class="sect1">
+<h2 id="_log_in_to_your_openshift_console"><a class="anchor" href="#_log_in_to_your_openshift_console"></a>Log in to your OpenShift Console</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>From the Red Hat Console, with your cluster selected, click the <strong>Open Console</strong> button.</p>
+</li>
+<li>
+<p>Authenticate</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_warning"><a class="anchor" href="#_warning"></a>Warning</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Warning: the following method is currently not documented</strong></p>
+</div>
+<div class="paragraph">
+<p>If you want the documented method, please refer to the <a href="https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html/managing_users_and_user_resources/adding-users-for-openshift-data-science_useradd">documentation</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_edit_configmap"><a class="anchor" href="#_edit_configmap"></a>Edit Configmap</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>locate the configmap called "rhods-groups-config" in the namespace called "redhat-ods-applications"</p>
+</li>
+<li>
+<p>Edit the YAML of the configmap</p>
+</li>
+<li>
+<p>ensure that opendatahub.io/modified: is set to 'true'</p>
+</li>
+<li>
+<p>ensure that admin_groups is set to cluster-admins</p>
+</li>
+<li>
+<p>ensure that allowed_groups is set to   'system:authenticated'
+(with the single quotes)</p>
+</li>
+<li>
+<p>this means that any authenticated OpenShift User is then also a RHODS user and any cluster-admin is also a RHODS admin</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_do_a_rollout_of_the_jupyterhub_pods"><a class="anchor" href="#_do_a_rollout_of_the_jupyterhub_pods"></a>Do a rollout of the JupyterHub Pods</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>start rollover</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <nav class="pagination">
   <span class="prev"><a href="04-install.rhods.html">4.1 Install RHODS Add-On</a></span>
   <span class="next"><a href="05-validation.html">5. Validate RHODS</a></span>
