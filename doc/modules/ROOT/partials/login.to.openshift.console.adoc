@@ -1,0 +1,6 @@
+== Log in to your OpenShift Console
+
+* From the Red Hat Console, with your cluster selected, click the **Open Console** button.
+
+* Authenticate
+

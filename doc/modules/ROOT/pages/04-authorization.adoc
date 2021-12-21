@@ -1,2 +1,26 @@
-= Configure Authorization
+= Configure the default RHODS Authorization
 
+// include::partial$login.to.openshift.console.adoc[]
+include::partial$login.to.openshift.console.adoc[]
+
+== Warning
+
+**Warning: the following method is currently not documented**
+
+If you want the documented method, please refer to the link:https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html/managing_users_and_user_resources/adding-users-for-openshift-data-science_useradd[documentation].
+
+
+== Edit Configmap
+
+* locate the configmap called "rhods-groups-config" in the namespace called "redhat-ods-applications"
+
+* Edit the YAML of the configmap
+* ensure that opendatahub.io/modified: is set to 'true'
+* ensure that admin_groups is set to cluster-admins
+* ensure that allowed_groups is set to   'system:authenticated'
+(with the single quotes)
+* this means that any authenticated OpenShift User is then also a RHODS user and any cluster-admin is also a RHODS admin
+
+== Do a rollout of the JupyterHub Pods
+
+* start rollover

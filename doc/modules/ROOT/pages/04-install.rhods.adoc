@@ -1,6 +1,6 @@
 = Install the RHODS AddOn
 
-include::partial$login.to.console.adoc[]
+include::partial$login.to.redhat.console.adoc[]
 // include::partial$headstyles.hbs[]
 
 == Locate the RHODS Add-on
