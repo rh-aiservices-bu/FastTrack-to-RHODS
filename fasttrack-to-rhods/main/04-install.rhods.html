@@ -77,13 +77,13 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="03-create.openshift.html">3. Getting a Managed OpenShift Cluster</a>
+    <a class="nav-link" href="03-create.openshift.html">3. Get a Managed OpenShift Cluster</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="03-create.osd.html">3.1-A Creating an OSD Cluster</a>
+    <a class="nav-link" href="03-create.osd.html">3.1-A Create an OSD Cluster</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="03-create.rosa.html">3.1-B Creating a ROSA Cluster</a>
+    <a class="nav-link" href="03-create.rosa.html">3.1-B Create a ROSA Cluster</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -101,7 +101,7 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="04-rhods.html">4. Getting RHODS</a>
+    <a class="nav-link" href="04-rhods.html">4. Get RHODS</a>
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="04-install.rhods.html">4.1 Install RHODS Add-On</a>
@@ -138,7 +138,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">FastTrack to RHODS</a></li>
-    <li><a href="04-rhods.html">4. Getting RHODS</a></li>
+    <li><a href="04-rhods.html">4. Get RHODS</a></li>
     <li><a href="04-install.rhods.html">4.1 Install RHODS Add-On</a></li>
   </ul>
 </nav>
@@ -148,9 +148,61 @@
 <article class="doc">
 <h1 class="page">Install the RHODS AddOn</h1>
 <div class="sect1">
+<h2 id="_log_in_to_console_redhat_com"><a class="anchor" href="#_log_in_to_console_redhat_com"></a>Log in to console.redhat.com</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Make sure you are logged in <a href="https://console.redhat.com/" class="bare">https://console.redhat.com/</a>.</p>
+</div>
+<div class="paragraph">
+<p> <details><summary> 
+Display detailed instructions:
+ </summary><div> </p>
+</div>
+<div class="paragraph">
+<p>If not already done, go to <a href="https://console.redhat.com/" class="bare">https://console.redhat.com/</a> and log in with your Red Hat account.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/console.login.png" alt="console"></span></p>
+</div>
+<div class="paragraph">
+<p>Once you are logged in, navigate to the OpenShift Section. (<a href="https://console.redhat.com/openshift" class="bare">https://console.redhat.com/openshift</a>).</p>
+</div>
+<div class="paragraph">
+<p>You should see your cluster(s).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/list.of.clusters.png" alt="console"></span></p>
+</div>
+<div class="paragraph">
+<p> </div></details> </p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_minimum_requirements_and_machine_pools"><a class="anchor" href="#_minimum_requirements_and_machine_pools"></a>Minimum Requirements and Machine Pools</h2>
 <div class="sectionbody">
-
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>if you see this</p>
+<div class="paragraph">
+<p><span class="image"><img src="_images/rhods.addon.prereq.not.met.png" alt="notmet"></span></p>
+</div>
+</li>
+<li>
+<p>click on the tile</p>
+</li>
+<li>
+<p>if it says this:</p>
+<div class="paragraph">
+<p><span class="image"><img src="_images/prereq.details.png" alt="notmet"></span></p>
+</div>
+</li>
+<li>
+<p>you need to add a machine pool</p>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -167,7 +219,7 @@
 <li>
 <p>This is what the result should look like:</p>
 <div class="paragraph">
-<p><span class="image"><img src="_images/installed.rhods.addon.png" alt="installed" width="300" height="300"></span></p>
+<p><span class="image"><img src="_images/installed.rhods.addon.png" alt="installed"></span></p>
 </div>
 </li>
 <li>
@@ -178,7 +230,7 @@
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="04-rhods.html">4. Getting RHODS</a></span>
+  <span class="prev"><a href="04-rhods.html">4. Get RHODS</a></span>
   <span class="next"><a href="04-authorization.html">4.2 Configure default RHODS Authorization</a></span>
 </nav>
 </article>
