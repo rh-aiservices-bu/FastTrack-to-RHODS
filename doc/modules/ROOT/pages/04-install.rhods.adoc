@@ -1,19 +1,31 @@
 = Install the RHODS AddOn
 
 include::partial$login.to.console.adoc[]
+// include::partial$headstyles.hbs[]
 
-== Minimum Requirements and Machine Pools
+== Locate the RHODS Add-on
 
-. if you see this
+* Select your Cluster in the list
+* Navigate to the **Add-ons** tab
+* You should the the **Red Hat OpenShift Data Science** add-on
++
+image:rhods.addon.tile.png[notmet,align=left]
++
+
+
+== Prerequisites not met
+
+* It is possible that your cluster does not meet the pre-requisites.
+* If that is the case, the RHODS add-on will look like:
 +
 image:rhods.addon.prereq.not.met.png[notmet,align=left]
 +
-. click on the tile
-. if it says this:
+* Clicking on the add-on and choosing the **Prerequisite** tab should display more details:
 +
-image:prereq.details.png[notmet,align=left]
+image:prereq.details.png[notmet,border='solid 1px',.align=left]
 +
-. you need to add a machine pool
+* In a case such as this one, you would have to add more machines to the cluster.
+
 
 == Install
 
