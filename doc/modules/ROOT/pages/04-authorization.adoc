@@ -11,8 +11,7 @@ Although this is link:https://access.redhat.com/documentation/en-us/red_hat_open
 * any OpenShift User automatically is recognized as a RHODS user
 * any OpenShift Cluster-Admin is recognized as a RHODS admin
 
-**Warning: the method described here is currently not documented**
-
+WARNING: The method described here is currently not documented. +
 If you prefer to follow the official method, please refer to the link:https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html/managing_users_and_user_resources/adding-users-for-openshift-data-science_useradd[documentation on how to add users].
 
 // include::partial$login.to.openshift.console.adoc[]
