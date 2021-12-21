@@ -15,6 +15,13 @@ include::_attributes.adoc[]
 * A way to build production-grade environments
 * A guarantee of success
 
+[#timing]
+== Timing
+
+* Going through these steps will take anywhere between 30 minutes and a few hours
+** The first time is going to take the longest
+** If you already have your cluster ready, it will be a lot faster
+
 == Next
 
 You don't **have** to skip the xref:02-boring.adoc[boring stuff], but it's ok if you do.

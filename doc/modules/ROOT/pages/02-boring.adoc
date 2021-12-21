@@ -9,7 +9,9 @@ The page you skip, until you need it.
 === General Disclaimers
 
 * The information provided here is for general informational purposes only.
-* It is provided in good faith, and is as accurate as I can make it.
+* These are my own notes on how I like to setup my own OpenShift Cluster and RHODS
+** They may or may not be applicable to your specific situation
+* This content is provided in good faith, and is as accurate as I can make it.
 * There is however no warranty of any kind, expressed or implied, regarding the accuracy, adequacy, validity, reliability, or completeness of this content.
 * Views expressed here are my own and do not reflect those of my employer.
 * Disclaimers are never read by anyone, but if you did, thanks for that!

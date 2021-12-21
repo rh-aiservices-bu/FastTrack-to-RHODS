@@ -7,14 +7,14 @@
 ** xref:02-boring.adoc#ref[2.4 Disclaimers]
 ** xref:02-boring.adoc#thanks[2.5 Thanks]
 
-* xref:03-create.openshift.adoc[3. Getting a Managed OpenShift Cluster]
-** xref:03-create.osd.adoc[3.1-A Creating an OSD Cluster]
-** xref:03-create.rosa.adoc[3.1-B Creating a ROSA Cluster]
+* xref:03-create.openshift.adoc[3. Get a Managed OpenShift Cluster]
+** xref:03-create.osd.adoc[3.1-A Create an OSD Cluster]
+** xref:03-create.rosa.adoc[3.1-B Create a ROSA Cluster]
 ** xref:03-auth.adoc[3.2 Configure Authentication]
 *** xref:03-auth.adoc#htpasswd[3.2.1 Configure HTPassword]
 *** xref:03-auth.adoc#github[3.2.2 Configure Github Authentication]
 
-* xref:04-rhods.adoc[4. Getting RHODS]
+* xref:04-rhods.adoc[4. Get RHODS]
 ** xref:04-install.rhods.adoc[4.1 Install RHODS Add-On]
 ** xref:04-authorization.adoc[4.2 Configure default RHODS Authorization]
 

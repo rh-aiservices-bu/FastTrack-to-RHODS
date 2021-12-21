@@ -1,4 +1,4 @@
-= Getting a Managed OpenShift Cluster
+= Get a Managed OpenShift Cluster
 include::_attributes.adoc[]
 
 

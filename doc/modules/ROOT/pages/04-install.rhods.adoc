@@ -1,6 +1,19 @@
 = Install the RHODS AddOn
 
+include::partial$login.to.console.adoc[]
+
 == Minimum Requirements and Machine Pools
+
+. if you see this
++
+image:rhods.addon.prereq.not.met.png[notmet,align=left]
++
+. click on the tile
+. if it says this:
++
+image:prereq.details.png[notmet,align=left]
++
+. you need to add a machine pool
 
 == Install
 
@@ -8,6 +21,6 @@
 
 * This is what the result should look like:
 +
-image:installed.rhods.addon.png[installed,300,300,align=left]
+image:installed.rhods.addon.png[installed,align=left]
 +
 * And now you should be done
