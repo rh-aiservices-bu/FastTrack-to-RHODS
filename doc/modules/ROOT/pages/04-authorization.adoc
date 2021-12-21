@@ -22,10 +22,12 @@ include::partial$login.to.openshift.console.adoc[]
 
 * Locate the configmap `rhods-groups-config` in the `redhat-ods-applications` namespace
 +
+[.bordershadow]
 image::rhods.configmap.png[configmap]
 +
 * Edit the YAML of the configmap
 +
+[.bordershadow]
 image::edit.configmap.png[configmap edit]
 +
 * Modify the content so that:
@@ -34,6 +36,7 @@ image::edit.configmap.png[configmap edit]
 ** `allowed_groups:` is set to `'system:authenticated'`
 * The result should look like:
 +
+[.bordershadow]
 image::updated.configmap.png[configmap edited]
 +
 * Click save
@@ -44,11 +47,14 @@ image::updated.configmap.png[configmap edited]
 
 * Locate the `jupyterhub` deploymentconfig in the `redhat-ods-applications` namespace
 +
+[.bordershadow]
 image::start.rollout.png[rollout]
 +
 * Wait until all 3 `jupyterhub` pods have restarted, and one is **Ready 2/2**:
 +
+[.bordershadow]
 image::pods.ready.png[ready]
++
 * At this point, the changes in Authorization should be fully active.
 * The next section will validate that we can successfully use RHODS, by launching a notebook.
 
