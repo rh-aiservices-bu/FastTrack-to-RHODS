@@ -31,7 +31,7 @@ image::edit.configmap.png[configmap edit]
 +
 * Modify the content so that:
 ** `opendatahub.io/modified:` is set to `true`
-** `admin_groups:` is set to `cluster-admins``
+** `admin_groups:` is set to `cluster-admins`
 ** `allowed_groups:` is set to `'system:authenticated'`
 * The result should look like:
 +

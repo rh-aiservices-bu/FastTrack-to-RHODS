@@ -1,9 +1,39 @@
 = Validation
 
+At this stage, and before you modify and/or customize your RHODS environment in any way, it's a good time to confirm that your users can access it.
+These steps will walk you through some basics.
+
+[#rhodsurl]
+== Get the RHODS URL
+
+* From the OpenShift Console, click on the application Switcher, and choose Red Hat OpenShift Data Science.
++
+[.bordershadow]
+image::rhods.link.png[]
++
+* This will open a new tab. Its URL is the one you can share with your end-users.
++
+[.bordershadow]
+image::rhods.url.png[]
++
+
+
 [#login]
 == 5.1 Log in to RHODS
+
+* Click on the **Log in with OpenShift** button.
+* You should now see the full dashboard
++
+[.bordershadow]
+image::rhods.dashboard.png[]
++
+
 
 [#getstarted]
 == 5.2 Get started with RHODS
 
+
+
+// [#loadtesting]
+// == 5.5 Load testing
 

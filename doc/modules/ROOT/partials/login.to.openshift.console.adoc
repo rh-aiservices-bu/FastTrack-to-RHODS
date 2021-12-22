@@ -1,6 +1,13 @@
 == Log in to your OpenShift Console
 
-* From the Red Hat Console, with your cluster selected, click the **Open Console** button.
+* From the Red Hat Console, with your cluster selected, click the **Open Console** button
+* A new tab will open
 
-* Authenticate
+* Click on the chosen Authentication Provider:
++
+[.bordershadow]
+image::login.with.png[]
++
+* Depending on the Authentication Provider, you might be prompted to enter credentials and/or passwords and/or to authorize an application. This is normal and expected.
+
 

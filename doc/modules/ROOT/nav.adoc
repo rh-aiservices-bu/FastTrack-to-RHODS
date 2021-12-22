@@ -1,11 +1,11 @@
 * xref:01-intro.adoc[1. Intro]
 
 * xref:02-boring.adoc[2. The Boring Stuff]
-** xref:02-boring.adoc#disclaimers[2.1 Disclaimers]
-** xref:02-boring.adoc#conventions[2.2 Conventions]
-** xref:02-boring.adoc#doc[2.3 Documentation]
-** xref:02-boring.adoc#ref[2.4 Disclaimers]
-** xref:02-boring.adoc#thanks[2.5 Thanks]
+// ** xref:02-boring.adoc#disclaimers[2.1 Disclaimers]
+// ** xref:02-boring.adoc#conventions[2.2 Conventions]
+// ** xref:02-boring.adoc#doc[2.3 Documentation]
+// ** xref:02-boring.adoc#ref[2.4 Disclaimers]
+// ** xref:02-boring.adoc#thanks[2.5 Thanks]
 
 * xref:03-create.openshift.adoc[3. Get a Managed OpenShift Cluster]
 ** xref:03-create.osd.adoc[3.1-A Create an OSD Cluster]
@@ -22,6 +22,8 @@
 ** xref:05-validation.adoc#login[5.1 Log Into RHODS]
 ** xref:05-validation.adoc#getstarted[5.2 Get Started with RHODS]
 
-// * xref:02-deploy.adoc[2. Deploy Service]
-// ** xref:02-deploy.adoc#package[Build Service]
-// ** xref:02-deploy.adoc#deploy[Deploy Dervice]
+* xref:06-common-customizations.adoc[6. Optional]
+** xref:06-common-customizations.adoc#notebooksizes[6.1 Notebook Sizes]
+** xref:06-common-customizations.adoc#autoscaling[6.2 Node Auto-Scaling]
+** xref:06-common-customizations.adoc#culling[6.3 Notebook Culling]
+

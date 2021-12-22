@@ -6,7 +6,7 @@ include::_attributes.adoc[]
 == If you already have a Managed OpenShift Cluster
 
 * check which version.. has to be more than....
-* if it's ROSA, make sure it's not ROSA with STS
+* if it's ROSA, make sure it's not ROSA without STS
 * ensure you have Auth configured..
 * if so, skip to ....
 
