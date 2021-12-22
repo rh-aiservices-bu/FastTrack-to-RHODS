@@ -1,5 +1,7 @@
 = Configure OpenShift Authentication
 
+CAUTION: Under construction
+
 [#htpasswd]
 == Configure HTPasswd as and auth provider
 
