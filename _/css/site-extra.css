@@ -1,10 +1,11 @@
-/* Screenshots look better with a border and a shadow */
-.bordershadow {
+/* left align items inside imageblock */
+.doc .imageblock {
+    align-items: flex-start;
+  }
+
+/* add a shadow to the image container */
+.doc .bordershadow .content {
     border: solid 1px black;
-    /* display: inline; */
-    /* float:left; */
-    text-align: left;
-    /* margin-left: 5%; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -12,32 +13,3 @@
 .doc {
     max-width: none;
 }
-
-/* .image {
-    border: solid;
-} */
-
-
-
-
-/* .imageblock {
-
-    display: block;
-
-    text-align: left;
-    margin-left: 5%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-} */
-
-/* .doc .image>img, .doc .imageblock img {
-    height: auto;
-    max-width: 100%;
-} */
-
-
-
-
-/*
-.doc {
-    max-width: none;
-} */
