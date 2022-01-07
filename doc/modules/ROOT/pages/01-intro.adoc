@@ -4,17 +4,19 @@ include::_attributes.adoc[]
 [#is]
 == What this is
 
-* This is the way I like to set up my RHODS environment
-* A quick way of doing so, if you follow along
-* An opinionated set of sequential steps to get RHODS setup quickly
-* A copy of various instructions that can be found in various other xref:#ref[sources].
+* An illustrated and opinionated HowTo on how I prefer to set up RHODS environments
+// * A quick way of doing so, if you follow along
+// * An opinionated set of sequential steps to get RHODS setup quickly
+// * A copy of various instructions that can be found in various other xref:#ref[sources].
 
 [#isnot]
 == What this is NOT
 
-* A replacement for the entire and complete documentation
+This is NOT:
+
+* A replacement for the entire and complete link:https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1[documentation]
 * A way to build production-grade environments
-* A guarantee of success
+* Going to be the best design for all situations
 
 [#timing]
 == Timing
