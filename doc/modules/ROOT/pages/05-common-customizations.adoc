@@ -1,0 +1,11 @@
+= Common Customizations (optional)
+
+[#autoscaling]
+== Using auto-scaling Machine Pools
+
+// [#notebooksizes]
+// == Changing the size of the available notebooks
+
+// [#culling]
+// == Notebook Culling
+

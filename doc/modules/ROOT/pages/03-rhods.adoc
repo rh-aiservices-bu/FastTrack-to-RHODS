@@ -1,0 +1,5 @@
+= Get RHODS
+
+If you don't already have a Managed OpenShift Cluster available, go back to "xref:02-create.openshift.adoc[Get a Managed OpenShift]"
+
+Deploying RHODS on an OpenShift Cluster that meets the minimum requirements will only take a couple clicks.

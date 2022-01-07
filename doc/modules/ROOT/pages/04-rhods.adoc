@@ -1,3 +1,0 @@
-= Get RHODS
-
-Deploying RHODS on an OpenShift Cluster that meets the minimum requirements will only take a couple clicks.

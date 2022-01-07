@@ -8,7 +8,7 @@ include::_attributes.adoc[]
 * check which version.. has to be more than....
 * if it's ROSA, make sure it's not ROSA without STS
 * ensure you have Auth configured..
-* if so, skip to ....
+* if so, skip to the "xref:03-rhods.adoc[Get RHODS]" section of this guide.
 
 [#Choosing ROSA vs OSD]
 == Choosing ROSA or OSD
