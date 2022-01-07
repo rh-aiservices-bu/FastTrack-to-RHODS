@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Deploy Service :: FastTrack to RHODS</title>
-    <link rel="canonical" href="https://erwangranger.github.io/Fastrack-to-RHODS/fasttrack-to-rhods/main/zz-deploy.html">
+    <title>Get a Managed OpenShift Cluster :: FastTrack to RHODS</title>
+    <link rel="canonical" href="https://erwangranger.github.io/Fastrack-to-RHODS/fasttrack-to-rhods/main/02-create.openshift.html">
+    <link rel="prev" href="01-intro.html">
+    <link rel="next" href="02-create.osd.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/site-extra.css">
@@ -57,7 +59,7 @@
   </li>
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="02-create.openshift.html">2. Get a Managed OpenShift Cluster</a>
 <ul class="nav-list">
@@ -129,91 +131,72 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">FastTrack to RHODS</a></li>
-    <li><a href="zz-deploy.html">Deploy Service</a></li>
+    <li><a href="02-create.openshift.html">2. Get a Managed OpenShift Cluster</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/erwangranger/FastTrack-to-RHODS/edit/main/doc/modules/ROOT/pages/zz-deploy.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/erwangranger/FastTrack-to-RHODS/edit/main/doc/modules/ROOT/pages/02-create.openshift.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Deploy Service</h1>
+<h1 class="page">Get a Managed OpenShift Cluster</h1>
 <div class="sect1">
-<h2 id="service"><a class="anchor" href="#service"></a>The Service</h2>
+<h2 id="existingclusters"><a class="anchor" href="#existingclusters"></a>If you already have a Managed OpenShift Cluster</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>The code:</p>
-</div>
-<div class="listingblock lines_7 console-input">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Main {
-
-    public static void main(String[] args) {
-
-    }
-
-}
-
-./mvnw compile</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="package"><a class="anchor" href="#package"></a>Packaging the Service</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can package the next bash script:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">#!/bin/sh
-echo "Hello World"</code></pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>check which version.. has to be more than&#8230;&#8203;.</p>
+</li>
+<li>
+<p>if it&#8217;s ROSA, make sure it&#8217;s not ROSA without STS</p>
+</li>
+<li>
+<p>ensure you have Auth configured..</p>
+</li>
+<li>
+<p>if so, skip to the "<a href="03-rhods.html" class="page">Get RHODS</a>" section of this guide.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="deploy"><a class="anchor" href="#deploy"></a>Deploy the Service</h2>
+<h2 id="_choosing_rosa_or_osd"><a class="anchor" href="#_choosing_rosa_or_osd"></a>Choosing ROSA or OSD</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>And then you can deploy the service and execute commands inside:</p>
-</div>
-<div class="paragraph">
-<p>Check that the pod is up and running:</p>
-</div>
-<div class="listingblock lines_space console-input">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl get pods</code></pre>
-</div>
-</div>
-<div class="listingblock console-output">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">NAME                        READY   STATUS    RESTARTS   AGE
-apps   1/1     Running   0          5s</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Then let&#8217;s go into the running pod to execute some commands:</p>
-</div>
-<div class="listingblock console-input">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl exec -ti apps /bin/bash</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Comparison of ROSA and OSD</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Change the pod name with your pod name.
-</td>
+<th class="tableblock halign-left valign-top">ROSA</th>
+<th class="tableblock halign-left valign-top">OSD</th>
+<th class="tableblock halign-left valign-top"></th>
 </tr>
+</thead>
+<tfoot>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://cloud.redhat.com/products/amazon-openshift">Red Hat OpenShift Service on AWS (ROSA)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://cloud.redhat.com/products/dedicated/">OpenShift Dedicated</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tfoot>
 </table>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_console_redhat_com_account"><a class="anchor" href="#_console_redhat_com_account"></a>Console.redhat.com account</h2>
+<div class="sectionbody">
+
 </div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="01-intro.html">1. Intro</a></span>
+  <span class="next"><a href="02-create.osd.html">2.1-A Create an OSD Cluster</a></span>
+</nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>

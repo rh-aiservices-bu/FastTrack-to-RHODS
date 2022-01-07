@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Deploy Service :: FastTrack to RHODS</title>
-    <link rel="canonical" href="https://erwangranger.github.io/Fastrack-to-RHODS/fasttrack-to-rhods/main/zz-deploy.html">
+    <title>Install the RHODS AddOn :: FastTrack to RHODS</title>
+    <link rel="canonical" href="https://erwangranger.github.io/Fastrack-to-RHODS/fasttrack-to-rhods/main/03-install.rhods.html">
+    <link rel="prev" href="03-rhods.html">
+    <link rel="next" href="03-authorization.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/site-extra.css">
@@ -85,7 +87,7 @@
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="03-rhods.html">3. Get RHODS</a>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="03-install.rhods.html">3.1 Install RHODS Add-On</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -129,91 +131,194 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">FastTrack to RHODS</a></li>
-    <li><a href="zz-deploy.html">Deploy Service</a></li>
+    <li><a href="03-rhods.html">3. Get RHODS</a></li>
+    <li><a href="03-install.rhods.html">3.1 Install RHODS Add-On</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/erwangranger/FastTrack-to-RHODS/edit/main/doc/modules/ROOT/pages/zz-deploy.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/erwangranger/FastTrack-to-RHODS/edit/main/doc/modules/ROOT/pages/03-install.rhods.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Deploy Service</h1>
+<h1 class="page">Install the RHODS AddOn</h1>
 <div class="sect1">
-<h2 id="service"><a class="anchor" href="#service"></a>The Service</h2>
+<h2 id="_log_in_to_console_redhat_com"><a class="anchor" href="#_log_in_to_console_redhat_com"></a>Log in to console.redhat.com</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The code:</p>
+<p>Make sure you are logged in <a href="https://console.redhat.com/" class="bare">https://console.redhat.com/</a>.</p>
 </div>
-<div class="listingblock lines_7 console-input">
+<div class="paragraph">
+<p> <details><summary> 
+Display detailed instructions:
+ </summary><div> </p>
+</div>
+<div class="paragraph">
+<p>If not already done, go to <a href="https://console.redhat.com/" class="bare">https://console.redhat.com/</a> and log in with your Red Hat account.</p>
+</div>
+<div class="imageblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Main {
-
-    public static void main(String[] args) {
-
-    }
-
-}
-
-./mvnw compile</code></pre>
+<img src="_images/console.login.png" alt="console">
 </div>
+</div>
+<div class="paragraph">
+<p>Once you are logged in, navigate to the OpenShift Section. (<a href="https://console.redhat.com/openshift" class="bare">https://console.redhat.com/openshift</a>).</p>
+</div>
+<div class="paragraph">
+<p>You should see your cluster(s).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/list.of.clusters.png" alt="console">
+</div>
+</div>
+<div class="paragraph">
+<p> </div></details> </p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="package"><a class="anchor" href="#package"></a>Packaging the Service</h2>
+<h2 id="_locate_the_rhods_add_on"><a class="anchor" href="#_locate_the_rhods_add_on"></a>Locate the RHODS Add-on</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>You can package the next bash script:</p>
-</div>
-<div class="listingblock">
+<div class="ulist">
+<ul>
+<li>
+<p>Select your Cluster in the list</p>
+</li>
+<li>
+<p>Navigate to the <strong>Add-ons</strong> tab</p>
+</li>
+<li>
+<p>You should the the <strong>Red Hat OpenShift Data Science</strong> add-on</p>
+<div class="imageblock bordershadow">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">#!/bin/sh
-echo "Hello World"</code></pre>
+<img src="_images/rhods.addon.tile.png" alt="notmet">
 </div>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="deploy"><a class="anchor" href="#deploy"></a>Deploy the Service</h2>
+<h2 id="_prerequisites_not_met"><a class="anchor" href="#_prerequisites_not_met"></a>Prerequisites not met</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>It is possible that your cluster does not meet the pre-requisites.</p>
+</li>
+<li>
+<p>If that is the case, the RHODS add-on will look like:</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/rhods.addon.prereq.not.met.png" alt="notmet">
+</div>
+</div>
+</li>
+<li>
+<p>Clicking on the add-on and choosing the <strong>Prerequisite</strong> tab should display more details:</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/prereq.details.png" alt="notmet">
+</div>
+</div>
+</li>
+<li>
+<p>In a case such as this one, you would have to add more machines to the cluster.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p> <details><summary> 
+Click here if you need help on how to add a new MachinePool for RHODS
+ </summary><div> </p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Go to the <strong>Machine Pool</strong> tab</p>
+</li>
+<li>
+<p>Click <strong>Add Machine Pool</strong></p>
+</li>
+<li>
+<p>Machine Pool Name: <code>m5-2xlarge</code></p>
+</li>
+<li>
+<p>Worker Node Instance Type: Select in the Drop Down &#8594; <code>m5.2xlarge</code></p>
+</li>
+<li>
+<p>Select the <code>Enable Auto-Scaling</code> Option</p>
+</li>
+<li>
+<p>Enter <code>0</code> as minimum</p>
+</li>
+<li>
+<p>Enter <code>2</code> as maximum</p>
+</li>
+<li>
+<p>Click <strong>Add Machine Pool</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p> </div></details> </p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install"><a class="anchor" href="#_install"></a>Install</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>And then you can deploy the service and execute commands inside:</p>
+<p>If your cluster meets the minimum prerequisites, you can move on to the Installation part:</p>
 </div>
-<div class="paragraph">
-<p>Check that the pod is up and running:</p>
-</div>
-<div class="listingblock lines_space console-input">
+<div class="ulist">
+<ul>
+<li>
+<p>Click the RHODS add-on</p>
+</li>
+<li>
+<p>Click the <strong>Install</strong> Button</p>
+<div class="imageblock bordershadow">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl get pods</code></pre>
+<img src="_images/install.rhods.png" alt="notmet" width=".border='solid 1px'" height=".align=left">
 </div>
 </div>
-<div class="listingblock console-output">
+</li>
+<li>
+<p>Enter your email address</p>
+<div class="imageblock bordershadow">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">NAME                        READY   STATUS    RESTARTS   AGE
-apps   1/1     Running   0          5s</code></pre>
+<img src="_images/rhods.email.png" alt="email" width=".align=left">
 </div>
 </div>
-<div class="paragraph">
-<p>Then let&#8217;s go into the running pod to execute some commands:</p>
-</div>
-<div class="listingblock console-input">
+</li>
+<li>
+<p>And click <strong>Install</strong></p>
+</li>
+<li>
+<p>The Add-on is now installing. This should last around 30-45 minutes</p>
+<div class="imageblock bordershadow">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl exec -ti apps /bin/bash</code></pre>
+<img src="_images/rhods.installing.png" alt="email" width=".align=left">
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Change the pod name with your pod name.
-</td>
-</tr>
-</table>
+</li>
+<li>
+<p>Wait until the Add-on is fully <strong>Installed</strong></p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/installed.rhods.addon.png" alt="installed">
+</div>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="03-rhods.html">3. Get RHODS</a></span>
+  <span class="next"><a href="03-authorization.html">3.2 Configure default RHODS Authorization</a></span>
+</nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>

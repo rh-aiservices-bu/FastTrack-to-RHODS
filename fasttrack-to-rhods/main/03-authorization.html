@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Deploy Service :: FastTrack to RHODS</title>
-    <link rel="canonical" href="https://erwangranger.github.io/Fastrack-to-RHODS/fasttrack-to-rhods/main/zz-deploy.html">
+    <title>Configure the default RHODS Authorization :: FastTrack to RHODS</title>
+    <link rel="canonical" href="https://erwangranger.github.io/Fastrack-to-RHODS/fasttrack-to-rhods/main/03-authorization.html">
+    <link rel="prev" href="03-install.rhods.html">
+    <link rel="next" href="04-validation.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/site-extra.css">
@@ -88,7 +90,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="03-install.rhods.html">3.1 Install RHODS Add-On</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="03-authorization.html">3.2 Configure default RHODS Authorization</a>
   </li>
 </ul>
@@ -129,91 +131,168 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">FastTrack to RHODS</a></li>
-    <li><a href="zz-deploy.html">Deploy Service</a></li>
+    <li><a href="03-rhods.html">3. Get RHODS</a></li>
+    <li><a href="03-authorization.html">3.2 Configure default RHODS Authorization</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/erwangranger/FastTrack-to-RHODS/edit/main/doc/modules/ROOT/pages/zz-deploy.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/erwangranger/FastTrack-to-RHODS/edit/main/doc/modules/ROOT/pages/03-authorization.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Deploy Service</h1>
+<h1 class="page">Configure the default RHODS Authorization</h1>
 <div class="sect1">
-<h2 id="service"><a class="anchor" href="#service"></a>The Service</h2>
+<h2 id="_rationale"><a class="anchor" href="#_rationale"></a>Rationale</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The code:</p>
-</div>
-<div class="listingblock lines_7 console-input">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Main {
-
-    public static void main(String[] args) {
-
-    }
-
-}
-
-./mvnw compile</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="package"><a class="anchor" href="#package"></a>Packaging the Service</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can package the next bash script:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">#!/bin/sh
-echo "Hello World"</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="deploy"><a class="anchor" href="#deploy"></a>Deploy the Service</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>And then you can deploy the service and execute commands inside:</p>
+<p>Currently, the way that RHODS Authorization defaults are configured, anyone who tries to log in will not be recognized as a RHODS user.</p>
 </div>
 <div class="paragraph">
-<p>Check that the pod is up and running:</p>
-</div>
-<div class="listingblock lines_space console-input">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl get pods</code></pre>
-</div>
-</div>
-<div class="listingblock console-output">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">NAME                        READY   STATUS    RESTARTS   AGE
-apps   1/1     Running   0          5s</code></pre>
-</div>
+<p>Instead, they will be met with <code>403: forbidden</code> error when they try to launch a notebook.</p>
 </div>
 <div class="paragraph">
-<p>Then let&#8217;s go into the running pod to execute some commands:</p>
+<p>Although this is <a href="https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html-single/getting_started_with_red_hat_openshift_data_science/index#i_see_a_emphasis_role_strong_403_forbidden_emphasis_error_when_i_log_in_to_jupyterhub">documented</a>, I belive it&#8217;s a better experience to reconfigure the authentication is way that:</p>
 </div>
-<div class="listingblock console-input">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl exec -ti apps /bin/bash</code></pre>
+<div class="ulist">
+<ul>
+<li>
+<p>any OpenShift User automatically is recognized as a RHODS user</p>
+</li>
+<li>
+<p>any OpenShift Cluster-Admin is recognized as a RHODS admin</p>
+</li>
+</ul>
 </div>
-</div>
-<div class="admonitionblock note">
+<div class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-Change the pod name with your pod name.
+The method described here is currently not documented.<br>
+If you prefer to follow the official method, please refer to the <a href="https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html/managing_users_and_user_resources/adding-users-for-openshift-data-science_useradd">documentation on how to add users</a>.
 </td>
 </tr>
 </table>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_log_in_to_your_openshift_console"><a class="anchor" href="#_log_in_to_your_openshift_console"></a>Log in to your OpenShift Console</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>From the Red Hat Console, with your cluster selected, click the <strong>Open Console</strong> button</p>
+</li>
+<li>
+<p>A new tab will open</p>
+</li>
+<li>
+<p>Click on the chosen Authentication Provider:</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/login.with.png" alt="login.with">
+</div>
+</div>
+</li>
+<li>
+<p>Depending on the Authentication Provider, you might be prompted to enter credentials and/or passwords and/or to authorize an application. This is normal and expected.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_edit_configmap"><a class="anchor" href="#_edit_configmap"></a>Edit Configmap</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Locate the configmap <code>rhods-groups-config</code> in the <code>redhat-ods-applications</code> namespace</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/rhods.configmap.png" alt="configmap">
+</div>
+</div>
+</li>
+<li>
+<p>Edit the YAML of the configmap</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/edit.configmap.png" alt="configmap edit">
+</div>
+</div>
+</li>
+<li>
+<p>Modify the content so that:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>opendatahub.io/modified:</code> is set to <code>true</code></p>
+</li>
+<li>
+<p><code>admin_groups:</code> is set to <code>cluster-admins</code></p>
+</li>
+<li>
+<p><code>allowed_groups:</code> is set to <code>'system:authenticated'</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The result should look like:</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/updated.configmap.png" alt="configmap edited">
+</div>
+</div>
+</li>
+<li>
+<p>Click save</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Note:</strong> These changes will not take effect until you restart all the JupyterHub pods. This is convered in the next section.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_do_a_rollout_of_the_jupyterhub_pods"><a class="anchor" href="#_do_a_rollout_of_the_jupyterhub_pods"></a>Do a rollout of the JupyterHub Pods</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Locate the <code>jupyterhub</code> deploymentconfig in the <code>redhat-ods-applications</code> namespace</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/start.rollout.png" alt="rollout">
+</div>
+</div>
+</li>
+<li>
+<p>Wait until all 3 <code>jupyterhub</code> pods have restarted, and one is <strong>Ready 2/2</strong>:</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/pods.ready.png" alt="ready">
+</div>
+</div>
+</li>
+<li>
+<p>At this point, the changes in Authorization should be fully active.</p>
+</li>
+<li>
+<p>The next section will validate that we can successfully use RHODS, by launching a notebook.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="03-install.rhods.html">3.1 Install RHODS Add-On</a></span>
+  <span class="next"><a href="04-validation.html">4. Validate RHODS</a></span>
+</nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>

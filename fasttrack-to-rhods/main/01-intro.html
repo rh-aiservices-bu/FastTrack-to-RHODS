@@ -6,7 +6,7 @@
     <title>Introduction :: FastTrack to RHODS</title>
     <link rel="canonical" href="https://erwangranger.github.io/Fastrack-to-RHODS/fasttrack-to-rhods/main/01-intro.html">
     <link rel="prev" href="index.html">
-    <link rel="next" href="02-boring.html">
+    <link rel="next" href="02-create.openshift.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/site-extra.css">
@@ -55,28 +55,29 @@
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="01-intro.html">1. Intro</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="02-boring.html">2. The Boring Stuff</a>
+</ul>
   </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="03-create.openshift.html">3. Get a Managed OpenShift Cluster</a>
+    <a class="nav-link" href="02-create.openshift.html">2. Get a Managed OpenShift Cluster</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="03-create.osd.html">3.1-A Create an OSD Cluster</a>
+    <a class="nav-link" href="02-create.osd.html">2.1-A Create an OSD Cluster</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="03-create.rosa.html">3.1-B Create a ROSA Cluster</a>
+    <a class="nav-link" href="02-create.rosa.html">2.1-B Create a ROSA Cluster</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="03-auth.html">3.2 Configure Authentication</a>
+    <a class="nav-link" href="02-auth.html">2.2 Configure Authentication</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="03-auth.html#htpasswd">3.2.1 Configure HTPassword</a>
+    <a class="nav-link" href="02-auth.html#htpasswd">2.2.1 Configure HTPassword</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="03-auth.html#github">3.2.2 Configure Github Authentication</a>
+    <a class="nav-link" href="02-auth.html#github">2.2.2 Configure Github Authentication</a>
   </li>
 </ul>
   </li>
@@ -84,40 +85,34 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="04-rhods.html">4. Get RHODS</a>
+    <a class="nav-link" href="03-rhods.html">3. Get RHODS</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="04-install.rhods.html">4.1 Install RHODS Add-On</a>
+    <a class="nav-link" href="03-install.rhods.html">3.1 Install RHODS Add-On</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="04-authorization.html">4.2 Configure default RHODS Authorization</a>
+    <a class="nav-link" href="03-authorization.html">3.2 Configure default RHODS Authorization</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="05-validation.html">5. Validate RHODS</a>
+    <a class="nav-link" href="04-validation.html">4. Validate RHODS</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="05-validation.html#login">5.1 Log Into RHODS</a>
+    <a class="nav-link" href="04-validation.html#login">4.1 Log Into RHODS</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="05-validation.html#getstarted">5.2 Get Started with RHODS</a>
+    <a class="nav-link" href="04-validation.html#getstarted">4.2 Get Started with RHODS</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="06-common-customizations.html">6. Optional</a>
+    <a class="nav-link" href="05-common-customizations.html">5. Optional</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="06-common-customizations.html#notebooksizes">6.1 Notebook Sizes</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="06-common-customizations.html#autoscaling">6.2 Node Auto-Scaling</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="06-common-customizations.html#culling">6.3 Notebook Culling</a>
+    <a class="nav-link" href="05-common-customizations.html#autoscaling">5.1 Auto-Scaling Machine Pools</a>
   </li>
 </ul>
   </li>
@@ -150,13 +145,16 @@
 <div class="ulist">
 <ul>
 <li>
-<p>A quick way of getting RHODS configured</p>
+<p>This is the way I like to set up my RHODS environment</p>
 </li>
 <li>
-<p>An opinionated set of steps for those who do not want to RTFM</p>
+<p>A quick way of doing so, if you follow along</p>
 </li>
 <li>
-<p>A copy of various instructions that can be found in various other <a href="02-boring.html#ref" class="page">sources</a>.</p>
+<p>An opinionated set of sequential steps to get RHODS setup quickly</p>
+</li>
+<li>
+<p>A copy of various instructions that can be found in various other <a href="#ref">sources</a>.</p>
 </li>
 </ul>
 </div>
@@ -203,16 +201,116 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_next"><a class="anchor" href="#_next"></a>Next</h2>
+<h2 id="disclaimers"><a class="anchor" href="#disclaimers"></a>1.1 Disclaimers</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_general_disclaimers"><a class="anchor" href="#_general_disclaimers"></a>General Disclaimers</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The information provided here is for general informational purposes only.</p>
+</li>
+<li>
+<p>These are my own notes on how I like to setup my own OpenShift Cluster and RHODS</p>
+<div class="ulist">
+<ul>
+<li>
+<p>They may or may not be applicable to your specific situation</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>This content is provided in good faith, and is as accurate as I can make it.</p>
+</li>
+<li>
+<p>There is however no warranty of any kind, expressed or implied, regarding the accuracy, adequacy, validity, reliability, or completeness of this content.</p>
+</li>
+<li>
+<p>Views expressed here are my own and do not reflect those of my employer.</p>
+</li>
+<li>
+<p>Disclaimers are never read by anyone, but if you did, thanks for that!</p>
+</li>
+<li>
+<p>Should you find inaccuracies in this content, please open an Issue in the github project in order to bring it to my attention.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_freshness"><a class="anchor" href="#_freshness"></a>Freshness</h3>
+<div class="paragraph">
+<p>It is possible that this document falls behind as things evolve.
+If unsure, check the history of the page in the github project to see when it was last updated.
+If you feel like something should be brought up to speed, please open an Issue against the project.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="conventions"><a class="anchor" href="#conventions"></a>1.2 Conventions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You don&#8217;t <strong>have</strong> to skip the <a href="02-boring.html" class="page">boring stuff</a>, but it&#8217;s ok if you do.</p>
+<p>Content that can be copied:</p>
 </div>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">echo "this is fun"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Expected output:</p>
+</div>
+<div class="listingblock lines_space console-output">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">this is fun</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="doc"><a class="anchor" href="#doc"></a>1.3 Documentation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_openshift"><a class="anchor" href="#_openshift"></a>OpenShift</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_osd"><a class="anchor" href="#_osd"></a>OSD</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_rosa"><a class="anchor" href="#_rosa"></a>ROSA</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_rhods"><a class="anchor" href="#_rhods"></a>RHODS</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_kubernetes"><a class="anchor" href="#_kubernetes"></a>Kubernetes</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ref"><a class="anchor" href="#ref"></a>1.4 References</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ROSAworkshop.io</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="thanks"><a class="anchor" href="#thanks"></a>1.5 Thanks</h2>
+<div class="sectionbody">
+
 </div>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="index.html">FastTrack to RHODS</a></span>
-  <span class="next"><a href="02-boring.html">2. The Boring Stuff</a></span>
+  <span class="next"><a href="02-create.openshift.html">2. Get a Managed OpenShift Cluster</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
