@@ -7,7 +7,7 @@
 // ** xref:02-boring.adoc#ref[2.4 Disclaimers]
 // ** xref:02-boring.adoc#thanks[2.5 Thanks]
 
-* xref:02-create.openshift.adoc[2. Get a Managed OpenShift Cluster]
+* xref:02-get.a.managed.openshift.adoc[2. Get a Managed OpenShift Cluster]
 ** xref:02-create.osd.adoc[2.1-A Create an OSD Cluster]
 ** xref:02-create.rosa.adoc[2.1-B Create a ROSA Cluster]
 ** xref:02-auth.adoc[2.2 Configure Authentication]
@@ -22,8 +22,8 @@
 ** xref:04-validation.adoc#login[4.1 Log Into RHODS]
 ** xref:04-validation.adoc#getstarted[4.2 Get Started with RHODS]
 
-* xref:05-common-customizations.adoc[5. Optional]
-** xref:05-common-customizations.adoc#autoscaling[5.1 Auto-Scaling Machine Pools]
+* xref:05-optional.adoc[5. Optional]
+** xref:05-optional.adoc#autoscaling[5.1 Auto-Scaling Machine Pools]
 // ** xref:05-common-customizations.adoc#notebooksizes[5.1 Notebook Sizes]
 // ** xref:05-common-customizations.adoc#culling[5.3 Notebook Culling]
 

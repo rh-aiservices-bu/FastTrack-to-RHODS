@@ -1,9 +1,9 @@
-= Install the RHODS AddOn
+= Install RHODS AddOn
 
 include::partial$login.to.redhat.console.adoc[]
 // include::partial$headstyles.hbs[]
 
-== Locate the RHODS Add-on
+== Locate RHODS Add-on
 
 * Select your Cluster in the list
 * Navigate to the **Add-ons** tab

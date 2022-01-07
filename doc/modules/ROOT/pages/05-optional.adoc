@@ -3,6 +3,12 @@
 [#autoscaling]
 == Using auto-scaling Machine Pools
 
+[#rhodsaccess]
+== Restrict Access to RHODS to only a few users
+
+[#selfprovision]
+== Restrict OpenShift Self-Provisionning to RHODS users
+
 // [#notebooksizes]
 // == Changing the size of the available notebooks
 

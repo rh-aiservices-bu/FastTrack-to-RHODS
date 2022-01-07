@@ -1,0 +1,81 @@
+= Get a Managed OpenShift Cluster
+include::_attributes.adoc[]
+
+[#orientation]
+== Do you already have a Managed OpenShift Cluster?
+
+[tabs]
+====
+Yes::
++
+--
+If you already have a cluster, you should read the summarized xref:#cluster-requirements[cluster requirements] below.
+
+If you are certain that your cluster meets all these requirement, you can skip straight to the "xref:03-rhods.adoc[Get RHODS]" section.
+--
+No::
++
+--
+If you don't yet have a Managed OpenShift Cluster, you will need to keep reading this page in order to:
+
+* Be aware of the xref:#cluster-requirements[cluster requirements]
+* Choose between xref:#chooseOSDROSA[ROSA and OSD]
+* Decide if you want to use the 60-day xref:#chooseOSDROSA[OSD Trial]
+--
+====
+
+[#cluster-requirements]
+== Managed OpenShift Cluster Requirement for RHODS
+
+* It has to be a Managed OpenShift:
+** either ROSA or OSD
+** not a general OCP cluster
+* It has to be on AWS
+** It cannot be an on-prem cluster
+** Currently only AWS is supported
+* You need to have access to both:
+** the link:https://console.redhat.com/[Red Hat Hybrid Console]
+** the OpenShift Web Console of your cluster
+* The version of OpenShift needs to be
+** OpenShift 4.9 or higher
+* If you are using ROSA, ensure that the cluster was NOT deployed with the `--sts` option
+
+[#existingclusters]
+== If you already have a Managed OpenShift Cluster
+
+* check which version.. has to be more than....
+* if it's ROSA, make sure it's not ROSA without STS
+* ensure you have Auth configured..
+* if so, skip to the "xref:03-rhods.adoc[Get RHODS]" section of this guide.
+
+[#chooseOSDROSA]
+== Choosing between ROSA and OSD
+
+.Comparison of ROSA and OSD
+[options="header,footer"]
+|=======================
+|ROSA |OSD |
+|https://cloud.redhat.com/products/amazon-openshift[Red Hat OpenShift Service on AWS (ROSA)] |https://cloud.redhat.com/products/dedicated/[OpenShift Dedicated] |
+|=======================
+
+[#OSDTrial]
+== OSD Trial
+
+If you want to sign up for an OSD Trial ...
+
+
+
+
+
+// [cols="1,1"]
+// |===
+// |Cell in column 1, row 1
+// |Cell in column 2, row 1
+
+// |Cell in column 1, row 2
+// |Cell in column 2, row 2
+
+// |Cell in column 1, row 3
+// |Cell in column 2, row 3
+// |===
+

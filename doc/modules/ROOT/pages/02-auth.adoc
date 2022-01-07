@@ -5,10 +5,43 @@ CAUTION: Under construction
 [#htpasswd]
 == Configure HTPasswd as and auth provider
 
+This is a good option to use if you just need a single user, or if you want to start by creating an Cluster Administrator account.
+
+* go to console.
+* select your cluster
+* "Access control" tab
+* in Identity providers:
+** add identity provider
+** choose HTpasswd
+** keep default ("HTPasswd")
+** use the suggested name and password. (but save them somewhere)
+** click add
+* under "Cluster Roles and Access"
+** click Add Users
+** enter the name of the admin account that you just created
+** choose `cluster-admin`
+** Click Add User
+
+To confirm, Click on the blue button (Open Console).
+
+Enter the credentials
+
+Confirm you can log in
+
 [#github]
 == Configure GitHub as an authentication provider
 
+Github can be used as a fairly easy way to setup authentication if your environment will be accessible by multiple users.
+
+The assumption is that it's ok
+
 === Create a github org
 
-=== configure org as auth provider
+=== configure that org as auth provider
+
+=== Make your Github user a cluster-admin
+
+=== Invite your users to your github org
+
+
 
