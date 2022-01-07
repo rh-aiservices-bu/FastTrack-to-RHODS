@@ -11,28 +11,33 @@ These steps will walk you through some basics.
 [.bordershadow]
 image::rhods.link.png[]
 +
-* This will open a new tab. Its URL is the one you can share with your end-users.
+* This will open a new tab.
 +
 [.bordershadow]
 image::rhods.url.png[]
 +
-
+* This URL is the main RHODS URL, and the only one that you need to share with your RHODS end-users.
 
 [#login]
 == 5.1 Log in to RHODS
 
-* Click on the **Log in with OpenShift** button.
+* Click on the **Log in with OpenShift** button (from the screenshot above).
 * You should now see the full dashboard
 +
 [.bordershadow]
 image::rhods.dashboard.png[]
 +
+* You want to make sure that you are able to successfully spawn a notebook.
+* Click on the "Launch" icon.
+* On the next screen, select ...
+* TODO Screenshot
+* choose image, size, and spawn
 
 
 [#getstarted]
-== 5.2 Get started with RHODS
+== 5.2 Get your users started with RHODS
 
-
+Link to Audrey's materials.
 
 // [#loadtesting]
 // == 5.5 Load testing

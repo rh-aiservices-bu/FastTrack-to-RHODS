@@ -11,8 +11,8 @@
 ** xref:02-create.osd.adoc[2.1-A Create an OSD Cluster]
 ** xref:02-create.rosa.adoc[2.1-B Create a ROSA Cluster]
 ** xref:02-auth.adoc[2.2 Configure Authentication]
-*** xref:02-auth.adoc#htpasswd[2.2.1 Configure HTPassword]
-*** xref:02-auth.adoc#github[2.2.2 Configure Github Authentication]
+*** xref:02-auth.adoc#htpasswd[2.2.1 HTPassword Auth]
+*** xref:02-auth.adoc#github[2.2.2 Github Auth]
 
 * xref:03-rhods.adoc[3. Get RHODS]
 ** xref:03-install.rhods.adoc[3.1 Install RHODS Add-On]
@@ -24,6 +24,8 @@
 
 * xref:05-optional.adoc[5. Optional]
 ** xref:05-optional.adoc#autoscaling[5.1 Auto-Scaling Machine Pools]
+** xref:05-optional.adoc#rhodsaccess[5.2 Restrict RHODS Access]
+** xref:05-optional.adoc#selfprovision[5.3 Restrict self-provisionners]
 // ** xref:05-common-customizations.adoc#notebooksizes[5.1 Notebook Sizes]
 // ** xref:05-common-customizations.adoc#culling[5.3 Notebook Culling]
 
