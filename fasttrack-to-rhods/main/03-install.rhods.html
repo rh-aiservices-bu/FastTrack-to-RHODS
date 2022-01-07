@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Install the RHODS AddOn :: FastTrack to RHODS</title>
+    <title>Install RHODS AddOn :: FastTrack to RHODS</title>
     <link rel="canonical" href="https://erwangranger.github.io/Fastrack-to-RHODS/fasttrack-to-rhods/main/03-install.rhods.html">
     <link rel="prev" href="03-rhods.html">
     <link rel="next" href="03-authorization.html">
@@ -61,7 +61,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="02-create.openshift.html">2. Get a Managed OpenShift Cluster</a>
+    <a class="nav-link" href="02-get.a.managed.openshift.html">2. Get a Managed OpenShift Cluster</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="02-create.osd.html">2.1-A Create an OSD Cluster</a>
@@ -74,10 +74,10 @@
     <a class="nav-link" href="02-auth.html">2.2 Configure Authentication</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="02-auth.html#htpasswd">2.2.1 Configure HTPassword</a>
+    <a class="nav-link" href="02-auth.html#htpasswd">2.2.1 HTPassword Auth</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="02-auth.html#github">2.2.2 Configure Github Authentication</a>
+    <a class="nav-link" href="02-auth.html#github">2.2.2 Github Auth</a>
   </li>
 </ul>
   </li>
@@ -109,10 +109,16 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="05-common-customizations.html">5. Optional</a>
+    <a class="nav-link" href="05-optional.html">5. Optional</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="05-common-customizations.html#autoscaling">5.1 Auto-Scaling Machine Pools</a>
+    <a class="nav-link" href="05-optional.html#autoscaling">5.1 Auto-Scaling Machine Pools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="05-optional.html#rhodsaccess">5.2 Restrict RHODS Access</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="05-optional.html#selfprovision">5.3 Restrict self-provisionners</a>
   </li>
 </ul>
   </li>
@@ -139,7 +145,7 @@
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Install the RHODS AddOn</h1>
+<h1 class="page">Install RHODS AddOn</h1>
 <div class="sect1">
 <h2 id="_log_in_to_console_redhat_com"><a class="anchor" href="#_log_in_to_console_redhat_com"></a>Log in to console.redhat.com</h2>
 <div class="sectionbody">
@@ -176,7 +182,7 @@ Display detailed instructions:
 </div>
 </div>
 <div class="sect1">
-<h2 id="_locate_the_rhods_add_on"><a class="anchor" href="#_locate_the_rhods_add_on"></a>Locate the RHODS Add-on</h2>
+<h2 id="_locate_rhods_add_on"><a class="anchor" href="#_locate_rhods_add_on"></a>Locate RHODS Add-on</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>

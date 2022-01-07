@@ -6,7 +6,7 @@
     <title>Validation :: FastTrack to RHODS</title>
     <link rel="canonical" href="https://erwangranger.github.io/Fastrack-to-RHODS/fasttrack-to-rhods/main/04-validation.html">
     <link rel="prev" href="03-authorization.html">
-    <link rel="next" href="05-common-customizations.html">
+    <link rel="next" href="05-optional.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/site-extra.css">
@@ -61,7 +61,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="02-create.openshift.html">2. Get a Managed OpenShift Cluster</a>
+    <a class="nav-link" href="02-get.a.managed.openshift.html">2. Get a Managed OpenShift Cluster</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="02-create.osd.html">2.1-A Create an OSD Cluster</a>
@@ -74,10 +74,10 @@
     <a class="nav-link" href="02-auth.html">2.2 Configure Authentication</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="02-auth.html#htpasswd">2.2.1 Configure HTPassword</a>
+    <a class="nav-link" href="02-auth.html#htpasswd">2.2.1 HTPassword Auth</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="02-auth.html#github">2.2.2 Configure Github Authentication</a>
+    <a class="nav-link" href="02-auth.html#github">2.2.2 Github Auth</a>
   </li>
 </ul>
   </li>
@@ -109,10 +109,16 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="05-common-customizations.html">5. Optional</a>
+    <a class="nav-link" href="05-optional.html">5. Optional</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="05-common-customizations.html#autoscaling">5.1 Auto-Scaling Machine Pools</a>
+    <a class="nav-link" href="05-optional.html#autoscaling">5.1 Auto-Scaling Machine Pools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="05-optional.html#rhodsaccess">5.2 Restrict RHODS Access</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="05-optional.html#selfprovision">5.3 Restrict self-provisionners</a>
   </li>
 </ul>
   </li>
@@ -161,12 +167,15 @@ These steps will walk you through some basics.</p>
 </div>
 </li>
 <li>
-<p>This will open a new tab. Its URL is the one you can share with your end-users.</p>
+<p>This will open a new tab.</p>
 <div class="imageblock bordershadow">
 <div class="content">
 <img src="_images/rhods.url.png" alt="rhods.url">
 </div>
 </div>
+</li>
+<li>
+<p>This URL is the main RHODS URL, and the only one that you need to share with your RHODS end-users.</p>
 </li>
 </ul>
 </div>
@@ -178,7 +187,7 @@ These steps will walk you through some basics.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Click on the <strong>Log in with OpenShift</strong> button.</p>
+<p>Click on the <strong>Log in with OpenShift</strong> button (from the screenshot above).</p>
 </li>
 <li>
 <p>You should now see the full dashboard</p>
@@ -188,19 +197,36 @@ These steps will walk you through some basics.</p>
 </div>
 </div>
 </li>
+<li>
+<p>You want to make sure that you are able to successfully spawn a notebook.</p>
+</li>
+<li>
+<p>Click on the "Launch" icon.</p>
+</li>
+<li>
+<p>On the next screen, select &#8230;&#8203;</p>
+</li>
+<li>
+<p>TODO Screenshot</p>
+</li>
+<li>
+<p>choose image, size, and spawn</p>
+</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="getstarted"><a class="anchor" href="#getstarted"></a>5.2 Get started with RHODS</h2>
+<h2 id="getstarted"><a class="anchor" href="#getstarted"></a>5.2 Get your users started with RHODS</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>Link to Audrey&#8217;s materials.</p>
+</div>
 </div>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="03-authorization.html">3.2 Configure default RHODS Authorization</a></span>
-  <span class="next"><a href="05-common-customizations.html">5. Optional</a></span>
+  <span class="next"><a href="05-optional.html">5. Optional</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">

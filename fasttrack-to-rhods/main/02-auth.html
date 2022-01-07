@@ -61,7 +61,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="02-create.openshift.html">2. Get a Managed OpenShift Cluster</a>
+    <a class="nav-link" href="02-get.a.managed.openshift.html">2. Get a Managed OpenShift Cluster</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="02-create.osd.html">2.1-A Create an OSD Cluster</a>
@@ -74,10 +74,10 @@
     <a class="nav-link" href="02-auth.html">2.2 Configure Authentication</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="#htpasswd">2.2.1 Configure HTPassword</a>
+    <a class="nav-link" href="#htpasswd">2.2.1 HTPassword Auth</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="#github">2.2.2 Configure Github Authentication</a>
+    <a class="nav-link" href="#github">2.2.2 Github Auth</a>
   </li>
 </ul>
   </li>
@@ -109,10 +109,16 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="05-common-customizations.html">5. Optional</a>
+    <a class="nav-link" href="05-optional.html">5. Optional</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="05-common-customizations.html#autoscaling">5.1 Auto-Scaling Machine Pools</a>
+    <a class="nav-link" href="05-optional.html#autoscaling">5.1 Auto-Scaling Machine Pools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="05-optional.html#rhodsaccess">5.2 Restrict RHODS Access</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="05-optional.html#selfprovision">5.3 Restrict self-provisionners</a>
   </li>
 </ul>
   </li>
@@ -131,7 +137,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">FastTrack to RHODS</a></li>
-    <li><a href="02-create.openshift.html">2. Get a Managed OpenShift Cluster</a></li>
+    <li><a href="02-get.a.managed.openshift.html">2. Get a Managed OpenShift Cluster</a></li>
     <li><a href="02-auth.html">2.2 Configure Authentication</a></li>
   </ul>
 </nav>
@@ -159,18 +165,97 @@ Under construction
 <div class="sect1">
 <h2 id="htpasswd"><a class="anchor" href="#htpasswd"></a>Configure HTPasswd as and auth provider</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>This is a good option to use if you just need a single user, or if you want to start by creating an Cluster Administrator account.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>go to console.</p>
+</li>
+<li>
+<p>select your cluster</p>
+</li>
+<li>
+<p>"Access control" tab</p>
+</li>
+<li>
+<p>in Identity providers:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>add identity provider</p>
+</li>
+<li>
+<p>choose HTpasswd</p>
+</li>
+<li>
+<p>keep default ("HTPasswd")</p>
+</li>
+<li>
+<p>use the suggested name and password. (but save them somewhere)</p>
+</li>
+<li>
+<p>click add</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>under "Cluster Roles and Access"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>click Add Users</p>
+</li>
+<li>
+<p>enter the name of the admin account that you just created</p>
+</li>
+<li>
+<p>choose <code>cluster-admin</code></p>
+</li>
+<li>
+<p>Click Add User</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To confirm, Click on the blue button (Open Console).</p>
+</div>
+<div class="paragraph">
+<p>Enter the credentials</p>
+</div>
+<div class="paragraph">
+<p>Confirm you can log in</p>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="github"><a class="anchor" href="#github"></a>Configure GitHub as an authentication provider</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Github can be used as a fairly easy way to setup authentication if your environment will be accessible by multiple users.</p>
+</div>
+<div class="paragraph">
+<p>The assumption is that it&#8217;s ok</p>
+</div>
 <div class="sect2">
 <h3 id="_create_a_github_org"><a class="anchor" href="#_create_a_github_org"></a>Create a github org</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_configure_org_as_auth_provider"><a class="anchor" href="#_configure_org_as_auth_provider"></a>configure org as auth provider</h3>
+<h3 id="_configure_that_org_as_auth_provider"><a class="anchor" href="#_configure_that_org_as_auth_provider"></a>configure that org as auth provider</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_make_your_github_user_a_cluster_admin"><a class="anchor" href="#_make_your_github_user_a_cluster_admin"></a>Make your Github user a cluster-admin</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_invite_your_users_to_your_github_org"><a class="anchor" href="#_invite_your_users_to_your_github_org"></a>Invite your users to your github org</h3>
 
 </div>
 </div>
