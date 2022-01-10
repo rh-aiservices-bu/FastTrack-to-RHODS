@@ -33,11 +33,14 @@ image::rhods.dashboard.png[]
 * TODO Screenshot
 * choose image, size, and spawn
 
+If you need more details, you can check:
+
+https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science/launch-jupyter-hub
 
 [#getstarted]
 == 5.2 Get your users started with RHODS
 
-Link to Audrey's materials.
+link:https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science[RHODS Learning path]
 
 // [#loadtesting]
 // == 5.5 Load testing
