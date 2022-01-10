@@ -4,7 +4,7 @@ runtime:
 site:
   title: FastTrack to RHODS
   url: http://localhost:3000/
-  start_page: fasttrack-to-rhods::index.adoc
+  start_page: FastTrack-to-RHODS::index.adoc
 
 content:
   sources:
