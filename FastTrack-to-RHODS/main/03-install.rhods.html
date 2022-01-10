@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Install RHODS AddOn :: FastTrack to RHODS</title>
+    <link rel="canonical" href="https://erwangranger.github.io/FastTrack-to-RHODS/FastTrack-to-RHODS/main/03-install.rhods.html">
+    <link rel="prev" href="03-rhods.html">
+    <link rel="next" href="03-authorization.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/site-extra.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://developers.redhat.com" target="_blank"><img src="../../_/img/NewRHDFullLogo_4-color_white-wordmark.png" height="40px" alt="Red Hat Developer Program"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="https://erwangranger.github.io/FastTrack-to-RHODS">FastTrack to RHODS</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://developers.redhat.com/ebooks/" target="_blank">Books</a>
+        <a class="navbar-item" href="https://developers.redhat.com/cheatsheets/" target="_blank">Cheat Sheets</a>
+        <a class="navbar-item" href="https://developers.redhat.com/events/" target="_blank">Upcoming Events</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">More Tutorials</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/kubernetes-tutorial/" target="_blank">Kubernetes</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/istio-tutorial/" target="_blank">Istio</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/quarkus-tutorial/" target="_blank">Quarkus</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/knative-tutorial/" target="_blank">Knative</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/tekton-tutorial/" target="_blank">Tekton</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="FastTrack-to-RHODS" data-version="main">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html"></a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="01-intro.html">1. Intro</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="02-get.a.managed.openshift.html">2. Get a Managed OpenShift Cluster</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="02-create.osd.html">2.1-A Create an OSD Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="02-create.rosa.html">2.1-B Create a ROSA Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="02-auth.html">2.2 Configure Authentication</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="02-auth.html#htpasswd">2.2.1 HTPassword Auth</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="02-auth.html#github">2.2.2 Github Auth</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="03-rhods.html">3. Get RHODS</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="03-install.rhods.html">3.1 Install RHODS Add-On</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="03-authorization.html">3.2 Configure default RHODS Authorization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="04-validation.html">4. Validate RHODS</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="04-validation.html#login">4.1 Log Into RHODS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="04-validation.html#getstarted">4.2 Get Started with RHODS</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="05-optional.html">5. Optional</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="05-optional.html#autoscaling">5.1 Auto-Scaling Machine Pools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="05-optional.html#rhodsaccess">5.2 Restrict RHODS Access</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="05-optional.html#selfprovision">5.3 Restrict self-provisionners</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">FastTrack to RHODS</a></li>
+    <li><a href="03-rhods.html">3. Get RHODS</a></li>
+    <li><a href="03-install.rhods.html">3.1 Install RHODS Add-On</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/erwangranger/FastTrack-to-RHODS/edit/main/doc/modules/ROOT/pages/03-install.rhods.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Install RHODS AddOn</h1>
+<div class="sect1">
+<h2 id="_log_in_to_console_redhat_com"><a class="anchor" href="#_log_in_to_console_redhat_com"></a>Log in to console.redhat.com</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Make sure you are logged in <a href="https://console.redhat.com/" class="bare">https://console.redhat.com/</a>.</p>
+</div>
+<div class="paragraph">
+<p> <details><summary> 
+Display detailed instructions:
+ </summary><div> </p>
+</div>
+<div class="paragraph">
+<p>If not already done, go to <a href="https://console.redhat.com/" class="bare">https://console.redhat.com/</a> and log in with your Red Hat account.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/console.login.png" alt="console">
+</div>
+</div>
+<div class="paragraph">
+<p>Once you are logged in, navigate to the OpenShift Section. (<a href="https://console.redhat.com/openshift" class="bare">https://console.redhat.com/openshift</a>).</p>
+</div>
+<div class="paragraph">
+<p>You should see your cluster(s).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/list.of.clusters.png" alt="console">
+</div>
+</div>
+<div class="paragraph">
+<p> </div></details> </p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_locate_rhods_add_on"><a class="anchor" href="#_locate_rhods_add_on"></a>Locate RHODS Add-on</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Select your Cluster in the list</p>
+</li>
+<li>
+<p>Navigate to the <strong>Add-ons</strong> tab</p>
+</li>
+<li>
+<p>You should the the <strong>Red Hat OpenShift Data Science</strong> add-on</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/rhods.addon.tile.png" alt="notmet">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prerequisites_not_met"><a class="anchor" href="#_prerequisites_not_met"></a>Prerequisites not met</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>It is possible that your cluster does not meet the pre-requisites.</p>
+</li>
+<li>
+<p>If that is the case, the RHODS add-on will look like:</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/rhods.addon.prereq.not.met.png" alt="notmet">
+</div>
+</div>
+</li>
+<li>
+<p>Clicking on the add-on and choosing the <strong>Prerequisite</strong> tab should display more details:</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/prereq.details.png" alt="notmet">
+</div>
+</div>
+</li>
+<li>
+<p>In a case such as this one, you would have to add more machines to the cluster.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p> <details><summary> 
+Click here if you need help on how to add a new MachinePool for RHODS
+ </summary><div> </p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Go to the <strong>Machine Pool</strong> tab</p>
+</li>
+<li>
+<p>Click <strong>Add Machine Pool</strong></p>
+</li>
+<li>
+<p>Machine Pool Name: <code>m5-2xlarge</code></p>
+</li>
+<li>
+<p>Worker Node Instance Type: Select in the Drop Down &#8594; <code>m5.2xlarge</code></p>
+</li>
+<li>
+<p>Select the <code>Enable Auto-Scaling</code> Option</p>
+</li>
+<li>
+<p>Enter <code>0</code> as minimum</p>
+</li>
+<li>
+<p>Enter <code>2</code> as maximum</p>
+</li>
+<li>
+<p>Click <strong>Add Machine Pool</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p> </div></details> </p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install"><a class="anchor" href="#_install"></a>Install</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If your cluster meets the minimum prerequisites, you can move on to the Installation part:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click the RHODS add-on</p>
+</li>
+<li>
+<p>Click the <strong>Install</strong> Button</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/install.rhods.png" alt="notmet" width=".border='solid 1px'" height=".align=left">
+</div>
+</div>
+</li>
+<li>
+<p>Enter your email address</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/rhods.email.png" alt="email" width=".align=left">
+</div>
+</div>
+</li>
+<li>
+<p>And click <strong>Install</strong></p>
+</li>
+<li>
+<p>The Add-on is now installing. This should last around 30-45 minutes</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/rhods.installing.png" alt="email" width=".align=left">
+</div>
+</div>
+</li>
+<li>
+<p>Wait until the Add-on is fully <strong>Installed</strong></p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/installed.rhods.addon.png" alt="installed">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="03-rhods.html">3. Get RHODS</a></span>
+  <span class="next"><a href="03-authorization.html">3.2 Configure default RHODS Authorization</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <a class="rhd-logo" href="https://developers.redhat.com" target="_blank"></div>
+</footer>
+<script src="../../_/js/vendor/clipboard.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

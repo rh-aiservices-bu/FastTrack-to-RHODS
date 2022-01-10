@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Get a Managed OpenShift Cluster :: FastTrack to RHODS</title>
+    <link rel="canonical" href="https://erwangranger.github.io/FastTrack-to-RHODS/FastTrack-to-RHODS/main/02-get.a.managed.openshift.html">
+    <link rel="prev" href="01-intro.html">
+    <link rel="next" href="02-create.osd.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/site-extra.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://developers.redhat.com" target="_blank"><img src="../../_/img/NewRHDFullLogo_4-color_white-wordmark.png" height="40px" alt="Red Hat Developer Program"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="https://erwangranger.github.io/FastTrack-to-RHODS">FastTrack to RHODS</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://developers.redhat.com/ebooks/" target="_blank">Books</a>
+        <a class="navbar-item" href="https://developers.redhat.com/cheatsheets/" target="_blank">Cheat Sheets</a>
+        <a class="navbar-item" href="https://developers.redhat.com/events/" target="_blank">Upcoming Events</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">More Tutorials</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/kubernetes-tutorial/" target="_blank">Kubernetes</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/istio-tutorial/" target="_blank">Istio</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/quarkus-tutorial/" target="_blank">Quarkus</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/knative-tutorial/" target="_blank">Knative</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/tekton-tutorial/" target="_blank">Tekton</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="FastTrack-to-RHODS" data-version="main">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html"></a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="01-intro.html">1. Intro</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="02-get.a.managed.openshift.html">2. Get a Managed OpenShift Cluster</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="02-create.osd.html">2.1-A Create an OSD Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="02-create.rosa.html">2.1-B Create a ROSA Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="02-auth.html">2.2 Configure Authentication</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="02-auth.html#htpasswd">2.2.1 HTPassword Auth</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="02-auth.html#github">2.2.2 Github Auth</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="03-rhods.html">3. Get RHODS</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="03-install.rhods.html">3.1 Install RHODS Add-On</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="03-authorization.html">3.2 Configure default RHODS Authorization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="04-validation.html">4. Validate RHODS</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="04-validation.html#login">4.1 Log Into RHODS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="04-validation.html#getstarted">4.2 Get Started with RHODS</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="05-optional.html">5. Optional</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="05-optional.html#autoscaling">5.1 Auto-Scaling Machine Pools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="05-optional.html#rhodsaccess">5.2 Restrict RHODS Access</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="05-optional.html#selfprovision">5.3 Restrict self-provisionners</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">FastTrack to RHODS</a></li>
+    <li><a href="02-get.a.managed.openshift.html">2. Get a Managed OpenShift Cluster</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/erwangranger/FastTrack-to-RHODS/edit/main/doc/modules/ROOT/pages/02-get.a.managed.openshift.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Get a Managed OpenShift Cluster</h1>
+<div class="sect1">
+<h2 id="orientation"><a class="anchor" href="#orientation"></a>Do you already have a Managed OpenShift Cluster?</h2>
+<div class="sectionbody">
+<div class="tabset is-loading">
+<div class="ulist tabs">
+<ul>
+<li>
+<p><a id="tabset1_yes"></a>Yes</p>
+</li>
+<li>
+<p><a id="tabset1_no"></a>No</p>
+</li>
+</ul>
+</div>
+<div class="content">
+<div class="tab-pane" aria-labelledby="tabset1_yes">
+<div class="paragraph">
+<p>If you already have a cluster, you should read the summarized <a href="#cluster-requirements">cluster requirements</a> below.</p>
+</div>
+<div class="paragraph">
+<p>If you are certain that your cluster meets all these requirement, you can skip straight to the "<a href="03-rhods.html" class="page">Get RHODS</a>" section.</p>
+</div>
+</div>
+<div class="tab-pane" aria-labelledby="tabset1_no">
+<div class="paragraph">
+<p>If you don&#8217;t yet have a Managed OpenShift Cluster, you will need to keep reading this page in order to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Be aware of the <a href="#cluster-requirements">cluster requirements</a></p>
+</li>
+<li>
+<p>Choose between <a href="#chooseOSDROSA">ROSA and OSD</a></p>
+</li>
+<li>
+<p>Decide if you want to use the 60-day <a href="#chooseOSDROSA">OSD Trial</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-requirements"><a class="anchor" href="#cluster-requirements"></a>Managed OpenShift Cluster Requirement for RHODS</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>It has to be a Managed OpenShift:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>either ROSA or OSD</p>
+</li>
+<li>
+<p>not a general OCP cluster</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>It has to be on AWS</p>
+<div class="ulist">
+<ul>
+<li>
+<p>It cannot be an on-prem cluster</p>
+</li>
+<li>
+<p>Currently only AWS is supported</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>You need to have access to both:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="https://console.redhat.com/">Red Hat Hybrid Console</a></p>
+</li>
+<li>
+<p>the OpenShift Web Console of your cluster</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The version of OpenShift needs to be</p>
+<div class="ulist">
+<ul>
+<li>
+<p>OpenShift 4.9 or higher</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If you are using ROSA, ensure that the cluster was NOT deployed with the <code>--sts</code> option</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="existingclusters"><a class="anchor" href="#existingclusters"></a>If you already have a Managed OpenShift Cluster</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>check which version.. has to be more than&#8230;&#8203;.</p>
+</li>
+<li>
+<p>if it&#8217;s ROSA, make sure it&#8217;s not ROSA without STS</p>
+</li>
+<li>
+<p>ensure you have Auth configured..</p>
+</li>
+<li>
+<p>if so, skip to the "<a href="03-rhods.html" class="page">Get RHODS</a>" section of this guide.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="chooseOSDROSA"><a class="anchor" href="#chooseOSDROSA"></a>Choosing between ROSA and OSD</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Comparison of ROSA and OSD</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ROSA</th>
+<th class="tableblock halign-left valign-top">OSD</th>
+<th class="tableblock halign-left valign-top"></th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://cloud.redhat.com/products/amazon-openshift">Red Hat OpenShift Service on AWS (ROSA)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://cloud.redhat.com/products/dedicated/">OpenShift Dedicated</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="OSDTrial"><a class="anchor" href="#OSDTrial"></a>OSD Trial</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you want to sign up for an OSD Trial &#8230;&#8203;</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="01-intro.html">1. Intro</a></span>
+  <span class="next"><a href="02-create.osd.html">2.1-A Create an OSD Cluster</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <a class="rhd-logo" href="https://developers.redhat.com" target="_blank"></div>
+</footer>
+<script src="../../_/js/vendor/clipboard.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
