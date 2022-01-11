@@ -6,14 +6,15 @@ Make sure you are logged in https://console.redhat.com/.
 Display detailed instructions:
 +++ </summary><div> +++
 
-If not already done, go to https://console.redhat.com/ and log in with your Red Hat account.
-
+* If not already done, go to https://console.redhat.com/ and log in with your Red Hat account.
++
+[.bordershadow]
 image::console.login.png[console]
-
-Once you are logged in, navigate to the OpenShift Section. (https://console.redhat.com/openshift).
-
-You should see your cluster(s).
-
++
+* Once you are logged in, navigate to the OpenShift Section. (https://console.redhat.com/openshift).
+* You should see your cluster(s).
++
+[.bordershadow]
 image::list.of.clusters.png[console]
 
 +++ </div></details> +++
