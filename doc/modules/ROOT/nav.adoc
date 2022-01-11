@@ -1,4 +1,4 @@
-* xref:01-intro.adoc[1. Intro]
+* xref:01-intro.adoc[1. Introduction]
 
 // * xref:02-boring.adoc[2. The Boring Stuff]
 // ** xref:02-boring.adoc#disclaimers[2.1 Disclaimers]
