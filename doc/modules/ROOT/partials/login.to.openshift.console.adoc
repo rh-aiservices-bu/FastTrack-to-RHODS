@@ -3,11 +3,11 @@
 * From the Red Hat Console, with your cluster selected, click the **Open Console** button
 * A new tab will open
 
-* Click on the chosen Authentication Provider:
+* Click on the chosen Identity Provider:
 +
 [.bordershadow]
 image::login.with.png[]
 +
-* Depending on the Authentication Provider, you might be prompted to enter credentials and/or passwords and/or to authorize an application. This is normal and expected.
+* Depending on the Identity Provider, you might be prompted to enter credentials and/or passwords and/or to authorize an application. This is normal and expected.
 
 

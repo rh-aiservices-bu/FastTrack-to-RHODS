@@ -5,9 +5,9 @@ CAUTION: Under construction
 RHODS itself has not particular authentication settings. +
 Instead, it relies on how OpenShift's authentication has been configured.
 
-Therefore, it's important to have at least one Authentication Provider configured.
+Therefore, it's important to have at least one Identity Provider configured.
 
-The steps below will walk you through 2 fairly simple Authentication Providers to get you started.
+The steps below will walk you through 2 fairly simple Identity Providers to get you started.
 
 include::partial$login.to.redhat.console.adoc[]
 
@@ -76,7 +76,7 @@ image::logged.into.openshift.png[]
 * If your screen looks like the above, kudos, you've just created an admin account for your openshift cluster
 
 [#github]
-== Configure GitHub as an authentication provider
+== Configure GitHub as an Identity provider
 
 CAUTION: Under construction
 
