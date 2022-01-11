@@ -5,6 +5,9 @@
 [.text-center.strong]
 == Overview
 
+image::overall.diagram.blank.svg[Interactive,900,opts=interactive]
+// image::overall.diagram.svg[Interactive,900,opts=inline]
+
 [.lines_space]
 [.console-output]
 [source,text]
