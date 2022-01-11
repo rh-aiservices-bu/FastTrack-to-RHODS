@@ -100,7 +100,7 @@
     <a class="nav-link" href="04-validation.html">4. Validate RHODS</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#login">4.1 Log Into RHODS</a>
+    <a class="nav-link" href="#logindashboard">4.1 Log Into RHODS</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="#getstarted">4.2 Get Started with RHODS</a>
@@ -148,14 +148,16 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>At this stage, and before you modify and/or customize your RHODS environment in any way, it&#8217;s a good time to confirm that your users can access it.
-These steps will walk you through some basics.</p>
+<p>At this stage, and before you modify and/or customize your RHODS environment in any way, it&#8217;s a good time to confirm that your users can access it.<br>
+These steps will walk you (an admin) through some basics.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="rhodsurl"><a class="anchor" href="#rhodsurl"></a>Get the RHODS URL</h2>
+<h2 id="logindashboard"><a class="anchor" href="#logindashboard"></a>4.1 Log into RHODS</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="rhodsurl"><a class="anchor" href="#rhodsurl"></a>Get the RHODS URL</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -177,26 +179,60 @@ These steps will walk you through some basics.</p>
 <li>
 <p>This URL is the main RHODS URL, and the only one that you need to share with your RHODS end-users.</p>
 </li>
+<li>
+<p>Save it or Bookmark it for later reference.</p>
+</li>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="login"><a class="anchor" href="#login"></a>5.1 Log in to RHODS</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="authenticate"><a class="anchor" href="#authenticate"></a>Authenticate</h3>
 <div class="ulist">
 <ul>
 <li>
 <p>Click on the <strong>Log in with OpenShift</strong> button (from the screenshot above).</p>
 </li>
 <li>
-<p>You should now see the full dashboard</p>
+<p>You will be prompted with one or more Authentication Choices depending on how your OpenShift Authentication is configured.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Under construction
+  need a screenshot here
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Choose the Authentication Method that works best for you, and enter credentials if required.</p>
+</li>
+<li>
+<p>If all goes well, you should now see the Red Hat OpenShift Data Science dashboard</p>
 <div class="imageblock bordershadow">
 <div class="content">
 <img src="_images/rhods.dashboard.png" alt="rhods.dashboard">
 </div>
 </div>
 </li>
+<li>
+<p>If so, continue below.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="spawn"><a class="anchor" href="#spawn"></a>Spawn a JupyterHub Notebook</h3>
+<div class="ulist">
+<ul>
 <li>
 <p>You want to make sure that you are able to successfully spawn a notebook.</p>
 </li>
@@ -206,9 +242,23 @@ These steps will walk you through some basics.</p>
 <li>
 <p>On the next screen, select &#8230;&#8203;</p>
 </li>
-<li>
-<p>TODO Screenshot</p>
-</li>
+</ul>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Under construction
+  add screenshots etc&#8230;&#8203; also, remember the things that you only see once.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>choose image, size, and spawn</p>
 </li>
@@ -222,11 +272,27 @@ These steps will walk you through some basics.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="getstarted"><a class="anchor" href="#getstarted"></a>5.2 Get your users started with RHODS</h2>
+<h2 id="getstarted"><a class="anchor" href="#getstarted"></a>4.2 Get your users started with RHODS</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science">RHODS Learning path</a></p>
+<p>Assuming the steps above were successful, your environment should be ready for use.<br>
+To get your users started with it:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Share the URL captured above, so they can access RHODS directly</p>
+</li>
+<li>
+<p>If there is more than one Authentication Methods defined in your OpenShift,<br>
+let your users know which one they should be using.</p>
+</li>
+<li>
+<p>If your users are un-familiar with RHODS, they should consult the <a href="https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science">RHODS Learning path</a>, which will guide them through the first steps.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>

@@ -100,7 +100,7 @@
     <a class="nav-link" href="04-validation.html">4. Validate RHODS</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="04-validation.html#login">4.1 Log Into RHODS</a>
+    <a class="nav-link" href="04-validation.html#logindashboard">4.1 Log Into RHODS</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="04-validation.html#getstarted">4.2 Get Started with RHODS</a>
@@ -150,10 +150,15 @@
 <h2 id="_rationale"><a class="anchor" href="#_rationale"></a>Rationale</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Currently, the way that RHODS Authorization defaults are configured, anyone who tries to log in will not be recognized as a RHODS user.</p>
+<p>Currently (at least up to RHODS V1.3.0-6), the way that RHODS Authorization defaults are configured, anyone who tries to log in will not be recognized as a RHODS user.</p>
 </div>
 <div class="paragraph">
-<p>Instead, they will be met with <code>403: forbidden</code> error when they try to launch a notebook.</p>
+<p>Instead, they will be met with <code>403: forbidden</code> error when they try to launch a notebook:</p>
+</div>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/403.forbidden.png" alt="403.forbidden">
+</div>
 </div>
 <div class="paragraph">
 <p>Although this is <a href="https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html-single/getting_started_with_red_hat_openshift_data_science/index#i_see_a_emphasis_role_strong_403_forbidden_emphasis_error_when_i_log_in_to_jupyterhub">documented</a>, I belive it&#8217;s a better experience to reconfigure the authentication is way that:</p>
@@ -161,7 +166,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>any OpenShift User automatically is recognized as a RHODS user</p>
+<p>any OpenShift User is automatically recognized as a RHODS user</p>
 </li>
 <li>
 <p>any OpenShift Cluster-Admin is recognized as a RHODS admin</p>
@@ -176,7 +181,7 @@
 </td>
 <td class="content">
 The method described here is currently not documented.<br>
-If you prefer to follow the official method, please refer to the <a href="https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html/managing_users_and_user_resources/adding-users-for-openshift-data-science_useradd">documentation on how to add users</a>.
+If you prefer to follow the official methods, please refer to the <a href="https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html/managing_users_and_user_resources/adding-users-for-openshift-data-science_useradd">documentation on how to add users</a>.
 </td>
 </tr>
 </table>
@@ -247,6 +252,16 @@ If you prefer to follow the official method, please refer to the <a href="https:
 </div>
 </li>
 <li>
+<p>WARNING: It&#8217;s very easy to forget the first out of the 3 lines mentionned above.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>(Not that it has happened to me or anything. It happened &#8230;&#8203; to a friend.)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
 <p>The result should look like:</p>
 <div class="imageblock bordershadow">
 <div class="content">
@@ -278,7 +293,7 @@ If you prefer to follow the official method, please refer to the <a href="https:
 </div>
 </li>
 <li>
-<p>Wait until all 3 <code>jupyterhub</code> pods have restarted, and one is <strong>Ready 2/2</strong>:</p>
+<p>Wait until all 3 <code>jupyterhub</code> pods have restarted, and one is <strong>Running 2/2</strong>:</p>
 <div class="imageblock bordershadow">
 <div class="content">
 <img src="_images/pods.ready.png" alt="ready">
@@ -289,7 +304,7 @@ If you prefer to follow the official method, please refer to the <a href="https:
 <p>At this point, the changes in Authorization should be fully active.</p>
 </li>
 <li>
-<p>The next section will validate that we can successfully use RHODS, by launching a notebook.</p>
+<p>The next section will validate that we can successfully use RHODS, by launching a Jupyter Notebook.</p>
 </li>
 </ul>
 </div>
