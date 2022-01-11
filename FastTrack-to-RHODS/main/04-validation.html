@@ -149,7 +149,7 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>At this stage, and before you modify and/or customize your RHODS environment in any way, it&#8217;s a good time to confirm that your users can access it.<br>
-These steps will walk you (an admin) through some basics.</p>
+These instructions will walk you through some very basic validation activities.</p>
 </div>
 </div>
 </div>
@@ -193,27 +193,20 @@ These steps will walk you (an admin) through some basics.</p>
 <p>Click on the <strong>Log in with OpenShift</strong> button (from the screenshot above).</p>
 </li>
 <li>
-<p>You will be prompted with one or more Authentication Choices depending on how your OpenShift Authentication is configured.</p>
+<p>You will be prompted with one or more possible Identity Providers to choose from, depending on how your OpenShift Authentication is configured.</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/choose.idp.png" alt="400" width="400">
+</div>
+</div>
 </li>
-</ul>
-</div>
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-Under construction
-  need a screenshot here
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<ul>
 <li>
-<p>Choose the Authentication Method that works best for you, and enter credentials if required.</p>
+<p>On the next screen, enter the credentials needed.</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/enter.admin.creds.png" alt="400" width="400">
+</div>
+</div>
 </li>
 <li>
 <p>If all goes well, you should now see the Red Hat OpenShift Data Science dashboard</p>
@@ -238,37 +231,51 @@ Under construction
 </li>
 <li>
 <p>Click on the "Launch" icon.</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/launch.icon.png" alt="launch.icon">
+</div>
+</div>
 </li>
 <li>
-<p>On the next screen, select &#8230;&#8203;</p>
+<p>You will be prompted to choose an identity provider and the matching credentials</p>
 </li>
-</ul>
-</div>
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-Under construction
-  add screenshots etc&#8230;&#8203; also, remember the things that you only see once.
-</td>
-</tr>
-</table>
-</div>
+<li>
+<p>On the next screen,</p>
 <div class="ulist">
 <ul>
 <li>
-<p>choose image, size, and spawn</p>
+<p>select the <strong>Minimal Python</strong> Notebook Image</p>
+</li>
+<li>
+<p>select the <strong>Default</strong> Container Size</p>
+</li>
+<li>
+<p>then click <strong>Start Server</strong></p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/start.notebook.png" alt="start.notebook">
+</div>
+</div>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>If you need more details, you can check:</p>
+</li>
+<li>
+<p>After a few seconds, you should be able to see the JupyterLab interface for your Notebook:</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/jupyter.interface.png" alt="jupyter.interface">
 </div>
-<div class="paragraph">
-<p><a href="https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science/launch-jupyter-hub" class="bare">https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science/launch-jupyter-hub</a></p>
+</div>
+</li>
+<li>
+<p>If you need more details on how to use it, you can check: <a href="https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science/launch-jupyter-hub" class="bare">https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science/launch-jupyter-hub</a></p>
+</li>
+<li>
+<p>Close the tab, and continue with the instructions below:</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
