@@ -1,7 +1,7 @@
 = Validation
 
 At this stage, and before you modify and/or customize your RHODS environment in any way, it's a good time to confirm that your users can access it. +
-These steps will walk you (an admin) through some basics.
+These instructions will walk you through some very basic validation activities.
 
 [#logindashboard]
 == 4.1 Log into RHODS
@@ -26,12 +26,16 @@ image::rhods.url.png[]
 === Authenticate
 
 * Click on the **Log in with OpenShift** button (from the screenshot above).
-* You will be prompted with one or more Authentication Choices depending on how your OpenShift Authentication is configured.
-
-CAUTION: Under construction
-  need a screenshot here
-
-* Choose the Authentication Method that works best for you, and enter credentials if required.
+* You will be prompted with one or more possible Identity Providers to choose from, depending on how your OpenShift Authentication is configured.
++
+[.bordershadow]
+image::choose.idp.png[400,400]
++
+* On the next screen, enter the credentials needed.
++
+[.bordershadow]
+image::enter.admin.creds.png[400,400]
++
 * If all goes well, you should now see the Red Hat OpenShift Data Science dashboard
 +
 [.bordershadow]
