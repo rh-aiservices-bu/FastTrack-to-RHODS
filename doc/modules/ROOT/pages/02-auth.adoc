@@ -65,6 +65,7 @@ choose **HTPasswd**, the one we just added
 image::choose.idp.png[]
 +
 * On the next screen, enter the credentials that we were generated for you.
++
 [.bordershadow]
 image::enter.admin.creds.png[]
 +
