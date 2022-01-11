@@ -160,59 +160,125 @@ Under construction
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>RHODS itself has not particular authentication settings.<br>
+Instead, it relies on how OpenShift&#8217;s authentication has been configured.</p>
+</div>
+<div class="paragraph">
+<p>Therefore, it&#8217;s important to have at least one Authentication Provider configured.</p>
+</div>
+<div class="paragraph">
+<p>The steps below will walk you through 2 fairly simple Authentication Providers to get you started.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="htpasswd"><a class="anchor" href="#htpasswd"></a>Configure HTPasswd as an auth provider</h2>
+<h2 id="_log_in_to_console_redhat_com"><a class="anchor" href="#_log_in_to_console_redhat_com"></a>Log in to console.redhat.com</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This is a good option to use if you just need a single user, or if you want to start by creating an Cluster Administrator account.</p>
+<p>Make sure you are logged in <a href="https://console.redhat.com/" class="bare">https://console.redhat.com/</a>.</p>
+</div>
+<div class="paragraph">
+<p> <details><summary> 
+Display detailed instructions:
+ </summary><div> </p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>go to console.</p>
+<p>If not already done, go to <a href="https://console.redhat.com/" class="bare">https://console.redhat.com/</a> and log in with your Red Hat account.</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/console.login.png" alt="console">
+</div>
+</div>
 </li>
 <li>
-<p>select your cluster</p>
+<p>Once you are logged in, navigate to the OpenShift Section. (<a href="https://console.redhat.com/openshift" class="bare">https://console.redhat.com/openshift</a>).</p>
 </li>
 <li>
-<p>"Access control" tab</p>
-</li>
-<li>
-<p>in Identity providers:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>add identity provider</p>
-</li>
-<li>
-<p>choose HTpasswd</p>
-</li>
-<li>
-<p>keep default ("HTPasswd")</p>
-</li>
-<li>
-<p>use the suggested name and password. (but save them somewhere)</p>
-</li>
-<li>
-<p>click add</p>
+<p>You should see your cluster(s).</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/list.of.clusters.png" alt="console">
+</div>
+</div>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>under "Cluster Roles and Access"</p>
+<div class="paragraph">
+<p> </div></details> </p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="htpasswd"><a class="anchor" href="#htpasswd"></a>Configure HTPasswd as an Identity Provider</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is a good option to use if you just need a single user, and/or if you want to start by creating an Cluster Administrator account.</p>
+</div>
+<div class="paragraph">
+<p>That is how we will set it up:</p>
+</div>
+<div class="sect2">
+<h3 id="_add_the_identity_provider"><a class="anchor" href="#_add_the_identity_provider"></a>Add the Identity Provider</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>click Add Users</p>
+<p>Choose the <strong>Access control</strong> tab for your cluster</p>
 </li>
 <li>
-<p>enter the name of the admin account that you just created</p>
+<p>Select <strong>Identity providers</strong></p>
 </li>
 <li>
-<p>choose <code>cluster-admin</code></p>
+<p>Click the Dropdown to <strong>Add identity provider</strong> and choose <strong>HTPasswd</strong></p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/add.htpass.idp1.png" alt="add.htpass.idp1">
+</div>
+</div>
+</li>
+<li>
+<p>On the next screen, keep all the defaults, including the suggested username and password</p>
+</li>
+<li>
+<p>MAKE SURE TO SAVE THEM SOMEWHERE.<br>
+They will not be shown to you again.</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/add.htpass.idp2.png" alt="add.htpass.idp2">
+</div>
+</div>
+</li>
+<li>
+<p>click <strong>Add</strong></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_make_this_new_user_a_cluster_admin"><a class="anchor" href="#_make_this_new_user_a_cluster_admin"></a>Make this new user a Cluster-Admin</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Select <strong>Cluster Roles and Access</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click <strong>Add User</strong></p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/add.htpass.admin1.png" alt="add.htpass.admin1">
+</div>
+</div>
+</li>
+<li>
+<p>Enter the name of the <code>admin-</code> account that was created in the previous step, and choose <strong>Cluster-Admins</strong></p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/add.htpass.admin2.png" alt="add.htpass.admin2">
+</div>
+</div>
 </li>
 <li>
 <p>Click Add User</p>
@@ -222,20 +288,63 @@ Under construction
 </li>
 </ul>
 </div>
-<div class="paragraph">
+</div>
+<div class="sect2">
+<h3 id="_confirm_you_can_log_into_openshift"><a class="anchor" href="#_confirm_you_can_log_into_openshift"></a>Confirm you can log into OpenShift</h3>
+<div class="ulist">
+<ul>
+<li>
 <p>To confirm, Click on the blue button (Open Console).</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/open.console.png" alt="open.console">
 </div>
-<div class="paragraph">
-<p>Enter the credentials</p>
 </div>
-<div class="paragraph">
-<p>Confirm you can log in</p>
+</li>
+<li>
+<p>A new tab will open, prompting you to choose an Identity Provider+
+choose <strong>HTPasswd</strong>, the one we just added</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/choose.idp.png" alt="choose.idp">
+</div>
+</div>
+</li>
+<li>
+<p>On the next screen, enter the credentials that we were generated for you.
+image::enter.admin.creds.png[]</p>
+</li>
+<li>
+<p>You should now be logged into the OpenShift Console</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/logged.into.openshift.png" alt="logged.into.openshift">
+</div>
+</div>
+</li>
+<li>
+<p>If your screen looks like the above, kudos, you&#8217;ve just created an admin account for your openshift cluster</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="github"><a class="anchor" href="#github"></a>Configure GitHub as an authentication provider</h2>
 <div class="sectionbody">
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Under construction
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>Github can be used as a fairly easy way to setup authentication if your environment will be accessible by multiple users.</p>
 </div>
