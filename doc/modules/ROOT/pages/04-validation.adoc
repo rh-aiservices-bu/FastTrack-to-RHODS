@@ -65,3 +65,8 @@ To get your users started with it:
 * If there is more than one Authentication Methods defined in your OpenShift, +
   let your users know which one they should be using.
 * If your users are un-familiar with RHODS, they should consult the link:https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science[RHODS Learning path], which will guide them through the first steps.
+
+== Progress
+
+[.bordershadow]
+image::overall.diag.4.png[400,400]

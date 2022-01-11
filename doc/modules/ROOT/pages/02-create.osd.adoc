@@ -1,3 +1,27 @@
 = Create an OSD Cluster
 
 CAUTION: Under construction
+
+
+
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+
+== Progress
+
+[.bordershadow]
+image::overall.diag.21.png[400,400]

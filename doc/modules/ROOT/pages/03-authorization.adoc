@@ -61,3 +61,8 @@ image::pods.ready.png[ready]
 +
 * At this point, the changes in Authorization should be fully active.
 * The next section will validate that we can successfully use RHODS, by launching a Jupyter Notebook.
+
+== Progress
+
+[.bordershadow]
+image::overall.diag.32.png[400,400]

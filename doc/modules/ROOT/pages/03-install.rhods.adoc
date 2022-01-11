@@ -69,4 +69,8 @@ image::rhods.installing.png[email,.align=left]
 +
 [.bordershadow]
 image::installed.rhods.addon.png[installed]
-+
+
+== Progress
+
+[.bordershadow]
+image::overall.diag.31.png[400,400]

@@ -29,3 +29,8 @@ Consult link:https://docs.openshift.com/container-platform/4.9/applications/proj
 
 // [#culling]
 // == Notebook Culling
+
+== Progress
+
+[.bordershadow]
+image::overall.diag.5.png[400,400]

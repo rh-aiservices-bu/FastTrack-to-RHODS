@@ -85,3 +85,7 @@ ROSAworkshop.io
 == 1.5 Thanks
 
 
+== Progress
+
+[.bordershadow]
+image::overall.diag.1.png[400,400]

@@ -96,3 +96,17 @@ The assumption is that it's ok
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+By the end of this page:
+[.bordershadow]
+image::overall.diag.22.png[400,400]

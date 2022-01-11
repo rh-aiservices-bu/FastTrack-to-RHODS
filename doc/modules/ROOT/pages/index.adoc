@@ -1,26 +1,26 @@
-= FastTrack to RHODS
+= FastTrack to Red Hat OpenShift Data Science (RHODS)
 :page-layout: home
 :!sectids:
 
-[.text-center.strong]
-== Overview
 
-image::overall.diagram.blank.svg[Interactive,900,opts=interactive]
-// image::overall.diagram.svg[Interactive,900,opts=inline]
+We will use the following diagram to keep track of our progress.
 
-[.lines_space]
-[.console-output]
-[source,text]
- ┌─────────────────────────────────────────┐           ┌─────────────────────────────────────────┐
- │                                         │           │                                         │
- │        Get Managed OpenShift            │           │         Get RHODS                       │
- │                                         │           │                                         │
- │ ┌───────────┐       ┌─────────────────┐ │           │ ┌───────────┐       ┌───────────────┐   │
- │ │  Create   │ ────► │ Configure       │ │  ───────► │ │  Install  │ ────► │Configure      │   │
- │ │  Cluster  │       │ Authentication  │ │           │ │  RHODS    │       │Authorization  │   │
- │ └───────────┘       └─────────────────┘ │           │ │  Add-On   │       └───────────────┘   │
- │                                         │           │ └───────────┘                           │
- └─────────────────────────────────────────┘           │                                         │
-                                                       └─────────────────────────────────────────┘
+[.bordershadow]
+image::overall.diag.0.png[400,400]
+
+// [.lines_space]
+// [.console-output]
+// [source,text]
+//  ┌─────────────────────────────────────────┐           ┌─────────────────────────────────────────┐
+//  │                                         │           │                                         │
+//  │        Get Managed OpenShift            │           │         Get RHODS                       │
+//  │                                         │           │                                         │
+//  │ ┌───────────┐       ┌─────────────────┐ │           │ ┌───────────┐       ┌───────────────┐   │
+//  │ │  Create   │ ────► │ Configure       │ │  ───────► │ │  Install  │ ────► │Configure      │   │
+//  │ │  Cluster  │       │ Authentication  │ │           │ │  RHODS    │       │Authorization  │   │
+//  │ └───────────┘       └─────────────────┘ │           │ │  Add-On   │       └───────────────┘   │
+//  │                                         │           │ └───────────┘                           │
+//  └─────────────────────────────────────────┘           │                                         │
+//                                                        └─────────────────────────────────────────┘
 
 
