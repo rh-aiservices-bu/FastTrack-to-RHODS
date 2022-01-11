@@ -2,34 +2,84 @@
 
 CAUTION: Under construction
 
+RHODS itself has not particular authentication settings. +
+Instead, it relies on how OpenShift's authentication has been configured.
+
+Therefore, it's important to have at least one Authentication Provider configured.
+
+The steps below will walk you through 2 fairly simple Authentication Providers to get you started.
+
+include::partial$login.to.redhat.console.adoc[]
+
 [#htpasswd]
-== Configure HTPasswd as an auth provider
+== Configure HTPasswd as an Identity Provider
 
-This is a good option to use if you just need a single user, or if you want to start by creating an Cluster Administrator account.
+This is a good option to use if you just need a single user, and/or if you want to start by creating an Cluster Administrator account.
 
-* go to console.
-* select your cluster
-* "Access control" tab
-* in Identity providers:
-** add identity provider
-** choose HTpasswd
-** keep default ("HTPasswd")
-** use the suggested name and password. (but save them somewhere)
-** click add
-* under "Cluster Roles and Access"
-** click Add Users
-** enter the name of the admin account that you just created
-** choose `cluster-admin`
+That is how we will set it up:
+
+=== Add the Identity Provider
+
+* Choose the **Access control** tab for your cluster
+* Select **Identity providers**
+* Click the Dropdown to **Add identity provider** and choose **HTPasswd**
++
+[.bordershadow]
+image::add.htpass.idp1.png[]
++
+* On the next screen, keep all the defaults, including the suggested username and password
+* MAKE SURE TO SAVE THEM SOMEWHERE. +
+They will not be shown to you again.
++
+[.bordershadow]
+image::add.htpass.idp2.png[]
++
+* click **Add**
+
+=== Make this new user a Cluster-Admin
+
+* Select **Cluster Roles and Access**
+** Click **Add User**
++
+[.bordershadow]
+image::add.htpass.admin1.png[]
++
+** Enter the name of the `admin-` account that was created in the previous step, and choose **Cluster-Admins**
++
+[.bordershadow]
+image::add.htpass.admin2.png[]
++
 ** Click Add User
 
-To confirm, Click on the blue button (Open Console).
+=== Confirm you can log into OpenShift
 
-Enter the credentials
-
-Confirm you can log in
+* To confirm, Click on the blue button (Open Console).
++
+[.bordershadow]
+image::open.console.png[]
++
+* A new tab will open, prompting you to choose an Identity Provider+
+choose **HTPasswd**, the one we just added
++
+[.bordershadow]
+image::choose.idp.png[]
++
+* On the next screen, enter the credentials that we were generated for you.
+[.bordershadow]
+image::enter.admin.creds.png[]
++
+* You should now be logged into the OpenShift Console
++
+[.bordershadow]
+image::logged.into.openshift.png[]
++
+* If your screen looks like the above, kudos, you've just created an admin account for your openshift cluster
 
 [#github]
 == Configure GitHub as an authentication provider
+
+CAUTION: Under construction
+
 
 Github can be used as a fairly easy way to setup authentication if your environment will be accessible by multiple users.
 
