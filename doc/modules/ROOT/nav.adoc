@@ -19,7 +19,7 @@
 ** xref:03-authorization.adoc[3.2 Configure default RHODS Authorization]
 
 * xref:04-validation.adoc[4. Validate RHODS]
-** xref:04-validation.adoc#login[4.1 Log Into RHODS]
+** xref:04-validation.adoc#logindashboard[4.1 Log Into RHODS]
 ** xref:04-validation.adoc#getstarted[4.2 Get Started with RHODS]
 
 * xref:05-optional.adoc[5. Optional]

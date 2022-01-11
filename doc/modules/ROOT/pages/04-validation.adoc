@@ -1,10 +1,13 @@
 = Validation
 
-At this stage, and before you modify and/or customize your RHODS environment in any way, it's a good time to confirm that your users can access it.
-These steps will walk you through some basics.
+At this stage, and before you modify and/or customize your RHODS environment in any way, it's a good time to confirm that your users can access it. +
+These steps will walk you (an admin) through some basics.
+
+[#logindashboard]
+== 4.1 Log into RHODS
 
 [#rhodsurl]
-== Get the RHODS URL
+=== Get the RHODS URL
 
 * From the OpenShift Console, click on the application Switcher, and choose Red Hat OpenShift Data Science.
 +
@@ -17,20 +20,35 @@ image::rhods.link.png[]
 image::rhods.url.png[]
 +
 * This URL is the main RHODS URL, and the only one that you need to share with your RHODS end-users.
+* Save it or Bookmark it for later reference.
 
-[#login]
-== 5.1 Log in to RHODS
+[#authenticate]
+=== Authenticate
 
 * Click on the **Log in with OpenShift** button (from the screenshot above).
-* You should now see the full dashboard
+* You will be prompted with one or more Authentication Choices depending on how your OpenShift Authentication is configured.
+
+CAUTION: Under construction
+  need a screenshot here
+
+* Choose the Authentication Method that works best for you, and enter credentials if required.
+* If all goes well, you should now see the Red Hat OpenShift Data Science dashboard
 +
 [.bordershadow]
 image::rhods.dashboard.png[]
 +
+* If so, continue below.
+
+[#spawn]
+=== Spawn a JupyterHub Notebook
+
 * You want to make sure that you are able to successfully spawn a notebook.
 * Click on the "Launch" icon.
 * On the next screen, select ...
-* TODO Screenshot
+
+CAUTION: Under construction
+  add screenshots etc... also, remember the things that you only see once.
+
 * choose image, size, and spawn
 
 If you need more details, you can check:
@@ -38,10 +56,12 @@ If you need more details, you can check:
 https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science/launch-jupyter-hub
 
 [#getstarted]
-== 5.2 Get your users started with RHODS
+== 4.2 Get your users started with RHODS
 
-link:https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science[RHODS Learning path]
+Assuming the steps above were successful, your environment should be ready for use. +
+To get your users started with it:
 
-// [#loadtesting]
-// == 5.5 Load testing
-
+* Share the URL captured above, so they can access RHODS directly
+* If there is more than one Authentication Methods defined in your OpenShift, +
+  let your users know which one they should be using.
+* If your users are un-familiar with RHODS, they should consult the link:https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science[RHODS Learning path], which will guide them through the first steps.

@@ -2,17 +2,20 @@
 
 == Rationale
 
-Currently, the way that RHODS Authorization defaults are configured, anyone who tries to log in will not be recognized as a RHODS user.
+Currently (at least up to RHODS V1.3.0-6), the way that RHODS Authorization defaults are configured, anyone who tries to log in will not be recognized as a RHODS user.
 
-Instead, they will be met with `403: forbidden` error when they try to launch a notebook.
+Instead, they will be met with `403: forbidden` error when they try to launch a notebook:
+
+[.bordershadow]
+image::403.forbidden.png[]
 
 Although this is link:https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html-single/getting_started_with_red_hat_openshift_data_science/index#i_see_a_emphasis_role_strong_403_forbidden_emphasis_error_when_i_log_in_to_jupyterhub[documented], I belive it's a better experience to reconfigure the authentication is way that:
 
-* any OpenShift User automatically is recognized as a RHODS user
+* any OpenShift User is automatically recognized as a RHODS user
 * any OpenShift Cluster-Admin is recognized as a RHODS admin
 
 WARNING: The method described here is currently not documented. +
-If you prefer to follow the official method, please refer to the link:https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html/managing_users_and_user_resources/adding-users-for-openshift-data-science_useradd[documentation on how to add users].
+If you prefer to follow the official methods, please refer to the link:https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html/managing_users_and_user_resources/adding-users-for-openshift-data-science_useradd[documentation on how to add users].
 
 // include::partial$login.to.openshift.console.adoc[]
 include::partial$login.to.openshift.console.adoc[]
@@ -33,6 +36,8 @@ image::edit.configmap.png[configmap edit]
 ** `opendatahub.io/modified:` is set to `true`
 ** `admin_groups:` is set to `cluster-admins`
 ** `allowed_groups:` is set to `'system:authenticated'`
+* WARNING: It's very easy to forget the first out of the 3 lines mentionned above.
+** (Not that it has happened to me or anything. It happened ... to a friend.)
 * The result should look like:
 +
 [.bordershadow]
@@ -49,11 +54,10 @@ image::updated.configmap.png[configmap edited]
 [.bordershadow]
 image::start.rollout.png[rollout]
 +
-* Wait until all 3 `jupyterhub` pods have restarted, and one is **Ready 2/2**:
+* Wait until all 3 `jupyterhub` pods have restarted, and one is **Running 2/2**:
 +
 [.bordershadow]
 image::pods.ready.png[ready]
 +
 * At this point, the changes in Authorization should be fully active.
-* The next section will validate that we can successfully use RHODS, by launching a notebook.
-
+* The next section will validate that we can successfully use RHODS, by launching a Jupyter Notebook.

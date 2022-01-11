@@ -39,17 +39,13 @@ If you don't yet have a Managed OpenShift Cluster, you will need to keep reading
 * The version of OpenShift needs to be
 ** OpenShift 4.9 or higher
 * If you are using ROSA, ensure that the cluster was NOT deployed with the `--sts` option
+* OpenShift Authentication needs to be configured
 
-[#existingclusters]
-== If you already have a Managed OpenShift Cluster
-
-* check which version.. has to be more than....
-* if it's ROSA, make sure it's not ROSA without STS
-* ensure you have Auth configured..
-* if so, skip to the "xref:03-rhods.adoc[Get RHODS]" section of this guide.
 
 [#chooseOSDROSA]
 == Choosing between ROSA and OSD
+
+CAUTION: Under construction
 
 .Comparison of ROSA and OSD
 [options="header,footer"]
@@ -60,6 +56,8 @@ If you don't yet have a Managed OpenShift Cluster, you will need to keep reading
 
 [#OSDTrial]
 == OSD Trial
+
+CAUTION: Under construction
 
 If you want to sign up for an OSD Trial ...
 
