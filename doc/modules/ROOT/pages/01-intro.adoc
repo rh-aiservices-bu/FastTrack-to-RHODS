@@ -21,9 +21,10 @@ This is NOT:
 [#timing]
 == Timing
 
-* Going through these steps will take anywhere between 30 minutes and a few hours
-** The first time is going to take the longest
-** If you already have your cluster ready, it will be a lot faster
+* Going through these steps will take anywhere between 30 minutes and a few hours, depending on:
+** whether you already have a Managed OpenShift available
+** Whether it's your first time setting up RHODS
+** How much customization you will require
 
 [#disclaimers]
 == 1.1 Disclaimers

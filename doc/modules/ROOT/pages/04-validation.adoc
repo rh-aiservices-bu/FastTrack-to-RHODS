@@ -48,16 +48,26 @@ image::rhods.dashboard.png[]
 
 * You want to make sure that you are able to successfully spawn a notebook.
 * Click on the "Launch" icon.
-* On the next screen, select ...
-
-CAUTION: Under construction
-  add screenshots etc... also, remember the things that you only see once.
-
-* choose image, size, and spawn
-
-If you need more details, you can check:
-
-https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science/launch-jupyter-hub
++
+[.bordershadow]
+image::launch.icon.png[]
++
+* You will be prompted to choose an identity provider and the matching credentials
+* On the next screen,
+** select the **Minimal Python** Notebook Image
+** select the **Default** Container Size
+** then click **Start Server**
++
+[.bordershadow]
+image::start.notebook.png[]
++
+* After a few seconds, you should be able to see the JupyterLab interface for your Notebook:
++
+[.bordershadow]
+image::jupyter.interface.png[]
++
+* If you need more details on how to use it, you can check: https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science/launch-jupyter-hub
+* Close the tab, and continue with the instructions below:
 
 [#getstarted]
 == 4.2 Get your users started with RHODS
