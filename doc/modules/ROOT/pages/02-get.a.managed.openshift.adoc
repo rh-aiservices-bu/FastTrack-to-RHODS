@@ -57,11 +57,11 @@ CAUTION: Under construction
 [#OSDTrial]
 == OSD Trial
 
-CAUTION: Under construction
+An OSD Trial Cluster allows you to test a 40-vCPU OSD cluster for 60 days.
 
-If you want to sign up for an OSD Trial ...
+Note that you are responsible for the Cloud Infrastructure Costs of the trial.
 
-
+If you are interested in signing up for an OSD Trials, please read carefully the content of the "link:https://access.redhat.com/articles/5990101[About the OpenShift Dedicated Trial]" page.
 
 
 
