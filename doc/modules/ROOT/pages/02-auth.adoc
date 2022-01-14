@@ -81,26 +81,41 @@ image::logged.into.openshift.png[]
 
 CAUTION: Under construction
 
+One of the fast-yet-simple way to grant OpenShift access to many users is to add a GitHub Identity provider to your OpenShift Cluster.
 
-Github can be used as a fairly easy way to setup authentication if your environment will be accessible by multiple users.
+This requires you and them to have a GitHub account, but nothing else is needed.
 
-The assumption is that it's ok
+If you've never done it before, the instructions below will guide you.
 
 === Create a github org
 
+* Log into github
+* Create a new Org.
+* settings
+* developer settings
+* new OAuth App
+* ...
+
 === configure that org as auth provider
+
+* console.redhat.com
+* new IDP (github)
+* ...
 
 === Make your Github user a cluster-admin
 
+* console.redhat.com
+* new cluster-admin
+
 === Invite your users to your github org
 
+* invite users (based on their github user id)
+*
 
+=== (optional) remove the HTPasswd
 
-
-
-
-
-
+* enforece 2FA on github
+* remove HTPasswd as a way to log in
 
 
 

@@ -51,7 +51,7 @@ If you need more information on how to choose between OSD and ROSA, please consu
 .Comparison of ROSA and OSD
 [options="header,footer"]
 |=======================
-Topic|ROSA |OSD |
+|Topic|ROSA |OSD |
 |Main Page|https://cloud.redhat.com/products/amazon-openshift[Red Hat OpenShift Service on AWS (ROSA)] |https://cloud.redhat.com/products/dedicated/[OpenShift Dedicated (OSD)] |
 |Service Type|Managed|Managed|
 |=======================
