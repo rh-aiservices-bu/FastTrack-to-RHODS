@@ -350,25 +350,91 @@ Under construction
 </table>
 </div>
 <div class="paragraph">
-<p>Github can be used as a fairly easy way to setup authentication if your environment will be accessible by multiple users.</p>
+<p>One of the fast-yet-simple way to grant OpenShift access to many users is to add a GitHub Identity provider to your OpenShift Cluster.</p>
 </div>
 <div class="paragraph">
-<p>The assumption is that it&#8217;s ok</p>
+<p>This requires you and them to have a GitHub account, but nothing else is needed.</p>
+</div>
+<div class="paragraph">
+<p>If you&#8217;ve never done it before, the instructions below will guide you.</p>
 </div>
 <div class="sect2">
 <h3 id="_create_a_github_org"><a class="anchor" href="#_create_a_github_org"></a>Create a github org</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p>Log into github</p>
+</li>
+<li>
+<p>Create a new Org.</p>
+</li>
+<li>
+<p>settings</p>
+</li>
+<li>
+<p>developer settings</p>
+</li>
+<li>
+<p>new OAuth App</p>
+</li>
+<li>
+<p>&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_configure_that_org_as_auth_provider"><a class="anchor" href="#_configure_that_org_as_auth_provider"></a>configure that org as auth provider</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p>console.redhat.com</p>
+</li>
+<li>
+<p>new IDP (github)</p>
+</li>
+<li>
+<p>&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_make_your_github_user_a_cluster_admin"><a class="anchor" href="#_make_your_github_user_a_cluster_admin"></a>Make your Github user a cluster-admin</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p>console.redhat.com</p>
+</li>
+<li>
+<p>new cluster-admin</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_invite_your_users_to_your_github_org"><a class="anchor" href="#_invite_your_users_to_your_github_org"></a>Invite your users to your github org</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>invite users (based on their github user id)
+*</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_optional_remove_the_htpasswd"><a class="anchor" href="#_optional_remove_the_htpasswd"></a>(optional) remove the HTPasswd</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>enforece 2FA on github</p>
+</li>
+<li>
+<p>remove HTPasswd as a way to log in</p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p>By the end of this page:</p>
 </div>
