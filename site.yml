@@ -3,7 +3,7 @@ runtime:
 
 site:
   title: FastTrack to RHODS
-  url: https://erwangranger.github.io/FastTrack-to-RHODS
+  url: https://rh-aiservices-bu.github.io/FastTrack-to-RHODS
   start_page: FastTrack-to-RHODS::index.adoc
 
 
