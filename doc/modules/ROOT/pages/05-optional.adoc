@@ -26,7 +26,20 @@ CAUTION: Under construction.
 Most OpenShift environments are configured in such a way that users who can authenticate to OpenShift also have the "self-provisionner" role. +
 This can be great for developpers, but might be too much if there are many potential users. +
 A fairly standard OpenShift practice is to reduce the number of users who have this ability. +
-Consult link:https://docs.openshift.com/container-platform/4.9/applications/projects/configuring-project-creation.html#disabling-project-self-provisioning_configuring-project-creation[the documentation on disabling project self-provisioning] for more info.
+If you want more details on this, you should consult link:https://docs.openshift.com/container-platform/4.9/applications/projects/configuring-project-creation.html#disabling-project-self-provisioning_configuring-project-creation[the documentation on disabling project self-provisioning] for more info.
+
+The fast way to implement this change is to
+
+* locate the right ClusterRoleBinding (**self-provisioners**)
++
+[.bordershadow]
+image::self-pro01.png[]
++
+* change the defaults:
++
+video::self-prov.change.mp4
+
+
 
 // [#notebooksizes]
 // == Changing the size of the available notebooks
