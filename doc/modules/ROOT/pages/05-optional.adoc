@@ -35,11 +35,18 @@ The fast way to implement this change is to
 [.bordershadow]
 image::self-pro01.png[]
 +
-* change the defaults:
+* change the default
+** from `system:authenticated:oauth`
+** to the name of the group containing your RHODS users, often `rhods-users`
 +
-video::self-prov.change.mp4
+[.bordershadow]
+image::self-prov.change.gif[]
++
+* Make sure to also modify the `autoupdate` line as illustrated in the above video.
 
+This role can be useful when users need to be self-sufficient in deploying their own applications, but it's not required for RHODS.
 
+Therefore, it's possible that you might want only a subset of RHODS users to have it. If that is the case, create a group in OpenShift, assign the right users to it, and update the ClusterRoleBinding to use that group instead.
 
 // [#notebooksizes]
 // == Changing the size of the available notebooks
