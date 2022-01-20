@@ -208,23 +208,12 @@ Under construction.
 <div class="sect1">
 <h2 id="selfprovision"><a class="anchor" href="#selfprovision"></a>Restrict OpenShift Self-Provisionning to RHODS users</h2>
 <div class="sectionbody">
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-Under construction.
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>Most OpenShift environments are configured in such a way that users who can authenticate to OpenShift also have the "self-provisionner" role.<br>
-This can be great for developpers, but might be too much if there are many potential users.<br>
-A fairly standard OpenShift practice is to reduce the number of users who have this ability.<br>
-If you want more details on this, you should consult <a href="https://docs.openshift.com/container-platform/4.9/applications/projects/configuring-project-creation.html#disabling-project-self-provisioning_configuring-project-creation">the documentation on disabling project self-provisioning</a> for more info.</p>
+Having this role allows a user to create an OpenShift Project themselves.<br>
+This can be great for developpers, but might be too impactful if the number of users who can authenticate is high.<br>
+Therefore, a fairly standard OpenShift practice is to reduce the number of users who have this ability.<br>
+(If you want more details on this, you should consult <a href="https://docs.openshift.com/container-platform/4.9/applications/projects/configuring-project-creation.html#disabling-project-self-provisioning_configuring-project-creation">the documentation on disabling project self-provisioning</a> for more info).</p>
 </div>
 <div class="paragraph">
 <p>The fast way to implement this change is to</p>
@@ -263,10 +252,23 @@ If you want more details on this, you should consult <a href="https://docs.opens
 </ul>
 </div>
 <div class="paragraph">
-<p>This role can be useful when users need to be self-sufficient in deploying their own applications, but it&#8217;s not required for RHODS.</p>
+<p>While this role can be useful when users need to be self-sufficient in creating OpenShift Projects, it&#8217;s not required for RHODS.</p>
 </div>
 <div class="paragraph">
-<p>Therefore, it&#8217;s possible that you might want only a subset of RHODS users to have it. If that is the case, create a group in OpenShift, assign the right users to it, and update the ClusterRoleBinding to use that group instead.</p>
+<p>Therefore, it&#8217;s possible that you might want only a subset of RHODS users to have it. If that is the case, then:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>create a group in OpenShift</p>
+</li>
+<li>
+<p>assign the right users to it</p>
+</li>
+<li>
+<p>update the ClusterRoleBinding to use that group instead.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
