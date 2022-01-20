@@ -180,6 +180,18 @@ These instructions will walk you through some very basic validation activities.<
 <p>This URL is the main RHODS URL, and the only one that you need to share with your RHODS end-users.</p>
 </li>
 <li>
+<p>Its pattern should usually be something like:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>https://rhods-dashboard-.................openshiftapps.com/</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
 <p>Save it or Bookmark it for later reference.</p>
 </li>
 </ul>
@@ -209,6 +221,15 @@ These instructions will walk you through some very basic validation activities.<
 </div>
 </li>
 <li>
+<p>If this is your very first time using the environment, you will be prompted to Authorize Access.
+Make sure to <strong>allow select permissions</strong> if you see that screen:</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/allow.perms.dashboard.png" alt="allow.perms.dashboard">
+</div>
+</div>
+</li>
+<li>
 <p>If all goes well, you should now see the Red Hat OpenShift Data Science dashboard</p>
 <div class="imageblock bordershadow">
 <div class="content">
@@ -227,7 +248,7 @@ These instructions will walk you through some very basic validation activities.<
 <div class="ulist">
 <ul>
 <li>
-<p>You want to make sure that you are able to successfully spawn a notebook.</p>
+<p>You want to make sure that you are able to successfully spawn a Jupyter notebook.</p>
 </li>
 <li>
 <p>Click on the "Launch" icon.</p>
@@ -238,7 +259,16 @@ These instructions will walk you through some very basic validation activities.<
 </div>
 </li>
 <li>
-<p>You will be prompted to choose an identity provider and the matching credentials</p>
+<p>You will be prompted to choose an identity provider and the matching credentials again.</p>
+</li>
+<li>
+<p>Once again, if this is your very first time using the environment, you will be prompted to Authorize Access.
+Make sure to <strong>allow select permissions</strong> if you see that screen:</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/allow.perms.jupyterhub.png" alt="allow.perms.jupyterhub">
+</div>
+</div>
 </li>
 <li>
 <p>On the next screen,</p>
@@ -290,8 +320,24 @@ To get your users started with it:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Share the URL captured above, so they can access RHODS directly</p>
+<p>Share the URL captured earlier, so they can access RHODS directly</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Remember that the RHODS URL looks like the following:</p>
 </li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>https://rhods-dashboard-.................openshiftapps.com/</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>If there is more than one Authentication Methods defined in your OpenShift,<br>
 let your users know which one they should be using.</p>
