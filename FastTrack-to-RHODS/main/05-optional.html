@@ -240,12 +240,33 @@ If you want more details on this, you should consult <a href="https://docs.opens
 </div>
 </li>
 <li>
-<p>change the defaults:</p>
-<div class="paragraph">
-<p>video::self-prov.change.mp4</p>
+<p>change the default</p>
+<div class="ulist">
+<ul>
+<li>
+<p>from <code>system:authenticated:oauth</code></p>
+</li>
+<li>
+<p>to the name of the group containing your RHODS users, often <code>rhods-users</code></p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/self-prov.change.gif" alt="self prov.change">
+</div>
 </div>
 </li>
 </ul>
+</div>
+</li>
+<li>
+<p>Make sure to also modify the <code>autoupdate</code> line as illustrated in the above video.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This role can be useful when users need to be self-sufficient in deploying their own applications, but it&#8217;s not required for RHODS.</p>
+</div>
+<div class="paragraph">
+<p>Therefore, it&#8217;s possible that you might want only a subset of RHODS users to have it. If that is the case, create a group in OpenShift, assign the right users to it, and update the ClusterRoleBinding to use that group instead.</p>
 </div>
 </div>
 </div>
