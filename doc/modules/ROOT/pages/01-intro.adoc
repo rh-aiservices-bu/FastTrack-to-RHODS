@@ -102,8 +102,18 @@ Happy reading!
 
 * https://www.rosaworkshop.io/
 
+[#servdef]
+== 1.5 Service Definitions
+
+* Red Hat OpenShift Data Science Service Definition:
+** https://access.redhat.com/support/policy/updates/rhods/service
+* OpenShift Dedicated service definition
+** https://docs.openshift.com/dedicated/osd_policy/osd-service-definition.html
+* Red Hat OpenShift Service on AWS service definition
+** https://docs.openshift.com/rosa/rosa_policy/rosa-service-definition.html
+
 [#thanks]
-== 1.5 Thanks
+== 1.6 Thanks
 
 Thanks to everyone who had a part in this:
 
