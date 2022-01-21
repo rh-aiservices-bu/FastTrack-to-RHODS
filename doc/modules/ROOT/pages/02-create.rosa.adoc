@@ -1,21 +1,27 @@
 = Create a ROSA Cluster
 
-CAUTION: Under construction
+CAUTION: Under construction. These instructions are currently only references to other sets of instructions.
+
+If you have never setup a ROSA Cluster before, the instructions available at https://www.rosaworkshop.io/rosa/1-account_setup/ should be useful.
+
+**HOWEVER**, note that these instructions rely on the `sts` option for AWS credentials, and that is at the moment NOT Supported by RHODS.
+If you follow them, make sure that you **DO NOT** use the `--sts` option when creating the cluster.
+
+== ROSA Account Setup
+
+++++
+<iframe src="https://www.rosaworkshop.io/rosa/1-account_setup/" width="100%" height="500" style="border:1px solid black;">
+</iframe>
+++++
+
+== ROSA Deployment
+
+++++
+<iframe src="https://www.rosaworkshop.io/rosa/2-deploy/" width="100%" height="500" style="border:1px solid black;">
+</iframe>
+++++
 
 
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
 +
 +
 +
