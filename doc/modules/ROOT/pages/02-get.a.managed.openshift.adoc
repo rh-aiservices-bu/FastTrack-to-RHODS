@@ -41,6 +41,16 @@ If you don't yet have a Managed OpenShift Cluster, you will need to keep reading
 * If you are using ROSA, ensure that the cluster was **NOT** deployed with the `--sts` option
 * OpenShift Authentication needs to be configured
 
+[#redhataccount]
+== About your RedHat.com account
+
+* Whether you use OSD or ROSA, you will need to link:https://www.redhat.com/wapps/ugc/register.html[sign up for a Red Hat login].
+* When you do, there are two types of account: **Corporate** or **Personal**.
+* It is very likely that your organization already has a Corporate Account with Red Hat.
+** If that is the case, you should ask to be granted access to it.
+* If your organization does not yet have an account, you should create a **Corporate** one even if you will be the only person using these resources. It makes sharing the work and transferring ownership of environments much more straightforward.
+
+
 [#chooseOSDROSA]
 == Choosing between ROSA and OSD
 
