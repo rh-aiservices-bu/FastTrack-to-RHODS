@@ -102,9 +102,9 @@ To get your users started with it:
 ----
 https://rhods-dashboard-.................openshiftapps.com/
 ----
-* If there is more than one Authentication Methods defined in your OpenShift, +
+* If there are more than one Authentication Methods defined in your OpenShift, +
   let your users know which one they should be using.
-* If your users are un-familiar with RHODS, they should consult the link:https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science[RHODS Learning path], which will guide them through the first steps.
+* If your users are unfamiliar with RHODS, they should consult the link:https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science[RHODS Learning path], which will guide them through the first steps.
 
 == Progress
 

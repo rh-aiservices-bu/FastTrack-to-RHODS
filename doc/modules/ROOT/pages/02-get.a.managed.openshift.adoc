@@ -11,7 +11,7 @@ Yes::
 --
 If you already have a cluster, you should read the summarized xref:#cluster-requirements[cluster requirements] below.
 
-If you are certain that your cluster meets all these requirement, you can skip straight to the "xref:03-rhods.adoc[Get RHODS]" section.
+If you are certain that your cluster meets all these requirements, you can skip straight to the "xref:03-rhods.adoc[Get RHODS]" section.
 --
 No::
 +
@@ -32,7 +32,7 @@ If you don't yet have a Managed OpenShift Cluster, you will need to keep reading
 ** not a general OCP cluster
 * It has to be on **AWS**
 ** It cannot be an on-prem cluster
-** Currently only AWS is supported
+** Only AWS is currently supported
 * You need to have access to both:
 ** the link:https://console.redhat.com/[Red Hat Hybrid Console]
 ** the OpenShift Web Console of your cluster

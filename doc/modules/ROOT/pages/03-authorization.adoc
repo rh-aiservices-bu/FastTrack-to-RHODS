@@ -36,7 +36,7 @@ image::edit.configmap.png[configmap edit]
 ** `opendatahub.io/modified:` is set to `true`
 ** `admin_groups:` is set to `cluster-admins`
 ** `allowed_groups:` is set to `'system:authenticated'`
-* WARNING: It's very easy to forget the first out of the 3 lines mentionned above.
+* WARNING: It's very easy to forget the first out of the three lines mentioned above.
 ** (Not that it has happened to me or anything. It happened ... to a friend.)
 * The result should look like:
 +
@@ -45,11 +45,11 @@ image::updated.configmap.png[configmap edited]
 +
 * Click save
 
-**Note:** These changes will not take effect until you restart all the JupyterHub pods. This is convered in the next section.
+**Note:** These changes will not take effect until you restart all the JupyterHub pods. This is covered in the next section.
 
 == Do a rollout of the JupyterHub Pods
 
-* Locate the `jupyterhub` deploymentconfig in the `redhat-ods-applications` namespace
+* Locate the `jupyterhub` DeploymentConfig in the `redhat-ods-applications` namespace
 +
 [.bordershadow]
 image::start.rollout.png[rollout]

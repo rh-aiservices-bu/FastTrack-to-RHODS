@@ -46,7 +46,7 @@ Click here if you need help on how to add a new MachinePool for RHODS
 
 == Install
 
-If your cluster meets the minimum prerequisites, you can move on to the Installation part:
+If your cluster meets the minimum pre-requisites, you can move on to the Installation part:
 
 * Click the RHODS add-on
 * Click the **Install** Button

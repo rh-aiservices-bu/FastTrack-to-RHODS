@@ -2,7 +2,7 @@
 
 CAUTION: Under construction
 
-RHODS itself has not particular authentication settings. +
+RHODS itself has no particular authentication settings. +
 Instead, it relies on how OpenShift's authentication has been configured.
 
 Therefore, it's important to have at least one Identity Provider configured.
@@ -14,7 +14,7 @@ include::partial$login.to.redhat.console.adoc[]
 [#htpasswd]
 == Configure HTPasswd as an Identity Provider
 
-This is a good option to use if you just need a single user, and/or if you want to start by creating an Cluster Administrator account.
+This is a good option to use if you only need a single user and/or if you want to start by creating a Cluster Administrator account.
 
 That is how we will set it up:
 
@@ -53,7 +53,7 @@ image::add.htpass.admin2.png[]
 
 === Confirm you can log into OpenShift
 
-* To confirm, Click on the blue button (Open Console).
+* To confirm, click on the blue button (Open Console).
 +
 [.bordershadow]
 image::open.console.png[]
@@ -74,22 +74,22 @@ image::enter.admin.creds.png[]
 [.bordershadow]
 image::logged.into.openshift.png[]
 +
-* If your screen looks like the above, kudos, you've just created an admin account for your openshift cluster
+* If your screen looks like the above, kudos, you've just created an admin account for your OpenShift cluster
 
 [#github]
 == Configure GitHub as an Identity provider
 
 CAUTION: Under construction
 
-One of the fast-yet-simple way to grant OpenShift access to many users is to add a GitHub Identity provider to your OpenShift Cluster.
+One of the fast-yet-simple ways to grant OpenShift access to many users is to add a GitHub Identity provider to your OpenShift Cluster.
 
 This requires you and them to have a GitHub account, but nothing else is needed.
 
 If you've never done it before, the instructions below will guide you.
 
-=== Create a github org
+=== Create a GitHub org
 
-* Log into github
+* Log into GitHub
 * Create a new Org.
 * settings
 * developer settings
@@ -99,7 +99,7 @@ If you've never done it before, the instructions below will guide you.
 === configure that org as auth provider
 
 * console.redhat.com
-* new IDP (github)
+* new IDP (GitHub)
 * ...
 
 === Make your Github user a cluster-admin
@@ -107,14 +107,14 @@ If you've never done it before, the instructions below will guide you.
 * console.redhat.com
 * new cluster-admin
 
-=== Invite your users to your github org
+=== Invite your users to your GitHub org
 
-* invite users (based on their github user id)
+* invite users (based on their GitHub user id)
 *
 
 === (optional) remove the HTPasswd
 
-* enforece 2FA on github
+* enforece 2FA on GitHub
 * remove HTPasswd as a way to log in
 
 
