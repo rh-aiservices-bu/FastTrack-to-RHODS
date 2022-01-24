@@ -39,16 +39,16 @@ This is NOT:
 * This content is provided in good faith, and is as accurate as I can make it.
 * There is however no warranty of any kind, expressed or implied, regarding the accuracy, adequacy, validity, reliability, or completeness of this content.
 * Views expressed here are my own and do not reflect those of my employer
-* Disclaimers are never read by anyone, but if you did, thanks for that!
-* Should you find inaccuracies in this content, please open an Issue in the link:https://github.com/rh-aiservices-bu/FastTrack-to-RHODS[github project] in order to bring it to my attention.
+* No-one reads disclaimers. But if you did, thanks for that!
+* Should you find inaccuracies in this content, please open an link:https://github.com/rh-aiservices-bu/FastTrack-to-RHODS/issues[Issue] in the link:https://github.com/rh-aiservices-bu/FastTrack-to-RHODS[github project] to bring it to my attention.
 
 === Freshness
 
-It is possible that this document falls behind as things evolve.
+This document may fall behind as things evolve.
 
-If unsure, check the history of the page in the link:https://github.com/rh-aiservices-bu/FastTrack-to-RHODS[github project] to see when it was last updated.
+If unsure, check the page's history in the link:https://github.com/rh-aiservices-bu/FastTrack-to-RHODS[github project] to see when it was last updated.
 
-If you feel like something should be brought up to speed, please open an Issue against the project.
+If you feel like something needs updating, please open an Issue against the project.
 
 [#conventions]
 == 1.2 Conventions
