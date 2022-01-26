@@ -101,6 +101,7 @@ Happy reading!
 == 1.4 Other References
 
 * https://www.rosaworkshop.io/
+* https://examples.openshift.pub/
 
 [#servdef]
 == 1.5 Service Definitions
