@@ -36,7 +36,7 @@ Click here if you need help on how to add a new MachinePool for RHODS
 * Go to the **Machine Pool** tab
 * Click **Add Machine Pool**
 * Machine Pool Name: `m5-2xlarge`
-* Worker Node Instance Type: Select in the Drop Down -> `m5.2xlarge`
+* Worker Node Instance Type: Select in the Drop Down -> `m5.2xlarge (8vCPU 32 GiB RAM)`
 * Select the `Enable Auto-Scaling` Option
 * Enter `0` as minimum
 * Enter `2` as maximum
