@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 [#is]
 == What this is
 
-* An illustrated and opinionated HowTo on how I prefer to set up RHODS environments
+* An illustrated and opinionated HowTo on setting up RedHat OpenShift Data Science environments (RHODS)
 // * A quick way of doing so, if you follow along
 // * An opinionated set of sequential steps to get RHODS setup quickly
 // * A copy of various instructions that can be found in various other xref:#ref[sources].
@@ -18,13 +18,13 @@ This is NOT:
 ** link:https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1[RHODS documentation]
 ** link:https://docs.openshift.com/[OpenShift documentation]
 * A way to build production-grade environments
-* Going to be the best design for all situations
+* The best design for all situations
 
 [#timing]
 == Timing
 
 * Going through these steps will take anywhere between 30 minutes and a few hours, depending on:
-** whether you already have a Managed OpenShift available
+** If you already have a Managed OpenShift available
 ** Whether it's your first time setting up RHODS
 ** How much customization you will require
 
@@ -37,7 +37,7 @@ This is NOT:
 * These are my own notes on how I like to setup my own OpenShift Cluster and RHODS
 ** They may or may not be applicable to your specific situation
 * This content is provided in good faith, and is as accurate as I can make it.
-* There is however no warranty of any kind, expressed or implied, regarding the accuracy, adequacy, validity, reliability, or completeness of this content.
+* There is no warranty of any kind, expressed or implied, regarding the accuracy, adequacy, validity, reliability, or completeness of this content.
 * Views expressed here are my own and do not reflect those of my employer
 * No-one reads disclaimers. But if you did, thanks for that!
 * Should you find inaccuracies in this content, please open an link:https://github.com/rh-aiservices-bu/FastTrack-to-RHODS/issues[Issue] in the link:https://github.com/rh-aiservices-bu/FastTrack-to-RHODS[github project] to bring it to my attention.
@@ -106,7 +106,7 @@ Happy reading!
 [#servdef]
 == 1.5 Service Definitions
 
-* Red Hat OpenShift Data Science Service Definition:
+* Red Hat OpenShift Data Science Service definition:
 ** https://access.redhat.com/support/policy/updates/rhods/service
 * OpenShift Dedicated service definition
 ** https://docs.openshift.com/dedicated/osd_policy/osd-service-definition.html
