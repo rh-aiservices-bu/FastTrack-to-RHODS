@@ -35,13 +35,12 @@ The fast way to implement this change is to
 image::self-pro01.png[]
 +
 * change the default
-** from `system:authenticated:oauth`
-** to the name of the group containing your RHODS users, often `rhods-users`
+** from `system:authenticated:oauth` to the name of the group containing your RHODS users, often `rhods-users`
+** Make sure to modify the `autoupdate` line as illustrated in the above video.
 +
 [.bordershadow]
 image::self-prov.change.gif[]
 +
-* Make sure to also modify the `autoupdate` line as illustrated in the above video.
 
 While this role can be useful when users need to be self-sufficient in creating OpenShift Projects, it's not required for RHODS.
 
