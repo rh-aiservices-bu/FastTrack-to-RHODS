@@ -25,11 +25,11 @@ If you don't yet have a Managed OpenShift Cluster, you will need to keep reading
 ====
 
 [#cluster-requirements]
-== Managed OpenShift Cluster Requirement for RHODS
+== Managed OpenShift Cluster Requirements for RHODS
 
 * It has to be a **Managed** OpenShift:
-** either ROSA or OSD
-** not a general OCP cluster
+** either RedHat OpenShift Service on AWS (ROSA) or OpenShift Dedicated (OSD)
+** not a general OpenShift Container Platform (OCP) cluster
 * It has to be on **AWS**
 ** It cannot be an on-prem cluster
 ** Only AWS is currently supported
