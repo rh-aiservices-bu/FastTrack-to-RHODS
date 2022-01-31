@@ -9,7 +9,7 @@ These instructions will walk you through some very basic validation activities.
 [#rhodsurl]
 === Get the RHODS URL
 
-* From the OpenShift Console, click on the application Switcher, and choose Red Hat OpenShift Data Science.
+* From the OpenShift Console, click on the application menu, and choose Red Hat OpenShift Data Science.
 +
 [.bordershadow]
 image::rhods.link.png[]
@@ -85,7 +85,7 @@ image::start.notebook.png[]
 [.bordershadow]
 image::jupyter.interface.png[]
 +
-* If you need more details on how to use it, you can check: https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science/launch-jupyter-hub
+* If you need more details on how to use it, you can check: link:https://developers.redhat.com/products/red-hat-openshift-data-science/getting-started/launch-red-hat-openshift-data-science[Jupyter Notebooks Learning path]
 * Close the tab, and continue with the instructions below:
 
 [#getstarted]
