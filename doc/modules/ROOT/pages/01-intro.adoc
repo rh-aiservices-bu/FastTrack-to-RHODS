@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 [#is]
 == What this is
 
-* An illustrated and opinionated HowTo on setting up RedHat OpenShift Data Science environments (RHODS)
+* An illustrated and opinionated HowTo on setting up RedHat OpenShift Data Science (RHODS) environments
 // * A quick way of doing so, if you follow along
 // * An opinionated set of sequential steps to get RHODS setup quickly
 // * A copy of various instructions that can be found in various other xref:#ref[sources].
