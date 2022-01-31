@@ -335,7 +335,7 @@ choose <strong>HTPasswd</strong>, the one we just added</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="github"><a class="anchor" href="#github"></a>Configure GitHub as an Identity provider</h2>
+<h2 id="github"><a class="anchor" href="#github"></a>Configure GitHub as an Identity provider for additional users</h2>
 <div class="sectionbody">
 <div class="admonitionblock caution">
 <table>
@@ -350,7 +350,7 @@ Under construction
 </table>
 </div>
 <div class="paragraph">
-<p>One of the fast-yet-simple ways to grant OpenShift access to many users is to add a GitHub Identity provider to your OpenShift Cluster.</p>
+<p>One of the fastest, yet simple, ways to grant OpenShift access to many users is to add a GitHub Identity provider to your OpenShift Cluster.</p>
 </div>
 <div class="paragraph">
 <p>This requires you and them to have a GitHub account, but nothing else is needed.</p>
@@ -359,20 +359,20 @@ Under construction
 <p>If you&#8217;ve never done it before, the instructions below will guide you.</p>
 </div>
 <div class="sect2">
-<h3 id="_create_a_github_org"><a class="anchor" href="#_create_a_github_org"></a>Create a GitHub org</h3>
+<h3 id="_create_a_github_organization_and_oauth_application"><a class="anchor" href="#_create_a_github_organization_and_oauth_application"></a>Create a GitHub Organization and OAuth application</h3>
 <div class="ulist">
 <ul>
 <li>
 <p>Log into GitHub</p>
 </li>
 <li>
-<p>Create a new Org.</p>
+<p>Create a new Org. (Must be an "Owner")</p>
 </li>
 <li>
 <p>settings</p>
 </li>
 <li>
-<p>developer settings</p>
+<p>developer settings (bottom)</p>
 </li>
 <li>
 <p>new OAuth App</p>
@@ -384,14 +384,17 @@ Under construction
 </div>
 </div>
 <div class="sect2">
-<h3 id="_configure_that_org_as_auth_provider"><a class="anchor" href="#_configure_that_org_as_auth_provider"></a>configure that org as auth provider</h3>
+<h3 id="_configure_that_org_as_an_authentication_provider"><a class="anchor" href="#_configure_that_org_as_an_authentication_provider"></a>configure that org as an authentication provider</h3>
 <div class="ulist">
 <ul>
 <li>
 <p>console.redhat.com</p>
 </li>
 <li>
-<p>new IDP (GitHub)</p>
+<p>Add Identity provider (GitHub)</p>
+</li>
+<li>
+<p>Fill in Client Id and Client secret from Org settings</p>
 </li>
 <li>
 <p>&#8230;&#8203;</p>
@@ -400,14 +403,20 @@ Under construction
 </div>
 </div>
 <div class="sect2">
-<h3 id="_make_your_github_user_a_cluster_admin"><a class="anchor" href="#_make_your_github_user_a_cluster_admin"></a>Make your Github user a cluster-admin</h3>
+<h3 id="_make_your_github_users_a_cluster_admin"><a class="anchor" href="#_make_your_github_users_a_cluster_admin"></a>Make your Github users a cluster-admin</h3>
 <div class="ulist">
 <ul>
 <li>
 <p>console.redhat.com</p>
 </li>
 <li>
-<p>new cluster-admin</p>
+<p>Access Control</p>
+</li>
+<li>
+<p>Add user (Github Id)</p>
+</li>
+<li>
+<p>cluster-admin</p>
 </li>
 </ul>
 </div>
