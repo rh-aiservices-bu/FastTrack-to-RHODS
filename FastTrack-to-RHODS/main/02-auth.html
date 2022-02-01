@@ -155,7 +155,7 @@
 <i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
-Under construction
+Under construction. This page is still a work in progress.
 </td>
 </tr>
 </table>
@@ -337,18 +337,6 @@ choose <strong>HTPasswd</strong>, the one we just added</p>
 <div class="sect1">
 <h2 id="github"><a class="anchor" href="#github"></a>Configure GitHub as an Identity provider for additional users</h2>
 <div class="sectionbody">
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-Under construction
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>One of the fastest, yet simple, ways to grant OpenShift access to many users is to add a GitHub Identity provider to your OpenShift Cluster.</p>
 </div>
@@ -356,54 +344,111 @@ Under construction
 <p>This requires you and them to have a GitHub account, but nothing else is needed.</p>
 </div>
 <div class="paragraph">
-<p>If you&#8217;ve never done it before, the instructions below will guide you.</p>
+<p>If you’ve never done it before, the instructions below will guide you.</p>
 </div>
 <div class="sect2">
-<h3 id="_create_a_github_organization_and_oauth_application"><a class="anchor" href="#_create_a_github_organization_and_oauth_application"></a>Create a GitHub Organization and OAuth application</h3>
+<h3 id="_create_a_github_organization"><a class="anchor" href="#_create_a_github_organization"></a>Create a GitHub Organization</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Log into GitHub</p>
+<p>Log into GitHub and go to the <a href="https://github.com/settings/organizations">Organizations</a> page</p>
 </li>
 <li>
-<p>Create a new Org. (Must be an "Owner")</p>
+<p>Create a new Org. (Must be an “Owner”)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Organizations &#8594; New Organization</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/new.org.png" alt="new.org">
+</div>
+</div>
 </li>
 <li>
-<p>settings</p>
+<p>Choose to create a free Organization</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/free.org.png" alt="free.org">
+</div>
+</div>
 </li>
 <li>
-<p>developer settings (bottom)</p>
+<p>Fill out and indicate if creating an enterprise org</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/org.name.png" alt="org.name">
+</div>
+</div>
 </li>
 <li>
-<p>new OAuth App</p>
+<p>Your new Organization should now be ready</p>
 </li>
-<li>
-<p>&#8230;&#8203;</p>
+</ul>
+</div>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_configure_that_org_as_an_authentication_provider"><a class="anchor" href="#_configure_that_org_as_an_authentication_provider"></a>configure that org as an authentication provider</h3>
+<h3 id="_configure_that_organization_as_an_auth_provider_and_create_oauth_application"><a class="anchor" href="#_configure_that_organization_as_an_auth_provider_and_create_oauth_application"></a>Configure that organization as an auth provider and create OAuth application</h3>
 <div class="ulist">
 <ul>
 <li>
 <p>console.redhat.com</p>
 </li>
 <li>
-<p>Add Identity provider (GitHub)</p>
+<p>Add identity provider (GitHub)</p>
+</li>
+<li>
+<p>Copy callback url</p>
+<div class="ulist">
+<ul>
+<li>
+<p>github.com</p>
+</li>
+<li>
+<p>Open Github org &#8594; Settings</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/org.settings.png" alt="org.settings">
+</div>
+</div>
+</li>
+<li>
+<p>Developer settings (bottom)</p>
+</li>
+<li>
+<p>OAuth Apps</p>
+</li>
+<li>
+<p>Register an application</p>
+</li>
+<li>
+<p>Paste callback url and provide homepage</p>
+</li>
+<li>
+<p>Register application</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/oauth.app.png" alt="oauth.app">
+</div>
+</div>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Fill in Client Id and Client secret from Org settings</p>
 </li>
 <li>
-<p>&#8230;&#8203;</p>
+<p>Save</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_make_your_github_users_a_cluster_admin"><a class="anchor" href="#_make_your_github_users_a_cluster_admin"></a>Make your Github users a cluster-admin</h3>
+<h3 id="_make_your_github_users_cluster_admins"><a class="anchor" href="#_make_your_github_users_cluster_admins"></a>Make your Github users cluster-admins</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -422,22 +467,11 @@ Under construction
 </div>
 </div>
 <div class="sect2">
-<h3 id="_invite_your_users_to_your_github_org"><a class="anchor" href="#_invite_your_users_to_your_github_org"></a>Invite your users to your GitHub org</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>invite users (based on their GitHub user id)
-*</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
 <h3 id="_optional_remove_the_htpasswd"><a class="anchor" href="#_optional_remove_the_htpasswd"></a>(optional) remove the HTPasswd</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>enforece 2FA on GitHub</p>
+<p>enforce 2FA on GitHub</p>
 </li>
 <li>
 <p>remove HTPasswd as a way to log in</p>
