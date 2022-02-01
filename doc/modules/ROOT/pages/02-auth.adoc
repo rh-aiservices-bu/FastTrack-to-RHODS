@@ -77,48 +77,52 @@ image::logged.into.openshift.png[]
 * If your screen looks like the above, kudos, you've just created an admin account for your OpenShift cluster
 
 [#github]
-== Configure GitHub as an Identity provider for additional users
-
-CAUTION: Under construction
-
-One of the fastest, yet simple, ways to grant OpenShift access to many users is to add a GitHub Identity provider to your OpenShift Cluster.
-
-This requires you and them to have a GitHub account, but nothing else is needed.
-
-If you've never done it before, the instructions below will guide you.
-
-=== Create a GitHub Organization and OAuth application
+=== Create a GitHub Organization
 
 * Log into GitHub
-* Create a new Org. (Must be an "Owner")
-* settings
-* developer settings (bottom)
-* new OAuth App
-* ...
-
-=== configure that org as an authentication provider
-
+* Create a new Org. (Must be an “Owner”)
+** Top right profile icon -> Settings
+** Organizations -> New Organization
+** Fill out and indicate if creating an enterprise org
++
+[.bordershadow]
+image::new.org.png[]
++
+=== Configure that org as an auth provider and create OAuth application
 * console.redhat.com
-* Add Identity provider (GitHub)
+* Add identity provider (GitHub)
+* Copy callback url
+** github.com
+** Open Github org -> Settings
++
+[.bordershadow]
+image::org.settings.png[]
++
+
+** Developer settings (bottom)
+** OAuth Apps
+** Register an application
+** Paste callback url and provide homepage
+** Register application
++
+[.bordershadow]
+image::oauth.app.png[]
++
+
 * Fill in Client Id and Client secret from Org settings
-* ...
+* Save
 
-=== Make your Github users a cluster-admin
-
+=== Make your Github users cluster-admins
 * console.redhat.com
 * Access Control
 * Add user (Github Id)
 * cluster-admin
 
-=== Invite your users to your GitHub org
-
-* invite users (based on their GitHub user id)
-*
-
 === (optional) remove the HTPasswd
 
 * enforece 2FA on GitHub
 * remove HTPasswd as a way to log in
+
 
 
 
