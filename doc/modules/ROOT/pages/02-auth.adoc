@@ -1,6 +1,6 @@
 = Configure OpenShift Authentication
 
-CAUTION: Under construction
+CAUTION: Under construction. This page is still a work in progress.
 
 RHODS itself has no particular authentication settings. +
 Instead, it relies on how OpenShift's authentication has been configured.
@@ -79,46 +79,70 @@ image::logged.into.openshift.png[]
 [#github]
 == Configure GitHub as an Identity provider for additional users
 
-CAUTION: Under construction
-
 One of the fastest, yet simple, ways to grant OpenShift access to many users is to add a GitHub Identity provider to your OpenShift Cluster.
 
 This requires you and them to have a GitHub account, but nothing else is needed.
 
-If you've never done it before, the instructions below will guide you.
+If you’ve never done it before, the instructions below will guide you.
 
-=== Create a GitHub Organization and OAuth application
+=== Create a GitHub Organization
 
-* Log into GitHub
-* Create a new Org. (Must be an "Owner")
-* settings
-* developer settings (bottom)
-* new OAuth App
-* ...
+* Log into GitHub and go to the link:https://github.com/settings/organizations[Organizations] page
+* Create a new Org. (Must be an “Owner”)
+// ** Top right profile icon -> Settings
+** Organizations -> New Organization
++
+[.bordershadow]
+image::new.org.png[]
++
+** Choose to create a free Organization
++
+[.bordershadow]
+image::free.org.png[]
++
+** Fill out and indicate if creating an enterprise org
++
+[.bordershadow]
+image::org.name.png[]
++
+** Your new Organization should now be ready
 
-=== configure that org as an authentication provider
+=== Configure that organization as an auth provider and create OAuth application
 
 * console.redhat.com
-* Add Identity provider (GitHub)
+* Add identity provider (GitHub)
+* Copy callback url
+** github.com
+** Open Github org -> Settings
++
+[.bordershadow]
+image::org.settings.png[]
++
+
+** Developer settings (bottom)
+** OAuth Apps
+** Register an application
+** Paste callback url and provide homepage
+** Register application
++
+[.bordershadow]
+image::oauth.app.png[]
++
+
 * Fill in Client Id and Client secret from Org settings
-* ...
+* Save
 
-=== Make your Github users a cluster-admin
-
+=== Make your Github users cluster-admins
 * console.redhat.com
 * Access Control
 * Add user (Github Id)
 * cluster-admin
 
-=== Invite your users to your GitHub org
-
-* invite users (based on their GitHub user id)
-*
-
 === (optional) remove the HTPasswd
 
-* enforece 2FA on GitHub
+* enforce 2FA on GitHub
 * remove HTPasswd as a way to log in
+
 
 
 
