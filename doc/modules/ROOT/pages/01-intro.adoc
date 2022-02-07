@@ -120,6 +120,7 @@ Thanks to everyone who had a part in this:
 
 * Will, Jeff, Steven, for supporting this initiative
 * Chris, for your support and patience those last few months
+* Troy, for his participation and the fresh eyes he brought to this project
 
 == Progress
 
