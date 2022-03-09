@@ -141,10 +141,10 @@ image::org.settings.png[]
 ** Copy **callback url** into Authorization URL
 ** Register application
 
-+
+
 [.bordershadow]
 video::slideDemoVideo.mp4[width="100%",height="100%",opts="autoplay,loop"]
-+
+
 
 * Copy Client ID into the Identity Page
 * Create a Client Secret Key
