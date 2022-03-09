@@ -381,8 +381,29 @@ choose <strong>HTPasswd</strong>, the one we just added</p>
 </div>
 </div>
 </li>
+</ul>
+</div>
+</li>
 <li>
-<p>Your new Organization should now be ready</p>
+<p>Enforce 2FA within the GitHub Organization</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This setting requires invited users activate another authentication method</p>
+<div class="imageblock unresolved bordershadow">
+<div class="content">
+<img src="require.twofa.png" alt="require.twofa">
+</div>
+</div>
+</li>
+<li>
+<p>Your new Organization should now be ready
+*Invite additional users to the organization</p>
+<div class="imageblock unresolved bordershadow">
+<div class="content">
+<img src="invite.member.png" alt="invite.member">
+</div>
+</div>
 </li>
 </ul>
 </div>
@@ -391,22 +412,13 @@ choose <strong>HTPasswd</strong>, the one we just added</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_configure_that_organization_as_an_auth_provider_and_create_oauth_application"><a class="anchor" href="#_configure_that_organization_as_an_auth_provider_and_create_oauth_application"></a>Configure that organization as an auth provider and create OAuth application</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>console.redhat.com</p>
-</li>
-<li>
-<p>Add identity provider (GitHub)</p>
-</li>
-<li>
-<p>Copy callback url</p>
+<h3 id="_secure_your_organization_with_oauthenticaton_and_configure_github_identity_provider"><a class="anchor" href="#_secure_your_organization_with_oauthenticaton_and_configure_github_identity_provider"></a>Secure your organization with OAuthenticaton and configure Github Identity provider</h3>
 <div class="ulist">
 <ul>
 <li>
 <p>github.com</p>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>Open Github org &#8594; Settings</p>
 <div class="imageblock bordershadow">
@@ -416,65 +428,110 @@ choose <strong>HTPasswd</strong>, the one we just added</p>
 </div>
 </li>
 <li>
-<p>Developer settings (bottom)</p>
+<p>Developer settings “(bottom)”</p>
 </li>
 <li>
-<p>OAuth Apps</p>
+<p>OAuth Apps
+**Register an application</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>console.redhat.com
+*</strong> Copy the link from “Open console” Button into the “Homepage URL” on Github</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Choose the Access control tab for your cluster</p>
 </li>
 <li>
-<p>Register an application</p>
+<p>Select Identity providers</p>
 </li>
 <li>
-<p>Paste callback url and provide homepage</p>
+<p>Add identity provider (GitHub)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Copy “callback url” into Authorization URL</p>
 </li>
 <li>
 <p>Register application</p>
-<div class="imageblock bordershadow">
+</li>
+</ul>
+</div>
+<div class="videoblock bordershadow">
 <div class="content">
-<img src="_images/oauth.app.png" alt="oauth.app">
+<video src="_images/slideDemoVideo.mp4" controls>
+Your browser does not support the video tag.
+</video>
 </div>
 </div>
+</li>
+<li>
+<p>Copy Client ID into the Identity Page</p>
+</li>
+<li>
+<p>Create a Client Secret Key</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Copy Client Secret into Identity Page</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Fill in Client Id and Client secret from Org settings</p>
+<p>Fill in Organization Name</p>
 </li>
 <li>
-<p>Save</p>
+<p>“Save”</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_make_your_github_users_cluster_admins"><a class="anchor" href="#_make_your_github_users_cluster_admins"></a>Make your Github users cluster-admins</h3>
+<h3 id="_make_yourself_and_other_github_users_cluster_admins_must_be_in_org"><a class="anchor" href="#_make_yourself_and_other_github_users_cluster_admins_must_be_in_org"></a>Make yourself and other GitHub users cluster-admins (Must be in Org)</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>console.redhat.com</p>
+<p>Choose the Access control tab for your cluster</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Select “Cluster Roles and Access”</p>
 </li>
 <li>
-<p>Access Control</p>
-</li>
-<li>
-<p>Add user (Github Id)</p>
+<p>Add user “(Provide Github Username)”</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/add.htpass.admin1.png" alt="add.htpass.admin1">
+</div>
+</div>
 </li>
 <li>
 <p>cluster-admin</p>
 </li>
 </ul>
 </div>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_optional_remove_the_htpasswd"><a class="anchor" href="#_optional_remove_the_htpasswd"></a>(optional) remove the HTPasswd</h3>
+<h3 id="_remove_the_htpasswd_once_your_github_has_access_optional"><a class="anchor" href="#_remove_the_htpasswd_once_your_github_has_access_optional"></a>remove the HTPasswd once your GitHub has access (optional)</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>enforce 2FA on GitHub</p>
-</li>
-<li>
 <p>remove HTPasswd as a way to log in</p>
+<div class="imageblock unresolved bordershadow">
+<div class="content">
+<img src="delete.htp.png" alt="delete.htp">
+</div>
+</div>
 </li>
 </ul>
 </div>
