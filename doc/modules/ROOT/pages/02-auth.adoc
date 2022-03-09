@@ -132,8 +132,7 @@ image::org.settings.png[]
 ** OAuth Apps
 ** Register an application
 
-
-*console.redhat.com
+* console.redhat.com
 ** Copy the link from **Open console** Button into the **Homepage URL** on Github
 
 * Choose the Access control tab for your cluster
