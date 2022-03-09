@@ -143,7 +143,7 @@ image::org.settings.png[]
 
 +
 [.bordershadow]
-video::slideDemoVideo.mp4[width="90%",opts="autoplay,loop"]
+video::slideDemoVideo.mp4[width="100%",opts="autoplay,loop"]
 +
 
 * Copy Client ID into the Identity Page
