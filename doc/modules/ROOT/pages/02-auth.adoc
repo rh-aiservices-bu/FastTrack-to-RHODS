@@ -151,12 +151,12 @@ video::slideDemoVideo.mp4[width=720,opts="autoplay,loop"]
 * Create a Client Secret Key
 ** Copy Client Secret into Identity Page
 * Fill in Organization Name
-* “Save”
+* **Save**
 
 === Make yourself and other GitHub users cluster-admins (Must be in Org)
 * Choose the Access control tab for your cluster
-** Select “Cluster Roles and Access”
-** Add user “(Provide Github Username)”
+** Select **Cluster Roles and Access**
+** Add user **(Provide Github Username)**
 +
 [.bordershadow]
 image::add.htpass.admin1.png[]
