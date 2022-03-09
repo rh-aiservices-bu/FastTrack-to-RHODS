@@ -106,13 +106,13 @@ image::free.org.png[]
 image::org.name.png[]
 +
 * Enforce 2FA within the GitHub Organization
-** This setting requires invited users activate another authentication method 
+** This setting requires invited users to activate another authentication method 
 +
 [.bordershadow]
 image::require.twofa.png[]
 +
-** Your new Organization should now be ready
-*Invite additional users to the organization
+* Your new Organization should now be ready
+* Invite additional users to the organization
 +
 [.bordershadow]
 image::invite.member.png[]
@@ -128,23 +128,23 @@ image::invite.member.png[]
 image::org.settings.png[]
 +
 
-** Developer settings “(bottom)”
+** Developer settings **(bottom)**
 ** OAuth Apps
-**Register an application
+** Register an application
 
 
 *console.redhat.com
-** Copy the link from “Open console” Button into the “Homepage URL” on Github
+** Copy the link from **Open console** Button into the **Homepage URL** on Github
 
 * Choose the Access control tab for your cluster
 * Select Identity providers
 * Add identity provider (GitHub)
-** Copy “callback url” into Authorization URL
+** Copy **callback url** into Authorization URL
 ** Register application
 
 +
 [.bordershadow]
-video::slideDemoVideo.mp4[]
+video::slideDemoVideo.mp4[width=720,opts="autoplay,loop"]
 +
 
 * Copy Client ID into the Identity Page
