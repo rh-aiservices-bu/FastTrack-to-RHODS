@@ -105,43 +105,72 @@ image::free.org.png[]
 [.bordershadow]
 image::org.name.png[]
 +
+* Enforce 2FA within the GitHub Organization
+** This setting requires invited users activate another authentication method 
++
+[.bordershadow]
+image::require.twofa.png[]
++
 ** Your new Organization should now be ready
+*Invite additional users to the organization
++
+[.bordershadow]
+image::invite.member.png[]
++
 
-=== Configure that organization as an auth provider and create OAuth application
 
-* console.redhat.com
-* Add identity provider (GitHub)
-* Copy callback url
-** github.com
+=== Secure your organization with OAuthenticaton and configure Github Identity provider
+
+* github.com
 ** Open Github org -> Settings
 +
 [.bordershadow]
 image::org.settings.png[]
 +
 
-** Developer settings (bottom)
+** Developer settings “(bottom)”
 ** OAuth Apps
-** Register an application
-** Paste callback url and provide homepage
+**Register an application
+
+
+*console.redhat.com
+** Copy the link from “Open console” Button into the “Homepage URL” on Github
+
+* Choose the Access control tab for your cluster
+* Select Identity providers
+* Add identity provider (GitHub)
+** Copy “callback url” into Authorization URL
 ** Register application
+
 +
 [.bordershadow]
-image::oauth.app.png[]
+video::slideDemoVideo.mp4[]
 +
 
-* Fill in Client Id and Client secret from Org settings
-* Save
+* Copy Client ID into the Identity Page
+* Create a Client Secret Key
+** Copy Client Secret into Identity Page
+* Fill in Organization Name
+* “Save”
 
-=== Make your Github users cluster-admins
-* console.redhat.com
-* Access Control
-* Add user (Github Id)
-* cluster-admin
+=== Make yourself and other GitHub users cluster-admins (Must be in Org)
+* Choose the Access control tab for your cluster
+** Select “Cluster Roles and Access”
+** Add user “(Provide Github Username)”
++
+[.bordershadow]
+image::add.htpass.admin1.png[]
++
+** cluster-admin
 
-=== (optional) remove the HTPasswd
+=== remove the HTPasswd once your GitHub has access (optional)
 
-* enforce 2FA on GitHub
 * remove HTPasswd as a way to log in
++
+[.bordershadow]
+image::delete.htp.png[]
++
+
 
 
 
