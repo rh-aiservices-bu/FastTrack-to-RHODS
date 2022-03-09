@@ -143,7 +143,6 @@ image::org.settings.png[]
 ** Register application
 
 +
-[.bordershadow]
 video::slideDemoVideo.mp4[width=720,opts="autoplay,loop"]
 +
 
