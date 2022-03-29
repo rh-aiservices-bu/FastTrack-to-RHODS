@@ -1,66 +1,26 @@
-= Configure the default RHODS Authorization
+= Configure RHODS Authorization
 
-== Rationale
+== Default configuration
 
-Currently (at least up to RHODS V1.3.0-6), the way that RHODS Authorization defaults are configured, anyone who tries to log in will not be recognized as a RHODS user.
+Starting with RHODS version 1.8.0-14, the default Authorization for RHODS is configured as follows:
 
-Instead, they will be met with `403: forbidden` error when they try to launch a notebook:
+* Any user who can successfully authenticate to OpenShift is automatically a RHODS **User**
+* Any OpenShift "dedicated-admin" user is automatically a RHODS **Admin**
 
-[.bordershadow]
-image::403.forbidden.png[]
+These settings make it extremely simple to get started using RHODS, and should usually be kept as-is, at least to start with.
 
-Although this is link:https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html-single/getting_started_with_red_hat_openshift_data_science/index#i_see_a_emphasis_role_strong_403_forbidden_emphasis_error_when_i_log_in_to_jupyterhub[documented], I belive it's a better experience to reconfigure the authentication is way that:
+== Restrictive configuration (Optional)
 
-* any OpenShift User is automatically recognized as a RHODS user
-* any OpenShift Cluster-Admin is recognized as a RHODS admin
+If your Identity Provider contains thousands of users, but only a few of them should be able to use RHODS, you will likely want to reconfigure the Authorization settings for RHODS, to explicitly list the few users that are allowed to do so.
 
-WARNING: The method described here is currently not documented. +
-If you prefer to follow the official methods, please refer to the link:https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html/managing_users_and_user_resources/adding-users-for-openshift-data-science_useradd[documentation on how to add users].
+At a high level, you would:
 
-// include::partial$login.to.openshift.console.adoc[]
-include::partial$login.to.openshift.console.adoc[]
+1. Create an OpenShift group
+2. Add the IDs of the individual users to the newly created group
+3. Edit the configmap called `rhods-groups-config` in the `redhat-ods-applications` namespace
+4. Rollout the JupyterHub pods for the settings to take hold
 
-== Edit Configmap
-
-* Locate the configmap `rhods-groups-config` in the `redhat-ods-applications` namespace
-+
-[.bordershadow]
-image::rhods.configmap.png[configmap]
-+
-* Edit the YAML of the configmap
-+
-[.bordershadow]
-image::edit.configmap.png[configmap edit]
-+
-* Modify the content so that:
-** `opendatahub.io/modified:` is set to `true`
-** `admin_groups:` is set to `cluster-admins`
-** `allowed_groups:` is set to `'system:authenticated'`
-* WARNING: It's very easy to forget the first out of the three lines mentioned above.
-** (Not that it has happened to me or anything. It happened ... to a friend.)
-* The result should look like:
-+
-[.bordershadow]
-image::updated.configmap.png[configmap edited]
-+
-* Click save
-
-**Note:** These changes will not take effect until you restart all the JupyterHub pods. This is covered in the next section.
-
-== Do a rollout of the JupyterHub Pods
-
-* Locate the `jupyterhub` DeploymentConfig in the `redhat-ods-applications` namespace
-+
-[.bordershadow]
-image::start.rollout.png[rollout]
-+
-* Wait until all 3 `jupyterhub` pods have restarted, and one is **Running 2/2**:
-+
-[.bordershadow]
-image::pods.ready.png[ready]
-+
-* At this point, the changes in Authorization should be fully active.
-* The next section will validate that we can successfully use RHODS, by launching a Jupyter Notebook.
+This is explained in greated details in the link:https://access.redhat.com/documentation/en-us/red_hat_openshift_data_science/1/html/managing_users_and_user_resources/adding-users-for-openshift-data-science_useradd#adding-existing-user-groups-from-an-identity-provider-to-openshift-data-science_useradd[Adding existing user groups from an identity provider to OpenShift Data Science] section of the documentation.
 
 == Progress
 

@@ -16,7 +16,7 @@
 
 * xref:03-rhods.adoc[3. Get RHODS]
 ** xref:03-install.rhods.adoc[3.1 Install RHODS Add-On]
-** xref:03-authorization.adoc[3.2 Configure default RHODS Authorization]
+** xref:03-authorization.adoc[3.2 Configure RHODS Authorization]
 
 * xref:04-validation.adoc[4. Validate RHODS]
 ** xref:04-validation.adoc#logindashboard[4.1 Log Into RHODS]
