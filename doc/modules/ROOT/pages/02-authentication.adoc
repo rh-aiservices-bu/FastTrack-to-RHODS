@@ -181,21 +181,16 @@ image::github-cluster-admin.png[]
 * The first time you do so, you will be prompted to authorize the connection
 
 
-=== Remove the HTPasswd once your GitHub has access (optional)
+== Remove the HTPasswd once your GitHub has access (optional)
 
-* Once you are remove HTPasswd as a way to log in
+* Once you are able to log in as a Cluster-Admin using your own Github credentials, you can (and probably should) remove HTPasswd as a way to log in, as it is likely to be less secure than GitHub + MFA.
 +
 [.bordershadow]
 image::delete.htp.png[]
 +
 
 
+== Progress
 
-
-
-
-
-
-By the end of this page:
 [.bordershadow]
 image::overall.diag.22.png[400,400]
