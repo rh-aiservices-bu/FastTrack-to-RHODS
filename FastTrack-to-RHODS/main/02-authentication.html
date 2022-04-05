@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Configure OpenShift Authentication :: FastTrack to RHODS</title>
+    <link rel="canonical" href="https://rh-aiservices-bu.github.io/FastTrack-to-RHODS/FastTrack-to-RHODS/main/02-authentication.html">
+    <link rel="prev" href="02-create.rosa.html">
+    <link rel="next" href="03-rhods.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/site-extra.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9H1PMK1101"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9H1PMK1101');
+    </script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://developers.redhat.com" target="_blank"><img src="../../_/img/NewRHDFullLogo_4-color_white-wordmark.png" height="40px" alt="Red Hat Developer Program"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="https://rh-aiservices-bu.github.io/FastTrack-to-RHODS">FastTrack to RHODS</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://developers.redhat.com/ebooks/" target="_blank">Books</a>
+        <a class="navbar-item" href="https://developers.redhat.com/cheatsheets/" target="_blank">Cheat Sheets</a>
+        <a class="navbar-item" href="https://developers.redhat.com/events/" target="_blank">Upcoming Events</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">More Tutorials</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/kubernetes-tutorial/" target="_blank">Kubernetes</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/istio-tutorial/" target="_blank">Istio</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/quarkus-tutorial/" target="_blank">Quarkus</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/knative-tutorial/" target="_blank">Knative</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/tekton-tutorial/" target="_blank">Tekton</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="FastTrack-to-RHODS" data-version="main">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html"></a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="01-intro.html">1. Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="02-get.a.managed.openshift.html">2. Get a Managed OpenShift Cluster</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="02-create.osd.html">2.1-A Create an OSD Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="02-create.rosa.html">2.1-B Create a ROSA Cluster</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="02-authentication.html">2.2 Configure Authentication</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#htpasswd">2.2.1 HTPassword Auth</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#github">2.2.2 Github Auth</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="03-rhods.html">3. Get RHODS</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="03-install.rhods.html">3.1 Install RHODS Add-On</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="03-authorization.html">3.2 Configure RHODS Authorization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="04-validation.html">4. Validate RHODS</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="04-validation.html#logindashboard">4.1 Log Into RHODS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="04-validation.html#getstarted">4.2 Get Started with RHODS</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="05-optional.html">5. Optional</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="05-optional.html#autoscaling">5.1 Auto-Scaling Machine Pools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="05-optional.html#rhodsaccess">5.2 Restrict RHODS Access</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="05-optional.html#selfprovision">5.3 Restrict self-provisionners</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">FastTrack to RHODS</a></li>
+    <li><a href="02-get.a.managed.openshift.html">2. Get a Managed OpenShift Cluster</a></li>
+    <li><a href="02-authentication.html">2.2 Configure Authentication</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rh-aiservices-bu/FastTrack-to-RHODS/edit/main/doc/modules/ROOT/pages/02-authentication.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Configure OpenShift Authentication</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>RHODS itself has no particular authentication settings.<br>
+Instead, it relies on how OpenShift&#8217;s authentication has been configured.</p>
+</div>
+<div class="paragraph">
+<p>Therefore, it&#8217;s important to have at least one Identity Provider configured.</p>
+</div>
+<div class="paragraph">
+<p>The steps below will walk you through 2 fairly simple Identity Providers to get you started.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_log_in_to_console_redhat_com"><a class="anchor" href="#_log_in_to_console_redhat_com"></a>Log in to console.redhat.com</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Make sure you are logged in <a href="https://console.redhat.com/" class="bare">https://console.redhat.com/</a>.</p>
+</div>
+<div class="paragraph">
+<p> <details><summary> 
+Display detailed instructions:
+ </summary><div> </p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If not already done, go to <a href="https://console.redhat.com/" class="bare">https://console.redhat.com/</a> and log in with your Red Hat account.</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/console.login.png" alt="console">
+</div>
+</div>
+</li>
+<li>
+<p>Once you are logged in, navigate to the OpenShift Section. (<a href="https://console.redhat.com/openshift" class="bare">https://console.redhat.com/openshift</a>).</p>
+</li>
+<li>
+<p>You should see your cluster(s).</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/list.of.clusters.png" alt="console">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p> </div></details> </p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="htpasswd"><a class="anchor" href="#htpasswd"></a>Configure HTPasswd as an Identity Provider</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is a good option to use if you only need a single user and/or if you want to start by creating a Cluster Administrator account.</p>
+</div>
+<div class="paragraph">
+<p>That is how we will set it up:</p>
+</div>
+<div class="sect2">
+<h3 id="_add_the_identity_provider"><a class="anchor" href="#_add_the_identity_provider"></a>Add the Identity Provider</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Choose the <strong>Access control</strong> tab for your cluster</p>
+</li>
+<li>
+<p>Select <strong>Identity providers</strong></p>
+</li>
+<li>
+<p>Click the Dropdown to <strong>Add identity provider</strong> and choose <strong>HTPasswd</strong></p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/add.htpass.idp1.png" alt="add.htpass.idp1">
+</div>
+</div>
+</li>
+<li>
+<p>On the next screen, keep all the defaults, including the suggested username and password</p>
+</li>
+<li>
+<p><strong>Make sure to save them somewhere</strong><br>
+They will not be shown again.</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/add.htpass.idp2.png" alt="add.htpass.idp2">
+</div>
+</div>
+</li>
+<li>
+<p>click <strong>Add</strong></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_make_this_new_user_a_cluster_admin"><a class="anchor" href="#_make_this_new_user_a_cluster_admin"></a>Make this new user a Cluster-Admin</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Select <strong>Cluster Roles and Access</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click <strong>Add User</strong></p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/add.htpass.admin1.png" alt="add.htpass.admin1">
+</div>
+</div>
+</li>
+<li>
+<p>Enter the name of the <code>admin-</code> account that was created in the previous step, and choose <strong>Cluster-Admins</strong></p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/add.htpass.admin2.png" alt="add.htpass.admin2">
+</div>
+</div>
+</li>
+<li>
+<p>Click Add User</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_confirm_you_can_log_into_openshift"><a class="anchor" href="#_confirm_you_can_log_into_openshift"></a>Confirm you can log into OpenShift</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>To confirm, click on the blue button (Open Console).</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/open.console.png" alt="open.console">
+</div>
+</div>
+</li>
+<li>
+<p>A new tab will open, prompting you to choose an Identity Provider+
+choose <strong>HTPasswd</strong>, the one we just added</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/choose.idp.png" alt="choose.idp">
+</div>
+</div>
+</li>
+<li>
+<p>On the next screen, enter the credentials that we were generated for you.</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/enter.admin.creds.png" alt="enter.admin.creds">
+</div>
+</div>
+</li>
+<li>
+<p>You should now be logged into the OpenShift Console</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/logged.into.openshift.png" alt="logged.into.openshift">
+</div>
+</div>
+</li>
+<li>
+<p>If your screen looks like the above, kudos, you&#8217;ve just created an admin account for your OpenShift cluster</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The next section will show you how to use Github Authentication in order to easily grant access to many users.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="github"><a class="anchor" href="#github"></a>Configure GitHub as an Identity provider for additional users</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>One of the fastest, yet simple, ways to grant OpenShift access to many users is to add a GitHub Identity provider to your OpenShift Cluster.</p>
+</div>
+<div class="paragraph">
+<p>This only requires you (and them) to have a GitHub account.</p>
+</div>
+<div class="paragraph">
+<p>If you’ve never done it before, the instructions below will guide you.</p>
+</div>
+<div class="sect2">
+<h3 id="_create_a_github_organization"><a class="anchor" href="#_create_a_github_organization"></a>Create a GitHub Organization</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Log into GitHub and go to the <a href="https://github.com/settings/organizations">Organizations</a> page</p>
+</li>
+<li>
+<p>Create a new Org. (Must be an “Owner”)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Organizations &#8594; New Organization</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/new.org.png" alt="new.org">
+</div>
+</div>
+</li>
+<li>
+<p>Choose to create a free Organization</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/free.org.png" alt="free.org">
+</div>
+</div>
+</li>
+<li>
+<p>Fill out and indicate if creating an enterprise org</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/org.name.png" alt="org.name">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_enforce_2fa_for_the_github_organization_optional_but_recommended"><a class="anchor" href="#_enforce_2fa_for_the_github_organization_optional_but_recommended"></a>Enforce 2FA for the GitHub Organization - (Optional but recommended)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>This setting requires invited users to activate another authentication method. This will add a layer of security to their Github login, and therefore to the access to OpenShift and RHODS.</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/require.twofa.png" alt="require.twofa">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_invite_users_to_your_organization"><a class="anchor" href="#_invite_users_to_your_organization"></a>Invite users to your organization</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Your new Organization should now be ready</p>
+</li>
+<li>
+<p>Invite additional users to the organization</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/invite.member.png" alt="invite.member">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configure_github_identity_provider_in_red_hat_hybrid_cloud_console"><a class="anchor" href="#_configure_github_identity_provider_in_red_hat_hybrid_cloud_console"></a>Configure Github Identity provider in Red Hat Hybrid Cloud Console</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The video below showcases the steps to be executed in order to configure the newly created Github Org as the authentication provider for the OpenShift Cluster.</p>
+<div class="videoblock">
+<div class="content">
+<video src="_images/slideDemoVideo.mp4" width="100%" height="100%" autoplay controls loop>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_make_yourself_and_other_github_users_cluster_admins_must_be_in_org"><a class="anchor" href="#_make_yourself_and_other_github_users_cluster_admins_must_be_in_org"></a>Make yourself and other GitHub users cluster-admins (Must be in Org)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Choose the Access control tab for your cluster</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Select <strong>Cluster Roles and Access</strong></p>
+</li>
+<li>
+<p>Add user <strong>(Provide Github Username)</strong></p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/add.htpass.admin1.png" alt="add.htpass.admin1">
+</div>
+</div>
+</li>
+<li>
+<p>Add your own Github ID as a Cluster-Admin</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/github-cluster-admin.png" alt="github cluster admin">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>You should to login using GitHub authentication</p>
+</li>
+<li>
+<p>The first time you do so, you will be prompted to authorize the connection</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_remove_the_htpasswd_once_your_github_has_access_optional"><a class="anchor" href="#_remove_the_htpasswd_once_your_github_has_access_optional"></a>Remove the HTPasswd once your GitHub has access (optional)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Once you are remove HTPasswd as a way to log in</p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/delete.htp.png" alt="delete.htp">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>By the end of this page:</p>
+</div>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/overall.diag.22.png" alt="400" width="400">
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="02-create.rosa.html">2.1-B Create a ROSA Cluster</a></span>
+  <span class="next"><a href="03-rhods.html">3. Get RHODS</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <a class="rhd-logo" href="https://developers.redhat.com" target="_blank"></div>
+</footer>
+<script src="../../_/js/vendor/clipboard.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

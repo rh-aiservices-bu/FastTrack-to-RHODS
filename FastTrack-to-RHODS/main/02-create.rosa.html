@@ -6,7 +6,7 @@
     <title>Create a ROSA Cluster :: FastTrack to RHODS</title>
     <link rel="canonical" href="https://rh-aiservices-bu.github.io/FastTrack-to-RHODS/FastTrack-to-RHODS/main/02-create.rosa.html">
     <link rel="prev" href="02-create.osd.html">
-    <link rel="next" href="02-auth.html">
+    <link rel="next" href="02-authentication.html">
     <meta name="generator" content="Antora 3.0.0">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/site-extra.css">
@@ -81,13 +81,13 @@
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="02-auth.html">2.2 Configure Authentication</a>
+    <a class="nav-link" href="02-authentication.html">2.2 Configure Authentication</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="02-auth.html#htpasswd">2.2.1 HTPassword Auth</a>
+    <a class="nav-link" href="02-authentication.html#htpasswd">2.2.1 HTPassword Auth</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="02-auth.html#github">2.2.2 Github Auth</a>
+    <a class="nav-link" href="02-authentication.html#github">2.2.2 Github Auth</a>
   </li>
 </ul>
   </li>
@@ -158,24 +158,17 @@
 <h1 class="page">Create a ROSA Cluster</h1>
 <div id="preamble">
 <div class="sectionbody">
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-Under construction. These instructions are currently only references to other sets of instructions.
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>If you have never setup a ROSA Cluster before, the instructions available at <a href="https://www.rosaworkshop.io/rosa/1-account_setup/" class="bare">https://www.rosaworkshop.io/rosa/1-account_setup/</a> should be useful.</p>
 </div>
 <div class="paragraph">
-<p><strong>HOWEVER</strong>, note that these instructions rely on the <code>sts</code> option for AWS credentials, and that is at the moment NOT Supported by RHODS.
-If you follow them, make sure that you <strong>DO NOT</strong> use the <code>--sts</code> option when creating the cluster.</p>
+<p><strong>HOWEVER</strong>, note that these instructions rely on the <code>sts</code> option for AWS credentials, and that is at the moment NOT Supported by RHODS.</p>
+</div>
+<div class="paragraph">
+<p>If you follow them, make sure that you <strong>DO NOT</strong> use the <code>--sts</code> option when creating the cluster.</p>
+</div>
+<div class="paragraph">
+<p>For your convenience, these instructions are included below in iFrames.</p>
 </div>
 </div>
 </div>
@@ -191,15 +184,6 @@ If you follow them, make sure that you <strong>DO NOT</strong> use the <code>--s
 <div class="sectionbody">
 <iframe src="https://www.rosaworkshop.io/rosa/2-deploy/" width="100%" height="500" style="border:1px solid black;">
 </iframe>
-<div class="paragraph">
-<p>+</p>
-</div>
-<div class="paragraph">
-<p>+</p>
-</div>
-<div class="paragraph">
-<p>+</p>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -214,7 +198,7 @@ If you follow them, make sure that you <strong>DO NOT</strong> use the <code>--s
 </div>
 <nav class="pagination">
   <span class="prev"><a href="02-create.osd.html">2.1-A Create an OSD Cluster</a></span>
-  <span class="next"><a href="02-auth.html">2.2 Configure Authentication</a></span>
+  <span class="next"><a href="02-authentication.html">2.2 Configure Authentication</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
