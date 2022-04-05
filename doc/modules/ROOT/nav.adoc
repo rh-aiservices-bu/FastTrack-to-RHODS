@@ -10,9 +10,9 @@
 * xref:02-get.a.managed.openshift.adoc[2. Get a Managed OpenShift Cluster]
 ** xref:02-create.osd.adoc[2.1-A Create an OSD Cluster]
 ** xref:02-create.rosa.adoc[2.1-B Create a ROSA Cluster]
-** xref:02-auth.adoc[2.2 Configure Authentication]
-*** xref:02-auth.adoc#htpasswd[2.2.1 HTPassword Auth]
-*** xref:02-auth.adoc#github[2.2.2 Github Auth]
+** xref:02-authentication.adoc[2.2 Configure Authentication]
+*** xref:02-authentication.adoc#htpasswd[2.2.1 HTPassword Auth]
+*** xref:02-authentication.adoc#github[2.2.2 Github Auth]
 
 * xref:03-rhods.adoc[3. Get RHODS]
 ** xref:03-install.rhods.adoc[3.1 Install RHODS Add-On]
