@@ -20,7 +20,7 @@ If you don't yet have a Managed OpenShift Cluster, you will need to keep reading
 
 * Be aware of the xref:#cluster-requirements[cluster requirements]
 * Choose between xref:#chooseOSDROSA[ROSA and OSD]
-* Decide if you want to use the 60-day xref:#chooseOSDROSA[OSD Trial]
+* Decide if you want to use the 60-day xref:#OSDTrial[OSD Trial]
 --
 ====
 
@@ -54,7 +54,7 @@ If you don't yet have a Managed OpenShift Cluster, you will need to keep reading
 [#chooseOSDROSA]
 == Choosing between ROSA and OSD
 
-CAUTION: Under construction
+CAUTION: Section under construction
 
 If you need more information on how to choose between OSD and ROSA, please consult these resources.
 
@@ -73,19 +73,5 @@ An OSD Trial Cluster allows you to test a 40-vCPU OSD cluster for 60 days.
 
 Note that you are responsible for the Cloud Infrastructure Costs of the trial.
 
-If you are interested in signing up for an OSD Trials, please read carefully the content of the "link:https://access.redhat.com/articles/5990101[About the OpenShift Dedicated Trial]" page.
-
-
-
-// [cols="1,1"]
-// |===
-// |Cell in column 1, row 1
-// |Cell in column 2, row 1
-
-// |Cell in column 1, row 2
-// |Cell in column 2, row 2
-
-// |Cell in column 1, row 3
-// |Cell in column 2, row 3
-// |===
+If you are interested in signing up for an OSD Trials, please read carefully the content of the link:https://access.redhat.com/articles/5990101[About the OpenShift Dedicated Trial] page.
 

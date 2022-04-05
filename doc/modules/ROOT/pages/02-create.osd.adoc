@@ -1,25 +1,16 @@
 = Create an OSD Cluster
 
-CAUTION: Under construction
+// CAUTION: Section under construction
 
+Please consult and follow the official documentation available on link:https://docs.openshift.com/dedicated/osd_cluster_create/creating-an-aws-cluster.html[how to create an OSD cluster on AWS]. This will walk you through the steps and requirements.
 
+For your convenience, these instructions are included below in an iframe.
 
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
+++++
+<iframe src="https://docs.openshift.com/dedicated/osd_cluster_create/creating-an-aws-cluster.html" width="100%" height="500" style="border:1px solid black;">
+</iframe>
+++++
+
 
 == Progress
 

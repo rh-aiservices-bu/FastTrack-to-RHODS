@@ -106,7 +106,7 @@ image::free.org.png[]
 image::org.name.png[]
 +
 * Enforce 2FA within the GitHub Organization
-** This setting requires invited users to activate another authentication method 
+** This setting requires invited users to activate another authentication method
 +
 [.bordershadow]
 image::require.twofa.png[]
