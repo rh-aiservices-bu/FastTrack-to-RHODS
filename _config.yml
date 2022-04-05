@@ -1,2 +1,7 @@
 theme: jekyll-theme-hacker
 google_analytics: G-9H1PMK1101
+
+remote_theme: jekyll/minima
+
+plugins:
+- jekyll-remote-theme
