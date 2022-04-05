@@ -1,6 +1,6 @@
 = Configure OpenShift Authentication
 
-CAUTION: Under construction. This page is still a work in progress.
+// CAUTION: Under construction. This page is still a work in progress.
 
 RHODS itself has no particular authentication settings. +
 Instead, it relies on how OpenShift's authentication has been configured.
@@ -28,8 +28,8 @@ That is how we will set it up:
 image::add.htpass.idp1.png[]
 +
 * On the next screen, keep all the defaults, including the suggested username and password
-* MAKE SURE TO SAVE THEM SOMEWHERE. +
-They will not be shown to you again.
+* **Make sure to save them somewhere** +
+They will not be shown again.
 +
 [.bordershadow]
 image::add.htpass.idp2.png[]
@@ -76,12 +76,14 @@ image::logged.into.openshift.png[]
 +
 * If your screen looks like the above, kudos, you've just created an admin account for your OpenShift cluster
 
+The next section will show you how to use Github Authentication in order to easily grant access to many users.
+
 [#github]
 == Configure GitHub as an Identity provider for additional users
 
 One of the fastest, yet simple, ways to grant OpenShift access to many users is to add a GitHub Identity provider to your OpenShift Cluster.
 
-This requires you and them to have a GitHub account, but nothing else is needed.
+This only requires you (and them) to have a GitHub account.
 
 If you’ve never done it before, the instructions below will guide you.
 
@@ -105,12 +107,19 @@ image::free.org.png[]
 [.bordershadow]
 image::org.name.png[]
 +
-* Enforce 2FA within the GitHub Organization
-** This setting requires invited users to activate another authentication method
+
+
+=== Enforce 2FA for the GitHub Organization - (Optional but recommended)
+
+* This setting requires invited users to activate another authentication method. This will add a layer of security to their Github login, and therefore to the access to OpenShift and RHODS.
 +
 [.bordershadow]
 image::require.twofa.png[]
 +
+
+
+=== Invite users to your organization
+
 * Your new Organization should now be ready
 * Invite additional users to the organization
 +
@@ -119,37 +128,41 @@ image::invite.member.png[]
 +
 
 
-=== Secure your organization with OAuthenticaton and configure Github Identity provider
+=== Configure Github Identity provider in Red Hat Hybrid Cloud Console
 
-* github.com
-** Open Github org -> Settings
-+
-[.bordershadow]
-image::org.settings.png[]
-+
-
-** Developer settings **(bottom)**
-** OAuth Apps
-** Register an application
-
-* console.redhat.com
-** Copy the link from **Open console** Button into the **Homepage URL** on Github
-
-* Choose the Access control tab for your cluster
-* Select Identity providers
-* Add identity provider (GitHub)
-** Copy **callback url** into Authorization URL
-** Register application
-
+* The video below showcases the steps to be executed in order to configure the newly created Github Org as the authentication provider for the OpenShift Cluster.
+// * A description of the steps follows.
 +
 video::slideDemoVideo.mp4[width="100%",height="100%", opts="autoplay,loop"]
 +
 
-* Copy Client ID into the Identity Page
-* Create a Client Secret Key
-** Copy Client Secret into Identity Page
-* Fill in Organization Name
-* **Save**
+
+// * github.com
+// ** Open Github org -> Settings
+// +
+// [.bordershadow]
+// image::org.settings.png[]
+// +
+
+// ** Developer settings **(bottom)**
+// ** OAuth Apps
+// ** Register an application
+
+// * console.redhat.com
+// ** Copy the link from **Open console** Button into the **Homepage URL** on Github
+
+// * Choose the Access control tab for your cluster
+// * Select Identity providers
+// * Add identity provider (GitHub)
+// ** Copy **callback url** into Authorization URL
+// ** Register application
+
+
+// * Copy Client ID into the Identity Page
+// * Create a Client Secret Key
+// ** Copy Client Secret into Identity Page
+// * Fill in Organization Name
+// * **Save**
 
 === Make yourself and other GitHub users cluster-admins (Must be in Org)
 * Choose the Access control tab for your cluster
@@ -159,11 +172,18 @@ video::slideDemoVideo.mp4[width="100%",height="100%", opts="autoplay,loop"]
 [.bordershadow]
 image::add.htpass.admin1.png[]
 +
-** cluster-admin
+** Add your own Github ID as a Cluster-Admin
++
+[.bordershadow]
+image::github-cluster-admin.png[]
++
+* You should to login using GitHub authentication
+* The first time you do so, you will be prompted to authorize the connection
 
-=== remove the HTPasswd once your GitHub has access (optional)
 
-* remove HTPasswd as a way to log in
+=== Remove the HTPasswd once your GitHub has access (optional)
+
+* Once you are remove HTPasswd as a way to log in
 +
 [.bordershadow]
 image::delete.htp.png[]
