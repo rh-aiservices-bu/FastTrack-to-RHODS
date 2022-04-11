@@ -81,7 +81,7 @@ The next section will show you how to use Github Authentication in order to easi
 [#github]
 == Configure GitHub as an Identity provider for additional users
 
-One of the fastest, yet simple, ways to grant OpenShift access to many users is to add a GitHub Identity provider to your OpenShift Cluster.
+One of the fastest ways to grant access to many users is to add a GitHub Identity Provider to your OpenShift Cluster.
 
 This only requires you (and them) to have a GitHub account.
 
@@ -136,20 +136,35 @@ image::invite.member.png[]
 video::slideDemoVideo.mp4[width="100%",height="100%", opts="autoplay,loop"]
 +
 
+* In the Red Hat Hybrid Cloud console (https://console.redhat.com)
+** Select your cluster
+** Copy the link from **Open console** Button into the **Homepage URL** on Github
 
-// * github.com
-// ** Open Github org -> Settings
-// +
-// [.bordershadow]
-// image::org.settings.png[]
-// +
+* In Github (https://github.com/)
+** Select your Github organization and go to **Settings**
++
+[.bordershadow]
+image::org.settings.png[]
++
+** Go to **Developer settings** (bottom)
+** Select **OAuth Apps**
+** Click **New OAuth App**
+* In the **Register a new OAuth** page:
+** Choose an **Application Name**
+** Paste the URL of your cluster as the **Homepage URL**
 
-// ** Developer settings **(bottom)**
-// ** OAuth Apps
-// ** Register an application
-
-// * console.redhat.com
-// ** Copy the link from **Open console** Button into the **Homepage URL** on Github
+* Back in the Red Hat Hybrid Cloud console (https://console.redhat.com)
+** Select your cluster
+** Go to the **Access Control** tab
+** Click on **Add identity provider**
+** Select **Github** in the dropdown list
+** Edit the **Name** to something meaningful, such as **Github-Auth**
+** Copy the **Oauth Callback URL**
+** Paste that URL into the Github screen asking you for it
+** Click on the **Register Application** button in the github screen
+** On the next screen, copy the **Client ID** from Github into the Red Hat Hybrid Console screen
+** Click on **Generate a new client secret** and also copy that secret into the Red Hat Hybrid Console screen
+** Finally, enter the Github **Organization** name into the Red Hat Hybrid Console and click **Add*
 
 // * Choose the Access control tab for your cluster
 // * Select Identity providers
@@ -177,8 +192,8 @@ image::add.htpass.admin1.png[]
 [.bordershadow]
 image::github-cluster-admin.png[]
 +
-* You should to login using GitHub authentication
-* The first time you do so, you will be prompted to authorize the connection
+* You should now be able to login using GitHub authentication
+* The first time you do so, you will be prompted to authorize the connection.
 
 
 == Remove the HTPasswd once your GitHub has access (optional)
