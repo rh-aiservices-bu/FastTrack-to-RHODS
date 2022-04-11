@@ -339,7 +339,7 @@ choose <strong>HTPasswd</strong>, the one we just added</p>
 <h2 id="github"><a class="anchor" href="#github"></a>Configure GitHub as an Identity provider for additional users</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>One of the fastest, yet simple, ways to grant OpenShift access to many users is to add a GitHub Identity provider to your OpenShift Cluster.</p>
+<p>One of the fastest ways to grant access to many users is to add a GitHub Identity Provider to your OpenShift Cluster.</p>
 </div>
 <div class="paragraph">
 <p>This only requires you (and them) to have a GitHub account.</p>
@@ -435,6 +435,96 @@ Your browser does not support the video tag.
 </div>
 </div>
 </li>
+<li>
+<p>In the Red Hat Hybrid Cloud console (<a href="https://console.redhat.com" class="bare">https://console.redhat.com</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Select your cluster</p>
+</li>
+<li>
+<p>Copy the link from <strong>Open console</strong> Button into the <strong>Homepage URL</strong> on Github</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In Github (<a href="https://github.com/" class="bare">https://github.com/</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Select your Github organization and go to <strong>Settings</strong></p>
+<div class="imageblock bordershadow">
+<div class="content">
+<img src="_images/org.settings.png" alt="org.settings">
+</div>
+</div>
+</li>
+<li>
+<p>Go to <strong>Developer settings</strong> (bottom)</p>
+</li>
+<li>
+<p>Select <strong>OAuth Apps</strong></p>
+</li>
+<li>
+<p>Click <strong>New OAuth App</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In the <strong>Register a new OAuth</strong> page:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Choose an <strong>Application Name</strong></p>
+</li>
+<li>
+<p>Paste the URL of your cluster as the <strong>Homepage URL</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Back in the Red Hat Hybrid Cloud console (<a href="https://console.redhat.com" class="bare">https://console.redhat.com</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Select your cluster</p>
+</li>
+<li>
+<p>Go to the <strong>Access Control</strong> tab</p>
+</li>
+<li>
+<p>Click on <strong>Add identity provider</strong></p>
+</li>
+<li>
+<p>Select <strong>Github</strong> in the dropdown list</p>
+</li>
+<li>
+<p>Edit the <strong>Name</strong> to something meaningful, such as <strong>Github-Auth</strong></p>
+</li>
+<li>
+<p>Copy the <strong>Oauth Callback URL</strong></p>
+</li>
+<li>
+<p>Paste that URL into the Github screen asking you for it</p>
+</li>
+<li>
+<p>Click on the <strong>Register Application</strong> button in the github screen</p>
+</li>
+<li>
+<p>On the next screen, copy the <strong>Client ID</strong> from Github into the Red Hat Hybrid Console screen</p>
+</li>
+<li>
+<p>Click on <strong>Generate a new client secret</strong> and also copy that secret into the Red Hat Hybrid Console screen</p>
+</li>
+<li>
+<p>Finally, enter the Github <strong>Organization</strong> name into the Red Hat Hybrid Console and click <strong>*Add</strong></p>
+</li>
+</ul>
+</div>
+</li>
 </ul>
 </div>
 </div>
@@ -469,10 +559,10 @@ Your browser does not support the video tag.
 </div>
 </li>
 <li>
-<p>You should to login using GitHub authentication</p>
+<p>You should now be able to login using GitHub authentication</p>
 </li>
 <li>
-<p>The first time you do so, you will be prompted to authorize the connection</p>
+<p>The first time you do so, you will be prompted to authorize the connection.</p>
 </li>
 </ul>
 </div>
