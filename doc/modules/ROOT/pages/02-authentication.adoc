@@ -131,10 +131,12 @@ image::invite.member.png[]
 === Configure Github Identity provider in Red Hat Hybrid Cloud Console
 
 * The video below showcases the steps to be executed in order to configure the newly created Github Org as the authentication provider for the OpenShift Cluster.
-// * A description of the steps follows.
+
 +
 video::slideDemoVideo.mp4[width="100%",height="100%", opts="autoplay,loop"]
 +
+
+The steps shown in the video are described below:
 
 * In the Red Hat Hybrid Cloud console (https://console.redhat.com)
 ** Select your cluster
