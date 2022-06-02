@@ -8,16 +8,26 @@ If you have never setup a ROSA Cluster before, the instructions available at htt
 
 If you follow them, make sure that you **DO NOT** use the `--sts` option when creating the cluster.
 
+== Guided deployment
+
+New (June 1st 2022): Try the new, Insruqt-powered set of instructions:
+
+Invite for RH people: <https://play.instruqt.com/openshift/invite/kaqgmwdw5pbu>.
+* Click on **Login**
+* Click on **Google**
+
+== Instructions
+
 For your convenience, these instructions are included below in iFrames.
 
-== ROSA Account Setup
+=== ROSA Account Setup
 
 ++++
 <iframe src="https://www.rosaworkshop.io/rosa/1-account_setup/" width="100%" height="500" style="border:1px solid black;">
 </iframe>
 ++++
 
-== ROSA Deployment
+=== ROSA Deployment
 
 ++++
 <iframe src="https://www.rosaworkshop.io/rosa/2-deploy/" width="100%" height="500" style="border:1px solid black;">
