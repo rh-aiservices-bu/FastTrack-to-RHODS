@@ -13,6 +13,7 @@ If you follow them, make sure that you **DO NOT** use the `--sts` option when cr
 New (June 1st 2022): Try the new, Insruqt-powered set of instructions:
 
 Invite for RH people: <https://play.instruqt.com/openshift/invite/kaqgmwdw5pbu>.
+
 * Click on **Login**
 * Click on **Google**
 
